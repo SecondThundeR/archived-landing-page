@@ -58,8 +58,8 @@ p {
     transform: translate(-50%, -50%);
     overflow: hidden;
     z-index: -100;
-    filter: blur(12px);
-    -webkit-filter: blur(12px);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
 .portrait-placeholder {
