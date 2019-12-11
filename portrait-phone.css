@@ -9,42 +9,79 @@ head {
 }
 
 body {
-    background-color: white;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(312deg, #312A6C , #3A3897 , #852D91);
+    background-size: 600% 600%;
+    background-repeat: no-repeat;
+    -webkit-animation: BgAnim 32s ease infinite;
+    -moz-animation: BgAnim 32s ease infinite;
+    -o-animation: BgAnim 32s ease infinite;
+    animation: BgAnim 32s ease infinite;
     height: 100%;
     padding: 16px;
 	font-family: Ubuntu, sans-serif;
 }
 
+@-webkit-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-moz-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-o-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+
 svg {
+    fill: white;
     margin: 0;
     padding: 0;
 }
 
 html {
+    overflow: hidden;
     height: 100%;
 }
 
 h1 {
     font-weight: bolder;
     font-size: 36px;
-    color: black;
-    margin: 0px;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 p {
-    margin: 18px;
     font-size: 16px;
-    color: gray;
+    color: rgba(255,255,255,0.5);
     font-style: italic;
 }
 
 .portrait-placeholder {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     height: 100%;
-    width: 100%;
     justify-content: center;
     align-items: center;
     align-self: center;
     text-align: center;
+}
+
+.typing {
+    display: none;
 }
