@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    color: white;
+}
+
+head {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: white;
+    height: 100%;
+    margin: 0px;
+	font-family: Ubuntu, sans-serif;
+}
+
+svg {
+    fill: white;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 36px;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+p {
+    /*margin: 18px;*/
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+}
+
+.videobcg { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -100;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+}
+
+.portrait-placeholder {
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.typing {
+    display: none;
+}

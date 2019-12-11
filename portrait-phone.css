@@ -1,1 +1,50 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");*{color:white;}head{display:none;}body{background-color:white;}[class~=portrait-placeholder]{display:flex;}body,html,[class~=portrait-placeholder]{height:100%;}body{padding-left:1pc;}body{padding-bottom:1pc;}body{padding-right:1pc;}body{padding-top:1pc;}body{font-family:Ubuntu,sans-serif;}[class~=portrait-placeholder]{flex-direction:column;}svg{margin-left:0;}svg{margin-bottom:0;}svg{margin-right:0;}svg{margin-top:0;}svg{padding-left:0;}svg{padding-bottom:0;}svg{padding-right:0;}[class~=portrait-placeholder]{width:100%;}[class~=portrait-placeholder]{justify-content:center;}svg{padding-top:0;}h1{font-weight:bolder;}h1{font-size:36px;}h1{color:black;}h1{margin-left:0pt;}h1{margin-bottom:0pt;}[class~=portrait-placeholder]{align-items:center;}h1{margin-right:0pt;}h1{margin-top:0pt;}p{margin-left:1.125pc;}p{margin-bottom:1.125pc;}p{margin-right:1.125pc;}p{margin-top:1.125pc;}p{font-size:.166666667in;}[class~=portrait-placeholder]{align-self:center;}p{color:gray;}p{font-style:italic;}[class~=portrait-placeholder]{text-align:center;}
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    color: white;
+}
+
+head {
+    display: none;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+    padding: 16px;
+	font-family: Ubuntu, sans-serif;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 36px;
+    color: black;
+    margin: 0px;
+}
+
+p {
+    margin: 18px;
+    font-size: 16px;
+    color: gray;
+    font-style: italic;
+}
+
+.portrait-placeholder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}

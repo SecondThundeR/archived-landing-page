@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    color: white;
+}
+
+head {
+    display: none;
+}
+
+.videobcg { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -100;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+	font-family: Ubuntu, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 48px;
+    margin: 16px;
+    color: white;
+}
+
+@keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+}
+
+.typing {
+    background-color: rgba(0,0,0,0.35);
+    display: flex;
+    border: solid 24px white;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.typing-text {
+    width: 90%;
+}
+
+.avatar {
+    background-image: url(assets/avatar.jpg);
+    background-position: 50% 10%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 128px;
+    width: 128px;
+    border-radius: 100%;
+    margin: -6px;
+    border: 6px solid white;
+    display: inline-block;
+}
+
+button {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    padding: 16px;
+    margin: 4px;
+    font-family: Ubuntu, sans-serif;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.portrait-placeholder {
+    display: none;
+}
