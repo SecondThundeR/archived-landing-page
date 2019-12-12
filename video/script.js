@@ -49,9 +49,4 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-
-    let css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap {border-right: 0.06em solid #fff; animation: blinking 1s steps(1) infinite;}";
-    document.body.appendChild(css);
 };

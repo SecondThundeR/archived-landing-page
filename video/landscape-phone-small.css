@@ -69,6 +69,11 @@ h1 {
     display: none;
 }
 
+.wrap {
+    border-right: 0.06em solid #fff; 
+    animation: blinking 1s steps(1) infinite;
+}
+
 button {
     background-color: transparent;
     border: 3px solid white;
