@@ -3,6 +3,7 @@
 * {
     color: white;
     font-family: Ubuntu, sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 head {
