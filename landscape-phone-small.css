@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    color: white;
+}
+
+head {
+    display: none;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(312deg, #312A6C , #3A3897 , #852D91);
+    background-size: 600% 600%;
+    background-repeat: no-repeat;
+    -webkit-animation: BgAnim 32s ease infinite;
+    -moz-animation: BgAnim 32s ease infinite;
+    -o-animation: BgAnim 32s ease infinite;
+    animation: BgAnim 32s ease infinite;
+    margin: 0;
+    height: 100%;
+	font-family: Ubuntu, sans-serif;
+}
+
+@-webkit-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-moz-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-o-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+}
+
+@keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+}
+
+.typing {
+    background-color: rgba(0,0,0,0.25);
+    display: flex;
+    border: solid 12px white;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.typing-text {
+    width: 90%;
+}
+
+.avatar {
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 16px;
+    padding: 16px;
+    margin: 4px;
+    font-family: Ubuntu, sans-serif;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
