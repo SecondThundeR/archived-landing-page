@@ -30,7 +30,6 @@ body {
     position: relative;
     overflow: hidden;
     margin: 0;
-    padding: 0;
     height: 100%;
 	font-family: Ubuntu, sans-serif;
 }
@@ -42,7 +41,7 @@ html {
 
 h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     color: white;
 }
 
@@ -53,7 +52,7 @@ h1 {
 }
 
 .typing {
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0,0,0,0.25);
     display: flex;
     border: solid 12px white;
     box-sizing: border-box;
@@ -69,7 +68,16 @@ h1 {
 }
 
 .avatar {
-    display: none;
+    background-image: url(assets/avatar.jpg);
+    background-position: 50% 10%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 96px;
+    width: 96px;
+    border-radius: 100%;
+    margin: -8px;
+    border: 6px solid white;
+    display: inline-block;
 }
 
 button {
@@ -89,8 +97,4 @@ button {
 button:hover {
     background-color: white;
     color: black;
-}
-
-.portrait-placeholder {
-    display: none;
 }

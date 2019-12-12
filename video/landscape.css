@@ -27,15 +27,16 @@ head {
 }
 
 body {
+    position: relative;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
     height: 100%;
+    margin: 0;
 	font-family: Ubuntu, sans-serif;
 }
 
 html {
     height: 100%;
+    overflow: hidden;
 }
 
 h1 {
@@ -51,7 +52,7 @@ h1 {
 }
 
 .typing {
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0,0,0,0.25);
     display: flex;
     border: solid 24px white;
     box-sizing: border-box;
@@ -96,8 +97,4 @@ button {
 button:hover {
     background-color: white;
     color: black;
-}
-
-.portrait-placeholder {
-    display: none;
 }
