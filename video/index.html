@@ -13,6 +13,11 @@
         <link rel="preload" href="script.js" as="script">
     </head>
     <body>
+        <script>
+            let laterRunScript = document.createElement('script');
+            laterRunScript.src = 'script.js';
+            document.body.appendChild(laterRunScript);
+        </script>
         <div class="typing">
             <div class="typing-text">
                 <span class="avatar"></span>
@@ -28,8 +33,7 @@
                 <button onclick="window.location.href = 'https://last.fm/ru/user/AwayFromGalaxy';">Last.fm</button>
                 <button onclick="window.location.href = 'https://github.com/SecondThundeR';">Github</button>
             </div>
-            <script src="script.js"></script>
-            <video class="videobcg" preload="auto" autoplay="autoplay" loop="loop">
+            <video class="videobcg"  preload="auto" autoplay="autoplay" loop="loop">
                 <source src="assets/1.mp4" type="video/mp4">
             </video>
         </div>
