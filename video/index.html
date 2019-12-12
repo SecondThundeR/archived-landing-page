@@ -9,11 +9,9 @@
         <link rel="stylesheet" media="(max-width: 700px) and (orientation: landscape)" href="landscape-phone-small.css">
         <link rel="stylesheet" media="(min-width: 768px) and (orientation: portrait)" href="portrait.css">
         <link rel="stylesheet" media="(min-width: 1024px) and (orientation: landscape)" href="landscape.css">
+        <script src="script.js"></script>
     </head>
     <body>
-        <video preload="auto" autoplay loop class="videobcg">
-            <source src="assets/1.mp4" type="video/mp4">
-        </video>
         <div class="typing">
             <div class="typing-text">
                 <span class="avatar"></span>
@@ -28,8 +26,10 @@
                 <button onclick="window.location.href = 'https://twitter.com/AwayFromGalaxy';">Twitter</button>
                 <button onclick="window.location.href = 'https://last.fm/ru/user/AwayFromGalaxy';">Last.fm</button>
                 <button onclick="window.location.href = 'https://github.com/SecondThundeR';">Github</button>
+                <video class="videobcg" preload autoplay loop muted>
+                    <source src="assets/1.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
-        <script src="script.js"></script>
     </body>
 </html>
