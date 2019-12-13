@@ -52,7 +52,7 @@ h1 {
 }
 
 .typing {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.4);
     display: flex;
     border: solid 12px white;
     box-sizing: border-box;
