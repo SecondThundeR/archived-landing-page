@@ -52,7 +52,7 @@ html {
 
 h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 p {
@@ -77,15 +77,7 @@ p {
 }
 
 .avatar {
-    background-image: url(assets/avatar.jpg);
-    background-position: 50% 10%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 128px;
-    width: 128px;
-    border-radius: 100%;
-    border: 6px solid white;
-    display: inline-block;
+    display: none;
 }
 
 .wrap {
