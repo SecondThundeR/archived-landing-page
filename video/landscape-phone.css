@@ -45,7 +45,7 @@ h1 {
     font-size: 32px;
 }
 
-p {
+.redirect {
     color: rgba(255, 255, 255, 0.5);
     cursor: default;
 }
