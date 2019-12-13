@@ -67,15 +67,7 @@ h1 {
 }
 
 .avatar {
-    background-image: url(assets/avatar.jpg);
-    background-position: 50% 10%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 96px;
-    width: 96px;
-    border-radius: 100%;
-    border: 6px solid white;
-    display: inline-block;
+    display: none;
 }
 
 .wrap {
