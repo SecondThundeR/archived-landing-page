@@ -6,6 +6,10 @@
 * {
     color: white;
     font-family: Ubuntu, sans-serif;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     text-rendering: optimizeLegibility;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -32,11 +36,11 @@ head {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    -ms-transition: all .3s ease-out;
-    transition: all .3s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
     overflow: hidden;
     z-index: -100;
     filter: blur(12px);
@@ -199,11 +203,11 @@ button:hover {
         align-items: center;
         text-align: center;
         align-self: center;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        transition: all .5s ease-out;
     }
         
     #avatar {
@@ -237,11 +241,11 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        transition: all .5s ease-out;
     }
 
     #avatar {
@@ -275,11 +279,11 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        transition: all .5s ease-out;
     }
         
     #avatar {
@@ -313,11 +317,11 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        transition: all .5s ease-out;
     }
         
     #avatar {
@@ -343,11 +347,11 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        transition: all .5s ease-out;
     }
         
     #avatar {
