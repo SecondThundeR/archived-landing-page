@@ -47,24 +47,48 @@ body {
 }
     
 @-webkit-keyframes BgAnim {
-    0%{background-position:2% 0%}
-    50%{background-position:99% 100%}
-    100%{background-position:2% 0%}
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
 }
 @-moz-keyframes BgAnim {
-    0%{background-position:2% 0%}
-    50%{background-position:99% 100%}
-    100%{background-position:2% 0%}
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
 }
 @-o-keyframes BgAnim {
-    0%{background-position:2% 0%}
-    50%{background-position:99% 100%}
-    100%{background-position:2% 0%}
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
 }
 @keyframes BgAnim {
-    0%{background-position:2% 0%}
-    50%{background-position:99% 100%}
-    100%{background-position:2% 0%}
+    0% {
+        background-position:2% 0%;
+    }
+    50% {
+        background-position:99% 100%;
+    }
+    100% {
+        background-position:2% 0%;
+    }
 }
 
 html {
@@ -73,6 +97,7 @@ html {
 }
 
 h1 {
+    cursor: default;
 }
 
 #redirect {
@@ -86,6 +111,11 @@ h1 {
 }
 
 button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background-color: transparent;
     border: 3px solid white;
     border-radius: 12px;
