@@ -105,9 +105,13 @@ h1 {
     cursor: default;
 }
 
-#redirect {
+#typing p {
     color: rgba(255, 255, 255, 0.5);
     cursor: default;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 #wrap {
@@ -116,6 +120,7 @@ h1 {
 }
 
 button {
+    outline: none;
     background-color: transparent;
     border: 3px solid white;
     border-radius: 12px;
@@ -129,6 +134,7 @@ button {
 }
 
 button:hover {
+    outline: none;
     background-color: white;
     color: black;
 }
@@ -152,6 +158,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
+        align-self: center;
     }
         
     #avatar {

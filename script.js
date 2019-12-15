@@ -3,7 +3,7 @@ let isShown = true;
 function showHideVideo() {
     let video = document.getElementById('videobcg');
     let bg = document.getElementById('typing');
-    let text = document.getElementById('redirect');
+    let text = document.getElementById('text-btn');
     
     if (isShown) {
         video.style.display = 'none';
