@@ -7,6 +7,11 @@
     color: white;
     font-family: Ubuntu, sans-serif;
     text-rendering: optimizeLegibility;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
     
 head {
@@ -111,11 +116,6 @@ h1 {
 }
 
 button {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     background-color: transparent;
     border: 3px solid white;
     border-radius: 12px;
