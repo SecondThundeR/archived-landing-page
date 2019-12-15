@@ -1,0 +1,255 @@
+/*
+    Rules for every mode and device
+*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+* {
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+    
+head {
+    display: none;
+}
+
+#videobcg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -100;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+}
+    
+body {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(312deg, #009245, #00A8C5, #D74177);
+    background-size: 600% 600%;
+    background-repeat: no-repeat;
+    -webkit-animation: BgAnim 32s ease infinite;
+    -moz-animation: BgAnim 32s ease infinite;
+    -o-animation: BgAnim 32s ease infinite;
+    animation: BgAnim 32s ease infinite;
+    height: 100%;
+    margin: 0;
+}
+    
+@-webkit-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-moz-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-o-keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@keyframes BgAnim {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+#redirect {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+}
+
+#wrap {
+    border-right: 0.06em solid #fff; 
+    animation: blinking 1s steps(1) infinite;
+}
+
+button {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    padding: 16px;
+    margin: 4px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/*
+    Rules for tablets and PC's in portrait
+*/
+@media (min-height: 860px) and (orientation: portrait){
+    h1 {
+        font-weight: bold;
+        font-size: 48px;
+    }
+
+    #typing {
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        border: solid 24px white;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        
+    #avatar {
+        background-image: url(assets/avatar.jpg);
+        background-position: 50% 10%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 128px;
+        width: 128px;
+        border-radius: 100%;
+        border: 6px solid white;
+        display: inline-block;
+    }
+}
+
+/*
+    Rules for regular phones in portait mode
+*/
+@media (max-height: 850px) and (orientation: portrait) {
+    h1 {
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    #typing {
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        border: solid 12px white;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #avatar {
+        background-image: url(assets/avatar.jpg);
+        background-position: 50% 10%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 128px;
+        width: 128px;
+        border-radius: 100%;
+        border: 6px solid white;
+        display: inline-block;
+    }
+}
+
+/*
+    Rules for tablets and PC's in landscape
+*/
+@media (min-width: 840px) and (orientation: landscape){
+    h1 {
+        font-weight: bold;
+        font-size: 48px;
+    }
+
+    #typing {
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        border: solid 24px white;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        
+    #avatar {
+        background-image: url(assets/avatar.jpg);
+        background-position: 50% 10%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 128px;
+        width: 128px;
+        border-radius: 100%;
+        border: 6px solid white;
+        display: inline-block;
+    }
+}
+
+/*
+    Rules for regular phones landscape
+*/
+@media (max-width: 830px) and (orientation: landscape){
+    h1 {
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    #typing {
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        border: solid 12px white;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        
+    #avatar {
+        display: none;
+    }
+}
+
+/*
+    Special rule for portrait mode for small phones (e.g. iPhone 5S/SE and others)
+*/
+@media (max-width: 340px) and (orientation: portrait){
+    h1 {
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    #typing {
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        border: solid 12px white;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        
+    #avatar {
+        display: none;
+    }
+}

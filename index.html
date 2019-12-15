@@ -3,21 +3,31 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project Demeter</title>
-        <link rel="stylesheet" media="(orientation: portrait)" href="portrait-phone-small.css">
-        <link rel="stylesheet" media="(min-width: 360px) and (orientation: portrait)" href="portrait-phone.css">
-        <link rel="stylesheet" media="(orientation: landscape)" href="landscape-phone.css">
-        <link rel="stylesheet" media="(min-width: 768px) and (orientation: portrait)" href="portrait.css">
-        <link rel="stylesheet" media="(min-width: 1024px) and (orientation: landscape)" href="landscape.css">
+        <title>Project Nemesis</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+        <link rel="manifest" href="icons/site.webmanifest">
+        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#fd0b31">
+        <link rel="shortcut icon" href="icons/favicon.ico">
+        <meta name="apple-mobile-web-app-title" content="Project Nemesis">
+        <meta name="application-name" content="Project Nemesis">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="icons/browserconfig.xml">
+        <meta name="theme-color" content="#fd0b31">
         <script src="script.js"></script>
     </head>
     <body>
-        <div class="typing">
-            <div class="typing-text">
-                <span class="avatar"></span>
+        <video id="videobcg" preload autoplay loop muted poster="assets/video_poster.jpg">
+            <source src="assets/1.mp4" type="video/mp4">
+        </video>
+        <div id="typing">
+            <div id="typing-text">
+                <span id="avatar"></span>
                 <h1>
                     <a class="typewrite" data-period="2000" data-type='[ "SecondThundeR", "Creator of Project Aurora", "Junior Designer", "Begginer at Web Development" ]'>
-                        <span class="wrap"></span>
+                        <span id="wrap"></span>
                     </a>
                 </h1>
                 <button onclick="window.location.href = 'https://vk.com/SecondThundeR'">VK</button>
@@ -26,7 +36,7 @@
                 <button onclick="window.location.href = 'https://twitter.com/AwayFromGalaxy'">Twitter</button>
                 <button onclick="window.location.href = 'https://last.fm/ru/user/AwayFromGalaxy'">Last.fm</button>
                 <button onclick="window.location.href = 'https://github.com/SecondThundeR'">Github</button>
-                <p class="redirect" onclick="window.location.href = 'https://secondthunder.github.io/video'">Open Video Version</p>
+                <p id="redirect" onclick="showHideVideo()">Hide Video</p>
             </div>
         </div>
     </body>
