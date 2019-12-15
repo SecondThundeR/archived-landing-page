@@ -72,6 +72,9 @@ html {
     overflow: hidden;
 }
 
+h1 {
+}
+
 #redirect {
     color: rgba(255, 255, 255, 0.5);
     cursor: default;
@@ -235,6 +238,11 @@ button:hover {
     h1 {
         font-weight: bold;
         font-size: 32px;
+        white-space: no-wrap;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
     }
 
     #typing {
