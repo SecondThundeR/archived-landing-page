@@ -6,13 +6,17 @@ function showHideVideo() {
     let text = document.getElementById('text-btn');
     
     if (isShown) {
-        video.style.display = 'none';
-        bg.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        video.classList.remove('visible');
+        video.classList.add('hidden');
+        bg.classList.remove('visible-dark');
+        bg.classList.add('hidden-dark');
         text.innerHTML = "Show Video";
         isShown = false;
     } else {
-        video.style.display = 'block';
-        bg.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+        video.classList.remove('hidden');
+        video.classList.add('visible');
+        bg.classList.remove('hidden-dark');
+        bg.classList.add('visible-dark');
         text.innerHTML = "Hide Video";
         isShown = true;
     }
