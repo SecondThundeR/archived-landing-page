@@ -2,10 +2,10 @@
     Rules for every mode and device
 */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
 
 * {
     color: white;
-    font-family: Ubuntu, sans-serif;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
@@ -138,11 +138,13 @@ html {
 }
 
 h1 {
+    font-family: 'Ubuntu', sans-serif;
     cursor: default;
 }
 
 #typing p {
     color: rgba(255, 255, 255, 0.5);
+    font-family: 'Ubuntu Mono', monospace;
     cursor: default;
     width: fit-content;
     margin: 0 auto;
@@ -164,6 +166,7 @@ h1 {
 }
 
 button {
+    font-family: 'Ubuntu Mono', monospace;
     outline: none;
     background-color: transparent;
     border: 3px solid white;
@@ -189,6 +192,7 @@ button:hover {
 */
 @media (min-height: 860px) and (orientation: portrait){
     h1 {
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 48px;
     }
@@ -228,6 +232,7 @@ button:hover {
 */
 @media (max-height: 850px) and (orientation: portrait) {
     h1 {
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 36px;
     }
@@ -266,6 +271,7 @@ button:hover {
 */
 @media (min-width: 840px) and (orientation: landscape){
     h1 {
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 48px;
     }
@@ -304,6 +310,7 @@ button:hover {
 */
 @media (max-width: 830px) and (orientation: landscape){
     h1 {
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 32px;
     }
@@ -334,6 +341,7 @@ button:hover {
 */
 @media (max-width: 340px) and (orientation: portrait){
     h1 {
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
         font-size: 32px;
     }
