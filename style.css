@@ -201,7 +201,6 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-        align-self: center;
         -webkit-transition: all .5s ease-out;
         -moz-transition: all .5s ease-out;
         -o-transition: all .5s ease-out;
