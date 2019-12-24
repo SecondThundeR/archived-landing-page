@@ -18,10 +18,6 @@
     -ms-user-select: none;
     user-select: none;
 }
-    
-head {
-    display: none;
-}
 
 #videobcg {
     position: absolute;
@@ -58,7 +54,6 @@ head {
 }
     
 body {
-    position: relative;
     overflow: hidden;
     background: linear-gradient(312deg, #009245, #00A8C5, #D74177);
     background-size: 600% 600%;
