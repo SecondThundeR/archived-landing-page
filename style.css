@@ -161,8 +161,68 @@ h1 {
 }
 
 #wrap {
-    border-right: 0.06em solid #fff; 
-    animation: blinking 1s steps(1) infinite;
+    border-right: 0.05em solid #fff; 
+    animation: blinking 1.5s steps(1) infinite;
+}
+
+@-webkit-keyframes blinking {
+    0%  {
+        color: #fff;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+@-moz-keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@-o-keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@-ms-keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@keyframes blinking {
+    0%  {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
 }
 
 button {
