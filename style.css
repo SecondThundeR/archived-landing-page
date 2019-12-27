@@ -54,6 +54,7 @@
 }
     
 body {
+    position: relative;
     overflow: hidden;
     background: linear-gradient(312deg, #009245, #00A8C5, #D74177);
     background-size: 600% 600%;
@@ -65,6 +66,10 @@ body {
     animation: BgAnim 32s ease infinite;
     height: 100%;
     margin: 0;
+}
+
+head {
+    display: none;
 }
     
 @-webkit-keyframes BgAnim {
