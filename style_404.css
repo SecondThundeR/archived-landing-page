@@ -54,7 +54,7 @@ h1 {
 
     #wrap {
         border-right: 0.04em solid #000; 
-        animation: blinking 1s steps(1) infinite;
+        animation: blinking 1.5s steps(1) infinite;
     }
 
     @-webkit-keyframes blinking {
