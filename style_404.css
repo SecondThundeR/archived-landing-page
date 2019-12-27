@@ -63,7 +63,7 @@ h1 {
     }
     
     #text-btn {
-        color: rgba(16, 137, 255, 0.5);
+        color: rgb(16, 137, 255);
         font-family: 'Ubuntu Mono', monospace;
         cursor: pointer;
         width: fit-content;
@@ -112,7 +112,7 @@ h1 {
     }
     
     #text-btn {
-        color: rgba(51, 153, 255, 0.5);
+        color: rgb(51, 153, 255);
         font-family: 'Ubuntu Mono', monospace;
         cursor: pointer;
         width: fit-content;
