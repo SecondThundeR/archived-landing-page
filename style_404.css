@@ -17,6 +17,7 @@
     }
         
     body {
+        position: relative;
         overflow: hidden;
         background-color: white;
         height: 100%;
@@ -26,6 +27,10 @@
     html {
         height: 100%;
         overflow: hidden;
+    }
+
+    head {
+        display: none;
     }
     
     h1 {
@@ -83,6 +88,7 @@
     }
         
     body {
+        position: relative;
         overflow: hidden;
         background-color: #242424;
         height: 100%;
@@ -92,6 +98,10 @@
     html {
         height: 100%;
         overflow: hidden;
+    }
+
+    head {
+        display: none;
     }
     
     h1 {
