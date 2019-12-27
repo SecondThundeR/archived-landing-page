@@ -7,10 +7,6 @@
 @media (prefers-color-scheme: light) {
     * {
         color: black;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
         text-rendering: optimizeLegibility;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -64,7 +60,7 @@
     #text-btn {
         color: rgba(16, 137, 255, 0.5);
         font-family: 'Ubuntu Mono', monospace;
-        cursor: default;
+        cursor: pointer;
         width: fit-content;
         margin: 0 auto;
     }
@@ -130,7 +126,7 @@
     #text-btn {
         color: rgba(51, 153, 255, 0.5);
         font-family: 'Ubuntu Mono', monospace;
-        cursor: default;
+        cursor: pointer;
         width: fit-content;
         margin: 0 auto;
     }
