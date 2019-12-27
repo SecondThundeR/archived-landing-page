@@ -1,0 +1,137 @@
+/*
+    Rules for every mode and device
+*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
+
+@media (prefers-color-scheme: light) {
+    * {
+        color: black;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        text-rendering: optimizeLegibility;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+        
+    body {
+        overflow: hidden;
+        background-color: white;
+        height: 100%;
+        margin: 0;
+    }
+    
+    html {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 3.5rem;
+        font-weight: bold;
+        cursor: default;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #flex-container {
+        display: flex;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #text {
+        color: black;
+        font-family: 'Ubuntu Mono', monospace;
+        cursor: default;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+    
+    #text-btn {
+        color: rgba(16, 137, 255, 0.5);
+        font-family: 'Ubuntu Mono', monospace;
+        cursor: default;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        text-rendering: optimizeLegibility;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+        
+    body {
+        overflow: hidden;
+        background-color: #242424;
+        height: 100%;
+        margin: 0;
+    }
+    
+    html {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    h1 {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 3.5rem;
+        font-weight: bold;
+        cursor: default;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #flex-container {
+        display: flex;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #text {
+        color: white;
+        font-family: 'Ubuntu Mono', monospace;
+        cursor: default;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+    
+    #text-btn {
+        color: rgba(51, 153, 255, 0.5);
+        font-family: 'Ubuntu Mono', monospace;
+        cursor: default;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
