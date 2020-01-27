@@ -1,7 +1,5 @@
-/*
-    Rules for every mode and device
-*/
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+/* Rules for every mode and device */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
 
 * {
@@ -39,8 +37,8 @@
     transition: all .5s ease-out;
     overflow: hidden;
     z-index: -100;
-    filter: blur(12px);
-    -webkit-filter: blur(12px);
+    filter: blur(36px);
+    -webkit-filter: blur(36px);
 }
 
 #videobcg.visible {
@@ -52,11 +50,59 @@
     visibility: hidden;
     opacity: 0;
 }
-    
+
+#typing {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+
+#typing.visible-dark {
+    background-color: rgba(0,0,0,0.6);
+}
+
+#typing.hidden-dark {
+    background-color: rgba(0,0,0,0.35);
+}
+
+#typing-text {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%
+}
+
+.buttons-block {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+head {
+    display: none;
+}
+
 body {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(312deg, #009245, #00A8C5, #D74177);
+    background: linear-gradient(312deg, #2d132c, #3282b8, #b030b0, #341677);
     background-size: 600% 600%;
     background-repeat: no-repeat;
     -webkit-animation: BgAnim 32s ease infinite;
@@ -65,13 +111,74 @@ body {
     -ms-animation: BgAnim 32s ease infinite;
     animation: BgAnim 32s ease infinite;
     height: 100%;
-    margin: 0;
 }
 
-head {
-    display: none;
+html {
+    height: 100%;
+    overflow: hidden;
 }
-    
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    cursor: default;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Ubuntu Mono', monospace;
+    cursor: default;
+    width: fit-content;
+    margin: 0px;
+}
+
+p.upper-headline {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0px;
+    margin-bottom: 0px;
+    color: rgb(255, 88, 88);
+}
+
+.wrap {
+    border-right: 0.05em solid #fff; 
+    animation: blinking 1.5s steps(1) infinite;
+}
+
+.avatar {
+    background-image: url(assets/avatar.jpg);
+    background-position: center;
+    background-size: 145%;
+    background-repeat: no-repeat;
+    margin: 0px;
+    border-radius: 100%;
+    border: 12px solid white;
+    display: inline-block;
+}
+
+button {
+    font-family: 'Ubuntu Mono', monospace;
+    outline: none;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 16px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    padding: 16px;
+    margin: 4px;
+}
+
+button:hover {
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
 @-webkit-keyframes BgAnim {
     0% {
         background-position:2% 0%;
@@ -130,39 +237,6 @@ head {
     100% {
         background-position:2% 0%;
     }
-}
-
-html {
-    height: 100%;
-    overflow: hidden;
-}
-
-h1 {
-    font-family: 'Ubuntu', sans-serif;
-    cursor: default;
-}
-
-#typing p {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: 'Ubuntu Mono', monospace;
-    cursor: default;
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
-#typing.visible-dark {
-    background-color: rgba(0,0,0,0.4);
-}
-
-#typing.hidden-dark {
-    background-color: rgba(0,0,0,0.0);
-}
-
-#wrap {
-    border-right: 0.05em solid #fff; 
-    animation: blinking 1.5s steps(1) infinite;
 }
 
 @-webkit-keyframes blinking {
@@ -225,64 +299,43 @@ h1 {
     }
 }
 
-button {
-    font-family: 'Ubuntu Mono', monospace;
-    outline: none;
-    background-color: transparent;
-    border: 3px solid white;
-    border-radius: 12px;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -ms-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    font-size: 18px;
-    padding: 16px;
-    margin: 4px;
-}
+/*
+    Rules for tablets and PC's in landscape
+*/
+@media (min-width: 840px) and (orientation: landscape) {
+    h1 {
+        font-size: 48px;
+        margin-top: 8px;
+        margin-bottom: 32px;
+    }
 
-button:hover {
-    outline: none;
-    background-color: white;
-    color: black;
+    #typing {
+        border: solid 24px white;
+    }
+    
+    .avatar {
+        height: 192px;
+        width: 192px;
+    }
 }
 
 /*
     Rules for tablets and PC's in portrait
 */
-@media (min-height: 860px) and (orientation: portrait){
+@media (min-height: 860px) and (orientation: portrait) {
     h1 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
         font-size: 48px;
+        margin-top: 8px;
+        margin-bottom: 32px;
     }
 
     #typing {
-        display: flex;
-        border: solid 24px white;
-        box-sizing: border-box;
-        height: 100%;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        -webkit-transition: all .5s ease-out;
-        -moz-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        -ms-transition: all .5s ease-out;
-        transition: all .5s ease-out;
+        border: solid 12px white;
     }
-        
-    #avatar {
-        background-image: url(assets/avatar.jpg);
-        background-position: 50% 10%;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 128px;
-        width: 128px;
-        border-radius: 100%;
-        border: 6px solid white;
-        display: inline-block;
+
+    .avatar {
+        height: 192px;
+        width: 192px;
     }
 }
 
@@ -291,137 +344,87 @@ button:hover {
 */
 @media (max-height: 850px) and (orientation: portrait) {
     h1 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
         font-size: 36px;
+        margin-top: 8px;
+        margin-bottom: 24px;
     }
 
     #typing {
-        display: flex;
         border: solid 12px white;
-        box-sizing: border-box;
-        height: 100%;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        -webkit-transition: all .5s ease-out;
-        -moz-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        -ms-transition: all .5s ease-out;
-        transition: all .5s ease-out;
     }
 
-    #avatar {
-        background-image: url(assets/avatar.jpg);
-        background-position: 50% 10%;
-        background-size: 100%;
-        background-repeat: no-repeat;
+    .buttons-block {
+        margin-top: 24px;
+    }
+
+    .avatar {
         height: 128px;
         width: 128px;
-        border-radius: 100%;
-        border: 6px solid white;
-        display: inline-block;
-    }
-}
-
-/*
-    Rules for tablets and PC's in landscape
-*/
-@media (min-width: 840px) and (orientation: landscape){
-    h1 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
-        font-size: 48px;
-    }
-
-    #typing {
-        display: flex;
-        border: solid 24px white;
-        box-sizing: border-box;
-        height: 100%;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        -webkit-transition: all .5s ease-out;
-        -moz-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        -ms-transition: all .5s ease-out;
-        transition: all .5s ease-out;
-    }
-        
-    #avatar {
-        background-image: url(assets/avatar.jpg);
-        background-position: 50% 10%;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 128px;
-        width: 128px;
-        border-radius: 100%;
-        border: 6px solid white;
-        display: inline-block;
     }
 }
 
 /*
     Rules for regular phones landscape
 */
-@media (max-width: 830px) and (orientation: landscape){
+@media (max-width: 830px) and (orientation: landscape) {
     h1 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
-        font-size: 32px;
+        font-size: 36px;
+        margin-top: 8px;
+        margin-bottom: 12px;
     }
 
     #typing {
-        display: flex;
         border: solid 12px white;
-        box-sizing: border-box;
-        height: 100%;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        -webkit-transition: all .5s ease-out;
-        -moz-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        -ms-transition: all .5s ease-out;
-        transition: all .5s ease-out;
+    }
+
+    .buttons-block {
+        margin-top: 12px;
     }
         
-    #avatar {
+    .avatar {
         display: none;
     }
 }
 
 /*
-    Special rule for portrait mode for small phones (e.g. iPhone 5S/SE and others)
+    Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
 */
-@media (max-width: 340px) and (orientation: portrait){
+@media (max-width: 340px) and (orientation: portrait) {
     h1 {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
         font-size: 32px;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
 
     #typing {
-        display: flex;
         border: solid 12px white;
-        box-sizing: border-box;
-        height: 100%;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        -webkit-transition: all .5s ease-out;
-        -moz-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        -ms-transition: all .5s ease-out;
-        transition: all .5s ease-out;
+    }
+
+    .buttons-block {
+        margin-top: 8px;
     }
         
-    #avatar {
+    .avatar {
+        display: none;
+    }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+    h1 {
+        font-size: 32px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    #typing {
+        border: solid 12px white;
+    }
+
+    .buttons-block {
+        margin-top: 8px;
+    }
+        
+    .avatar {
         display: none;
     }
 }

@@ -4,19 +4,29 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
 
-#flex-container {
-    display: flex;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-html {
+html, body{
     height: 100%;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    background-color: #242424;
+    height: 100%;
+    margin: 0;
 }
 
 head {
@@ -32,220 +42,173 @@ h1 {
     padding: 0px;
 }
 
+#text {
+    color: black;
+    font-family: 'Ubuntu Mono', monospace;
+    cursor: default;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.flex-container {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-btn {
+    color: rgb(51, 153, 255);
+    font-family: 'Ubuntu Mono', monospace;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.sad-icon {
+    background-image: url(assets/icons/sad-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    margin: 36px;
+    height: 192px;
+    width: 192px;
+    border-radius: 100%;
+    display: inline-block;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#wrap {
+    color: rgb(16, 137, 255);
+    animation: blinking 1.5s steps(1) infinite;
+}
+
+@-webkit-keyframes blinking {
+    0%  {
+        border-color: rgb(16, 137, 255);
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        border-color: rgb(16, 137, 255);
+    }
+}
+
+@-moz-keyframes blinking {
+    0%  {
+        border-color: rgb(16, 137, 255);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: rgb(16, 137, 255);
+    }
+}
+
+@-o-keyframes blinking {
+    0%  {
+        border-color: rgb(16, 137, 255);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: rgb(16, 137, 255);
+    }
+}
+
+@-ms-keyframes blinking {
+    0%  {
+        border-color: rgb(16, 137, 255);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: rgb(16, 137, 255);
+    }
+}
+
+@keyframes blinking {
+    0%  {
+        border-color: rgb(16, 137, 255);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: rgb(16, 137, 255);
+    }
+}
+
 @media (prefers-color-scheme: light) {
     * {
         color: black;
-        text-rendering: optimizeLegibility;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+    }
+
+    .sad-icon {
+        background-color: #fff;
     }
         
     body {
-        position: relative;
-        overflow: hidden;
         background-color: white;
-        height: 100%;
-        margin: 0;
     }
 
     #wrap {
         border-right: 0.04em solid #000; 
-        animation: blinking 1.5s steps(1) infinite;
-    }
-
-    @-webkit-keyframes blinking {
-        0%  {
-            color: #fff;
-        }
-        50% {
-            color: transparent;
-        }
-        100% {
-            color: #fff;
-        }
-    }
-    
-    @-moz-keyframes blinking {
-        0%  {
-            border-color: #000;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #000;
-        }
-    }
-    
-    @-o-keyframes blinking {
-        0%  {
-            border-color: #000;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #000;
-        }
-    }
-    
-    @-ms-keyframes blinking {
-        0%  {
-            border-color: #000;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #000;
-        }
-    }
-    
-    @keyframes blinking {
-        0%  {
-            border-color: #000;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #000;
-        }
     }
     
     #text {
         color: black;
-        font-family: 'Ubuntu Mono', monospace;
-        cursor: default;
-        width: fit-content;
-        margin: 0 auto;
-        margin-top: 8px;
-        margin-bottom: 12px;
-    }
-    
-    #text-btn {
-        color: rgb(16, 137, 255);
-        font-family: 'Ubuntu Mono', monospace;
-        cursor: pointer;
-        width: fit-content;
-        margin: 0 auto;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     * {
         color: white;
-        text-rendering: optimizeLegibility;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+    }
+
+    .sad-icon {
+        background-color: #333;
     }
         
     body {
-        position: relative;
-        overflow: hidden;
         background-color: #242424;
-        height: 100%;
-        margin: 0;
     }
 
     #wrap {
         border-right: 0.04em solid #fff; 
-        animation: blinking 1.5s steps(1) infinite;
-    }
-
-    @-webkit-keyframes blinking {
-        0%  {
-            color: #fff;
-        }
-        50% {
-            color: transparent;
-        }
-        100% {
-            color: #fff;
-        }
-    }
-    
-    @-moz-keyframes blinking {
-        0%  {
-            border-color: #fff;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #fff;
-        }
-    }
-    
-    @-o-keyframes blinking {
-        0%  {
-            border-color: #fff;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #fff;
-        }
-    }
-    
-    @-ms-keyframes blinking {
-        0%  {
-            border-color: #fff;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #fff;
-        }
-    }
-    
-    @keyframes blinking {
-        0%  {
-            border-color: #fff;
-        }
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: #fff;
-        }
-    }
-    
-    #flex-container {
-        display: flex;
-        box-sizing: border-box;
-        height: 100%;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
     
     #text {
         color: white;
-        font-family: 'Ubuntu Mono', monospace;
-        cursor: default;
-        width: fit-content;
-        margin: 0 auto;
-        margin-top: 8px;
-        margin-bottom: 12px;
     }
-    
-    #text-btn {
-        color: rgb(51, 153, 255);
-        font-family: 'Ubuntu Mono', monospace;
-        cursor: pointer;
-        width: fit-content;
-        margin: 0 auto;
+}
+
+@media (max-width: 830px) and (orientation: landscape) {
+    h1 {
+        font-size: 3rem;
+    }
+    .sad-icon {
+        height: 144px;
+        width: 144px;
+    }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .sad-icon {
+        display: none;
     }
 }

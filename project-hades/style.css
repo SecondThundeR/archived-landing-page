@@ -1,0 +1,657 @@
+/* Importing Ubuntu Font */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
+
+/* Hiding Scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 
+    Flickity Rules
+    75% width of carousel
+*/
+.main-carousel {
+    width: 100%;
+}
+
+/* Hiding carousel side buttons */
+.flickity-button {
+    display: none;
+}
+
+/* Rules for carousel cell */
+.carousel-cell {
+    display: block;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 370px;
+    margin: 24px;
+}
+
+/* Rules for inactive circles */
+.flickity-page-dots .dot {
+    background: transparent !important;
+    border: 2px solid rgb(255, 88, 88) !important;
+}
+
+/* Fill for active circles */
+.flickity-page-dots .dot.is-selected {
+    background: rgb(255, 88, 88) !important;
+}
+
+/* Some rules for dots padding */
+.flickity-page-dots {
+    bottom: 0px !important;
+}
+
+/* Set border-box, margin and padding 0px, Ubuntu Font for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Set max height for blocks */
+html, body {
+    height: 100%;
+}
+
+/*  
+    Header items
+    ----------------------
+    Rules for header <div>
+*/
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 10%;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Set transition for links via <a> */
+a {
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* Link rule (as h2) */
+a.invert {
+    font-weight: 700;
+    margin: 16px;
+    font-size: 28px;
+}
+
+/* Rule for invert class */
+a.invert:hover {
+    color: rgb(255, 88, 88);
+}
+
+/* Color on hover links via <a> */
+a:hover {
+    color: rgb(255, 88, 88);
+}
+
+/* Rules for <li> */
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* Rules for inactive "decorating" word */
+a.decor {
+    color: rgb(255, 88, 88);
+    cursor: default;
+}
+
+li.decor {
+    color: rgb(255, 88, 88);
+    cursor: default;
+}
+
+
+/* 
+    Container Styles
+    ----------------------
+    Rules for main blocks (flexbox containers)
+*/
+.flexbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+}
+
+/* Special height for landing block */
+.flexbox-container.landing-block {
+    height: 90%;
+}
+
+/* Rules for row direction blocks */
+.row-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rules for footer block */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Rules for header */
+header {
+    height: 10%;
+    width: 100%
+}
+
+/* 
+    Element Styles
+    ----------------------
+    Rules for logo image
+*/
+.logo {
+    background-image: url(assets/cons-icons/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 16px;
+    height: 192px;
+    width: 192px;
+    border-radius: 100%;
+    display: inline-block;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+}
+
+/* Rules for svg icons */
+.icon {
+    height: 144px;
+    width: 144px;
+    background-size: cover;
+    display: inline-block;
+    margin: 16px;
+}
+
+/* Paths for svg icons */
+.icon-puzzle {
+    background-image: url(assets/cons-icons/puzzle-outline.svg);
+    background-repeat: no-repeat;
+}
+
+.icon-box {
+    background-image: url(assets/cons-icons/drawing-box.svg);
+    background-repeat: no-repeat;
+}
+
+.icon-emote {
+    background-image: url(assets/cons-icons/emoticon-happy-outline.svg);
+    background-repeat: no-repeat;
+}
+
+/* Rules for <h1> */
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: rgba(255, 88, 88, 0.87);
+}
+
+/* Rules for <h2> */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* Rules for <p> */
+p {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+/* Rules for avatar */
+.avatar {
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+    border: 4px solid rgb(255, 88, 88);
+    background-image: url(assets/avatar.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+/* Rules for buttons */
+button {
+    outline: none;
+    padding: 9px 25px;
+    margin-left: 20px;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in 0s;
+    margin: 12px;
+}
+
+/* Rule for disabled buttons */
+button:disabled {
+    cursor: default;
+}
+
+/* Rules for hovering over buttons */
+button.active:hover {
+    color: white;
+    border: 2px solid rgb(255, 88, 88);
+    background-color: rgb(255, 88, 88);
+}
+
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+    /* Setting white blocks (Landing Block, Screenshot Block, Footer) */
+    body {
+        background-color: white;
+    }
+
+    /* Setting dark blocks (Uniqueness Block, FAQ Block) */
+    .flexbox-container.uniqueness-block, .flexbox-container.faq-block {
+        background-color: #232020;
+    }
+
+    /* Setting black text for <li>, <a>, <button> */
+    li, a, button {
+        color: black;
+    }
+    
+    /* Setting white text for <a> on dark blocks */
+    a.invert {
+        color: white;
+    }
+
+    /* Setting black border for buttons */
+    button {
+        border: 2px solid black;
+    }
+
+    /* Setting rules for disabled buttons */
+    button:disabled {
+        color: rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    /* Setting white background of logo */
+    .logo {
+        background-color: #fff;
+    }
+
+    /* Setting light and dark rules for text for this theme */
+    h2.dark {
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    h2.light {
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    p.dark {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    
+    p.light {
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    /* Setting dark blocks (Landing Block, Screenshot Block, Footer) */
+    body {
+        background-color: #232020;
+    }
+
+    /* Setting white blocks (Uniqueness Block, FAQ Block) */
+    .flexbox-container.uniqueness-block, .flexbox-container.faq-block {
+        background-color: white;
+    }
+
+    /* Setting white text for <li>, <a>, <button> */
+    li, a, button {
+        color: white;
+    }
+        
+    /* Setting black text for <a> on light blocks */
+    a.invert {
+        color: black;
+    }
+
+    /* Setting white border for buttons */
+    button {
+        border: 2px solid white;
+    }
+
+    /* Setting rules for disabled buttons */
+    button:disabled {
+        color: rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Setting dark background of logo */
+    .logo {
+        background-color: #333;
+    }
+
+    /* Setting light and dark rules for text for this theme */
+    h2.dark {
+        color: rgba(0, 0, 0, 0.87);
+    }
+    
+    h2.light {
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    p.dark {
+        color: rgba(0, 0, 0, 0.4);
+    }
+    
+    p.light {
+        color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Rules for tablets and PC's in portrait */
+@media (max-width: 530px) and (orientation: portrait) {
+    /* Hiding avatar */
+    .avatar {
+        display: none;
+    }
+
+    /* Changing flex-end to center */
+    header {
+        justify-content: center;
+    }
+}
+
+/* Phone Rules (Portrait) */
+@media (max-height: 850px) and (orientation: portrait) {
+    /* Adding more side paddings */
+    .flexbox-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* Changing header and landing block height */
+    header {
+        height: 13%;
+    }
+
+    .flexbox-container.landing-block {
+        height: 87%;
+    }
+
+    /* Disabling avatar in header */
+    .avatar {
+        display: none;
+    }
+
+    /* Changing icon size */
+    .icon {
+        height: 96px;
+        width: 96px;
+        margin: 0;
+    }
+
+    /* Special text rules */
+    h1 {
+        font-size: 28px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li, a, button {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    a.invert {
+        font-size: 24px;
+    }
+
+    li.decor {
+        padding-top: 4px;
+    }
+
+    /* Setting special height for cell of carousel div */
+    .carousel-cell {
+        height: 270px;
+    }
+}
+
+/* Phone Rules (Landscape) */
+@media (max-width: 830px) and (orientation: landscape) {
+    /* Removing header (For some time) */
+    header {
+        display: none;
+    }
+
+    /* Setting full height for landing block */
+    .flexbox-container.landing-block {
+        height: 100%;
+    }
+
+    /* Setting height 25% for footer */
+    .footer {
+        height: 25%;
+    }
+
+    /* Setting smaller logo and icon size */
+    .logo {
+        height: 160px;
+        width: 160px;
+    }
+
+    .icon {
+        height: 96px;
+        width: 96px;
+        margin: 0;
+    }
+    
+    /* Special text rules */
+    h1 {
+        font-size: 28px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+
+    li, a, button {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    a.invert {
+        font-size: 24px;
+    }
+
+    li.decor {
+        padding-top: 4px;
+    }
+
+    /* Setting special height for cell of carousel div */
+    .carousel-cell {
+        height: 225px;
+    }
+}
+
+/* Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others) */
+@media (max-width: 340px) and (orientation: portrait) {
+    /* Setting 15% height of header and 85% of landing block */    
+    header {
+        height: 15%;
+    }
+
+    .flexbox-container.landing-block {
+        height: 85%;
+    }
+
+    /* Setting 25% height of footer */    
+    .footer {
+        height: 25%;
+    }
+
+    /* Hiding avatar */
+    .avatar {
+        display: none;
+    }
+
+    /* Setting special buttons padding */
+    button {
+        padding: 8px 16px;
+    }
+
+    /* Setting smaller logo and icon size */
+    .logo {
+        height: 144px;
+        width: 144px;
+    }
+
+    .icon {
+        height: 96px;
+        width: 96px;
+        margin: 0;
+    }
+
+    /* Special text rules */    
+    h1 {
+        font-size: 28px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    li, a, button {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    a.invert {
+        font-size: 24px;
+    }
+
+    li.decor {
+        padding-top: 4px;
+    }
+
+    /* Setting special height for cell of carousel div */    
+    .carousel-cell {
+        height: 260px;
+    }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+    /* Removing header, setting full height of landing block, setting 30% height of footer */    
+    header {
+        display: none;
+    }
+
+    .flexbox-container.landing-block {
+        height: 100%;
+    }
+
+    .footer {
+        height: 30%;
+    }
+
+    /* Setting special buttons padding */
+    button {
+        padding: 8px 16px;
+    }
+
+    /* Setting smaller logo size and removing icon */
+    .logo {
+        height: 128px;
+        width: 128px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    /* Special text rules */ 
+    h1 {
+        font-size: 28px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li, a, button {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    li.decor {
+        padding-top: 4px;
+    }
+    
+    a.invert {
+        font-size: 24px;
+    }
+
+    /* Setting special height for cell of carousel div */    
+    .carousel-cell {
+        height: 150px;
+    }
+}

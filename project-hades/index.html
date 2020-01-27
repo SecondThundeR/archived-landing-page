@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Declaring English for this page -->
+<html lang="en">
+    <head>
+        <!-- Set UTF-8 for text -->
+        <meta charset="UTF-8">
+        <!-- Declaring important rule for mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Declaring site favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#ff6464">
+        <link rel="shortcut icon" href="/favicons/favicon.ico">
+        <meta name="apple-mobile-web-app-title" content="Project Hades">
+        <meta name="application-name" content="Project Hades">
+        <meta name="msapplication-TileColor" content="#ff6464">
+        <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Initializating own styles + flickity library styles and scripts -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="flickity/flickity.css" media="screen">
+        <script src="flickity/flickity.js"></script>
+        <!-- Declaring title -->
+        <title>Project Hades</title>
+    </head>
+    <body>
+        <!-- Setting header for site -->
+        <header>
+            <!-- Adding avatar of account -->
+            <span class="avatar"></span>
+            <!-- Adding link for home and text to display presence on this page  -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="decor">Project Hades</li>
+                </ul>
+            </nav>
+            <!-- Adding button for Github Repo of Project Hades-->
+            <a href="https://github.com/SecondThundeR/project-hades"><button class="active">Github</button></a>
+        </header>
+        <!--
+            Adding flexbox containers (Full Height Blocks)
+            ----------------------
+            Adding elements for landing-block
+        -->
+        <div class="flexbox-container landing-block">
+            <div>
+                <!-- Adding title of project -->
+                <h1>Project Hades</h1>
+                <!-- Adding logo of project-->
+                <span class="logo"></span>
+                <!-- Adding description of project with link on me -->
+                <p class="light">Design project of messenger app from <a href="https://github.com/SecondThundeR">SecondThundeR</a><br>
+                Project Hades combines minimalistic and beautiful interface</p>
+            </div>
+        </div>
+        <!-- Adding elements for uniqueness-block -->
+        <div class="flexbox-container uniqueness-block">
+            <!-- Adding title of block -->
+            <h1>What is unique about this project?</h1>
+            <!-- Adding flickity carousel -->
+            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+                <!-- Adding flickity carousel content -->
+                <div class="carousel-cell">
+                    <!-- Adding title of block item -->
+                    <h2 class="dark">Simplicity</h2>
+                    <!-- Adding icon of block item -->
+                    <span class="icon icon-puzzle"></span>
+                    <!-- Adding desc of block item -->
+                    <p class="dark">Project Hades is aimed at simplicity of elements and competent use of free screen space</p>
+                </div>
+                <div class="carousel-cell">
+                    <!-- Adding title of block item -->
+                    <h2 class="dark">Minimalism</h2>
+                    <!-- Adding icon of block item -->
+                    <span class="icon icon-box"></span>
+                    <!-- Adding desc of block item -->
+                    <p class="dark">No extra components or elements. Everything you need from the app and nothing more</p>
+                </div>
+                <div class="carousel-cell">
+                    <!-- Adding title of block item -->
+                    <h2 class="dark">Friendly UX</h2>
+                    <!-- Adding icon of block item -->
+                    <span class="icon icon-emote"></span>
+                    <!-- Adding desc of block item -->
+                 <p class="dark">Ease of use and learning is the principle and main ideology of the Project Hades</p>
+                </div>
+            </div>
+        </div>
+        <!-- Adding elements for buttons to screenshot page block -->
+        <div class="flexbox-container buttons-block">
+            <!-- Adding title of block -->
+            <h1>Screenshots</h1>
+            <!-- Adding row-block for buttons -->
+            <div class="row-block">
+                <!-- <button class="active" onclick="window.location.href='screenshots-page/start-screens/index.html'">Start Screens</button> -->
+                <button disabled>Start Screens (Page in development)</button>
+                <button disabled>Support Screens (Soon)</button>
+                <button disabled>Main Screens (Soon)</button>
+                <button disabled>Chat Screens (Soon)</button>
+            </div>
+        </div>
+        <!-- Adding elements for faq-block -->
+        <div class="flexbox-container faq-block">
+            <!-- Adding title of block -->
+            <h1>FAQ</h1>
+            <!-- Adding links to README anchors -->
+            <a class="invert" href="https://github.com/SecondThundeR/Project-Hades/blob/master/README.md#what-tools-were-used-to-create-this">What tools were used to create this?</a>
+            <a class="invert" href="https://github.com/SecondThundeR/Project-Hades/blob/master/README.md#used-resources-in-project">What resources were used in the project?</a>
+            </div>
+        </div>
+        <!-- Adding elements for footer -->
+        <div class="footer">
+            <div>
+                <!-- Adding links to language versions and info about site -->
+                <p class="light">
+                    Site language: <a class="decor">English</a> / <a href="index-ru.html">Русский</a>
+                    <br>
+                    Created and maintained on January 27 2020 by SecondThundeR from scratch with <a>❤️</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
