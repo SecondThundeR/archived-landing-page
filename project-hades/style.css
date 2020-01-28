@@ -64,6 +64,7 @@ html, body {
     Rules for header <div>
 */
 header {
+    position: absolute;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -130,11 +131,6 @@ li.decor {
     padding-left: 16px;
     padding-right: 16px;
     flex-direction: column;
-}
-
-/* Special height for landing block */
-.flexbox-container.landing-block {
-    height: 90%;
 }
 
 /* Rules for row direction blocks */
@@ -408,10 +404,6 @@ button.active:hover {
         height: 13%;
     }
 
-    .flexbox-container.landing-block {
-        height: 87%;
-    }
-
     /* Disabling avatar in header */
     .avatar {
         display: none;
@@ -429,6 +421,10 @@ button.active:hover {
         font-size: 28px;
         margin-top: 18px;
         margin-bottom: 18px;
+    }
+
+    h1.title {
+        font-size: 36px;
     }
 
     h2 {
@@ -465,11 +461,6 @@ button.active:hover {
         display: none;
     }
 
-    /* Setting full height for landing block */
-    .flexbox-container.landing-block {
-        height: 100%;
-    }
-
     /* Setting height 25% for footer */
     .footer {
         height: 25%;
@@ -492,6 +483,10 @@ button.active:hover {
         font-size: 28px;
         margin-top: 18px;
         margin-bottom: 18px;
+    }
+
+    h1.title {
+        font-size: 36px;
     }
 
     h2 {
@@ -528,10 +523,6 @@ button.active:hover {
         height: 15%;
     }
 
-    .flexbox-container.landing-block {
-        height: 85%;
-    }
-
     /* Setting 25% height of footer */    
     .footer {
         height: 25%;
@@ -564,6 +555,10 @@ button.active:hover {
         font-size: 28px;
         margin-top: 18px;
         margin-bottom: 18px;
+    }
+
+    h1.title {
+        font-size: 32px;
     }
 
     h2 {
@@ -612,13 +607,8 @@ button.active:hover {
         padding: 8px 16px;
     }
 
-    /* Setting smaller logo size and removing icon */
-    .logo {
-        height: 128px;
-        width: 128px;
-    }
-
-    .icon {
+    /* Setting removing logo and icon */
+    .logo, .icon {
         display: none;
     }
 
@@ -627,6 +617,10 @@ button.active:hover {
         font-size: 28px;
         margin-top: 8px;
         margin-bottom: 8px;
+    }
+
+    h1.title {
+        font-size: 32px;
     }
 
     h2 {
@@ -639,7 +633,7 @@ button.active:hover {
 
     li, a, button {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     li.decor {
