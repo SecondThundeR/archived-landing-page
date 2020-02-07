@@ -1,0 +1,325 @@
+<!-- Нужны комментарии? Откройте index.html (только на английском языке) -->
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Начальные экраны</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/favicon-16x16.png">
+		<link rel="manifest" href="../../../favicons/site-second-ru.webmanifest">
+		<link rel="mask-icon" href="../../../favicons/safari-pinned-tab.svg" color="#ff6464">
+		<link rel="shortcut icon" href="../../../favicons/favicon.ico">
+		<meta name="apple-mobile-web-app-title" content="Начальные экраны">
+		<meta name="application-name" content="Начальные экраны">
+		<meta name="msapplication-TileColor" content="#ff6464">
+		<meta name="msapplication-config" content="../../../favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="../../../flickity/flickity.css" media="screen">
+		<script src="../../../flickity/flickity.js"></script>
+	</head>
+	<body>
+		<header>
+			<span class="avatar"></span>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="../../../../">Главная</a></li>
+					<li class="decor">Project Hades</li>
+				</ul>
+			</nav>
+			<a href="https://github.com/SecondThundeR/project-hades"><button class="active">Github</button></a>
+		</header>
+		<div class="flexbox-container banner-block">
+			<p><a class="decor">Давайте повернём телефон!</a></p>
+			<span class="icon icon-rotate"></span>
+			<h1 class="light">Эта страница лучше смотрится в портретном режиме</h1>
+		</div>
+		<div class="flexbox-container unsupported-block">
+			<p><a class="decor">Вот незадача!</a></p>
+			<span class="icon icon-sad-icon"></span>
+			<h1 class="light">Эта страница ещё не адаптирована под ваше разрешение экрана</h1>
+		</div>
+		<div class="flexbox-container landing-block">
+			<p><a class="decor">Добро пожаловать на страницу скриншотов</a></p>
+			<h1 class="light">Скриншоты начальных экранов</h1>
+			<p><a class="text-button" href="../../../ru">Вернуться обратно на страницу проекта</a></p>
+		</div>
+		<div class="flexbox-container light-screenshots-block">
+			<h1>Светлый режим</h1>
+			<h2 class="dark">Экраны приветствия</h2>
+			<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr"></span>
+					<p class="dark">Первый экран при запуске приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-alert"></span>
+					<p class="dark">Диалоговое окно при нажатии кнопки "Пропустить"</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-fast"></span>
+					<p class="dark">Описание быстрой работы приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-free"></span>
+					<p class="dark">Описание бесплатной работы приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-power"></span>
+					<p class="dark">Описание безлимитной и неограниченной работы с приложением</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-cloud"></span>
+					<p class="dark">Описание получения личного облака для хранения данных</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-secure"></span>
+					<p class="dark">Описание безопасной работы с приложением</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-thank"></span>
+					<p class="dark">Разработчики приносят благодарности за использование приложения :)</p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<h2 class="dark">Экраны входа</h2>
+			<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+				<div class="carousel-cell">
+					<span class="screenshot splash-scr"></span>
+					<p class="dark">Заставка при включении приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot land-scr"></span>
+					<p class="dark">Начальный лендинг приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-empty-email"></span>
+					<p class="dark">Экран входа (Почта не введена)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-email"></span>
+					<p class="dark">Экран входа (Почта введена)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-searching"></span>
+					<p class="dark">Экран поиска аккаунта по почте</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-pass-empty"></span>
+					<p class="dark">Экран входа (Аккаунт найден, Пароль не введён)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr"></span>
+					<p class="dark">Экран входа (Аккаунт найден, Пароль введён)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-loading"></span>
+					<p class="dark">Проверка пароля и вход в аккаунт</p>
+				</div>
+			</div>
+			<br>
+			<br>
+				<h2 class="dark">Многопользовательский интерфейс</h2>
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+					<div class="carousel-cell">
+						<span class="screenshot multi-jane"></span>
+						<p class="dark">Экран с прошлым аккаунтом</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot multi-jane-logout"></span>
+						<p class="dark">Диалоговое окно при нажатии кнопки "Выход из аккаунта"</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot multi-shirline"></span>
+						<p class="dark">Выбор нового аккаунта после выхода с прошлого</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot multi-sidnee"></span>
+						<p class="dark">Экран с новым добавленным аккаунтом</p>
+					</div>
+				</div>
+				<br>
+				<br>
+				<h2 class="dark">Экраны регистрации</h2>
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+					<div class="carousel-cell">
+						<span class="screenshot step-one"></span>
+						<p class="dark">Установка фотографии для аккаунта (С помощью камеры или галереи)</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-one-done"></span>
+						<p class="dark">Фотография добавлена</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-two"></span>
+						<p class="dark">Добавление имени, фамилии и юзернейма аккаунта</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-two-done"></span>
+						<p class="dark">Все данные заполнены</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-three"></span>
+						<p class="dark">Добавление почты, телефона и пароля для аккаунта</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-three-done"></span>
+						<p class="dark">Все данные заполнены (Телефон не добавлен для примера)</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-four"></span>
+						<p class="dark">Принятие условий использования</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-four-done"></span>
+						<p class="dark">Условия использования приняты. Аккаунт готов для работы</p>
+					</div>
+				</div>
+		</div>
+		<div class="flexbox-container dark-screenshots-block">
+			<h1>Тёмный режим</h1>
+			<h2 class="light">Экраны приветствия</h2>
+			<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-dark"></span>
+					<p class="light">Первый экран при запуске приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-alert-dark"></span>
+					<p class="light">Диалоговое окно при нажатии кнопки "Пропустить"</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-fast-dark"></span>
+					<p class="light">Описание быстрой работы приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-free-dark"></span>
+					<p class="light">Описание бесплатной работы приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-power-dark"></span>
+					<p class="light">Описание безлимитной и неограниченной работы с приложением</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-cloud-dark"></span>
+					<p class="light">Описание получения личного облака для хранения данных</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-secure-dark"></span>
+					<p class="light">Описание безопасной работы с приложением</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot wel-scr-thank-dark"></span>
+					<p class="light">Разработчики приносят благодарности за использование приложения :)</p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<h2 class="light">Экраны входа</h2>
+			<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+				<div class="carousel-cell">
+					<span class="screenshot splash-scr-dark"></span>
+					<p class="light">Заставка при включении приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot land-scr-dark"></span>
+					<p class="light">Начальный лендинг приложения</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-empty-email-dark"></span>
+					<p class="light">Экран входа (Почта не введена)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-email-dark"></span>
+					<p class="light">Экран входа (Почта введена)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-searching-dark"></span>
+					<p class="light">Экран поиска аккаунта по почте</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-pass-empty-dark"></span>
+					<p class="light">Экран входа (Аккаунт найден, Пароль не введён)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-dark"></span>
+					<p class="light">Экран входа (Аккаунт найден, Пароль введён)</p>
+				</div>
+				<div class="carousel-cell">
+					<span class="screenshot login-scr-loading-dark"></span>
+					<p class="light">Проверка пароля и вход в аккаунт</p>
+				</div>
+				</div>
+				<br>
+				<br>
+				<h2 class="light">Многопользовательский интерфейс</h2>
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+					<div class="carousel-cell">
+						<span class="screenshot multi-jane-dark"></span>
+						<p class="light">Экран с прошлым аккаунтом</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot multi-jane-logout-dark"></span>
+						<p class="light">Диалоговое окно при нажатии кнопки "Выход из аккаунта"</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot multi-shirline-dark"></span>
+						<p class="light">Выбор нового аккаунта после выхода с прошлого</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot multi-sidnee-dark"></span>
+						<p class="light">Экран с новым добавленным аккаунтом</p>
+					</div>
+				</div>
+				<br>
+				<br>
+				<h2 class="light">Экраны регистрации</h2>
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+					<div class="carousel-cell">
+						<span class="screenshot step-one-dark"></span>
+						<p class="light">Установка фотографии для аккаунта (С помощью камеры или галереи)</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-one-done-dark"></span>
+						<p class="light">Фотография добавлена</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-two-dark"></span>
+						<p class="light">Добавление имени, фамилии и юзернейма аккаунта</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-two-done-dark"></span>
+						<p class="light">Все данные заполнены</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-three-dark"></span>
+						<p class="light">Добавление почты, телефона и пароля для аккаунта</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-three-done-dark"></span>
+						<p class="light">Все данные заполнены (Телефон не добавлен для примера)</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-four-dark"></span>
+						<p class="light">Принятие условий использования</p>
+					</div>
+					<div class="carousel-cell">
+						<span class="screenshot step-four-done-dark"></span>
+						<p class="light">Условия использования приняты. Аккаунт готов для работы</p>
+					</div>
+				</div>
+				</div>
+			<div class="footer">
+					<div>
+							<p class="dark">
+								Язык сайта: <a class="invert" href="../">English</a> / <a class="decor">Русский</a>
+								<br>
+								Создан и поддерживается 27 января 2020 года пользователем SecondThundeR с нуля и с <a>❤️</a>
+							</p>
+					</div>
+			</div>
+	</body>
+</html>
