@@ -142,7 +142,7 @@ p.upper-headline {
 }
 
 .wrap {
-    border-right: 0.05em solid #fff; 
+    border-right: 0.05em solid #fff;
     animation: blinking 1.5s steps(1) infinite;
 }
 
@@ -312,7 +312,7 @@ button:hover {
     #typing {
         border: solid 24px white;
     }
-    
+
     .avatar {
         height: 192px;
         width: 192px;
@@ -380,7 +380,7 @@ button:hover {
     .buttons-block {
         margin-top: 12px;
     }
-        
+
     .avatar {
         display: none;
     }
@@ -403,7 +403,7 @@ button:hover {
     .buttons-block {
         margin-top: 8px;
     }
-        
+
     .avatar {
         display: none;
     }
@@ -423,7 +423,7 @@ button:hover {
     .buttons-block {
         margin-top: 8px;
     }
-        
+
     .avatar {
         display: none;
     }
