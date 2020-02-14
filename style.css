@@ -19,8 +19,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 110%;
+    min-height: 110%;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
@@ -54,6 +54,7 @@
     text-align: center;
     flex-direction: column;
     height: 100%;
+    padding: 16px;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
@@ -157,7 +158,7 @@ a:hover {
     background-image: url(assets/avatar.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    border: 12px solid #ff5858;
+    border: 8px solid #ff5858;
     border-radius: 100%;
 }
 
@@ -313,8 +314,8 @@ button:hover {
         font-size: 48px;
     }
 
-    #typing {
-        border: solid 24px white;
+    .buttons-block {
+        width: 50%;
     }
 
     .avatar {
@@ -333,11 +334,12 @@ button:hover {
         font-size: 48px;
     }
 
-    #typing {
-        border: solid 12px white;
+    .buttons-block {
+        width: 50%;
     }
 
     .avatar {
+        border: 6px solid #ff5858;
         width: 192px;
         height: 192px;
     }
@@ -354,14 +356,16 @@ button:hover {
     }
 
     #typing {
-        border: solid 12px white;
+        padding: 12px;
     }
+
 
     .buttons-block {
         margin-top: 24px;
     }
 
     .avatar {
+        border: 6px solid #ff5858;
         width: 128px;
         height: 128px;
     }
@@ -377,11 +381,8 @@ button:hover {
         font-size: 36px;
     }
 
-    #typing {
-        border: solid 12px white;
-    }
-
     .buttons-block {
+        width: 70%;
         margin-top: 12px;
     }
 
@@ -393,7 +394,7 @@ button:hover {
 /*
     Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
 */
-@media (max-width: 340px) and (orientation: portrait) {
+@media (max-width: 360px) and (orientation: portrait) {
     h1 {
         margin-top: 8px;
         margin-bottom: 8px;
@@ -401,7 +402,16 @@ button:hover {
     }
 
     #typing {
-        border: solid 12px white;
+        padding: 12px;
+    }
+
+    button {
+        margin: 8px 2px;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 12px;
+
     }
 
     .buttons-block {
@@ -421,10 +431,20 @@ button:hover {
     }
 
     #typing {
-        border: solid 12px white;
+        padding: 12px;
+    }
+
+    button {
+        margin: 8px 2px;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 12px;
+
     }
 
     .buttons-block {
+        width: 80%;
         margin-top: 8px;
     }
 
