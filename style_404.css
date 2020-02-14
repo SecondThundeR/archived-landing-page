@@ -206,7 +206,7 @@ a:hover {
 
 @media (max-width: 830px) and (orientation: landscape) {
     h1 {
-        font-size: 3rem;
+        font-size: 48px;
     }
     .sad-icon {
         width: 144px;
@@ -216,7 +216,7 @@ a:hover {
 
 @media (max-height: 320px) and (orientation: landscape) {
     h1 {
-        font-size: 3rem;
+        font-size: 48px;
     }
 
     .sad-icon {
