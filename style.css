@@ -82,6 +82,7 @@
 }
 
 .buttons-block {
+    width: 80%;
     margin-top: 24px;
     margin-bottom: 12px;
 }
@@ -314,10 +315,6 @@ button:hover {
         font-size: 48px;
     }
 
-    .buttons-block {
-        width: 50%;
-    }
-
     .avatar {
         width: 192px;
         height: 192px;
@@ -332,10 +329,6 @@ button:hover {
         margin-top: 8px;
         margin-bottom: 32px;
         font-size: 48px;
-    }
-
-    .buttons-block {
-        width: 50%;
     }
 
     .avatar {

@@ -4,7 +4,7 @@ function showHideVideo() {
     let video = document.getElementById('videobcg');
     let bg = document.getElementById('typing');
     let text = document.getElementById('text-btn');
-    
+
     if (isShown) {
         video.classList.remove('visible');
         video.classList.add('hidden');
