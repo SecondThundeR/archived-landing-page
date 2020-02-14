@@ -1,10 +1,6 @@
-/*
-    Rules for every mode and device
-*/
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
-
 * {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
     text-rendering: optimizeLegibility;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -14,7 +10,8 @@
     user-select: none;
 }
 
-html, body{
+html,
+body{
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -34,22 +31,43 @@ head {
 }
 
 h1 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 3.5rem;
+    width: fit-content;
+    font-size: 56px;
     font-weight: bold;
     cursor: default;
-    margin: 0px;
+    margin: 0px auto;
     padding: 0px;
+}
+
+a {
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    transition-duration: .5s;
+    outline: none;
+}
+
+a:hover {
+    color: #ff6464;
 }
 
 #text {
     color: black;
-    font-family: 'Ubuntu Mono', monospace;
     cursor: default;
     width: fit-content;
     margin: 0 auto;
     margin-top: 8px;
     margin-bottom: 12px;
+}
+
+.cont-elements {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
 .flex-container {
@@ -62,90 +80,83 @@ h1 {
     text-align: center;
 }
 
-.text-btn {
-    color: rgb(51, 153, 255);
-    font-family: 'Ubuntu Mono', monospace;
-    cursor: pointer;
-    width: fit-content;
-    margin: 0 auto;
-}
-
 .sad-icon {
+    display: inline-block;
+    width: 192px;
+    height: 192px;
+    margin: 36px;
     background-image: url(assets/icons/sad-icon.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60%;
-    margin: 36px;
-    height: 192px;
-    width: 192px;
     border-radius: 100%;
-    display: inline-block;
-    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
-    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 0px 0px 30px rgba(0,0,0,.3);
+    transition: all .3s ease-in-out 0s;
 }
 
 #wrap {
-    color: rgb(16, 137, 255);
+    border-right: 3px solid #ff6464;
+    color: #ff6464;
     animation: blinking 1.5s steps(1) infinite;
 }
 
 @-webkit-keyframes blinking {
     0%  {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
     50% {
         color: transparent;
     }
     100% {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
 }
 
 @-moz-keyframes blinking {
     0%  {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
     50% {
         border-color: transparent;
     }
     100% {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
 }
 
 @-o-keyframes blinking {
     0%  {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
     50% {
         border-color: transparent;
     }
     100% {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
 }
 
 @-ms-keyframes blinking {
     0%  {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
     50% {
         border-color: transparent;
     }
     100% {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
 }
 
 @keyframes blinking {
     0%  {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
     50% {
         border-color: transparent;
     }
     100% {
-        border-color: rgb(16, 137, 255);
+        border-color: #ff6464;
     }
 }
 
@@ -154,18 +165,18 @@ h1 {
         color: black;
     }
 
+    a {
+        color: rgba(0, 0, 0, .5);
+    }
+
     .sad-icon {
         background-color: #fff;
     }
-        
+
     body {
         background-color: white;
     }
 
-    #wrap {
-        border-right: 0.04em solid #000; 
-    }
-    
     #text {
         color: black;
     }
@@ -176,18 +187,18 @@ h1 {
         color: white;
     }
 
+    a {
+        color: rgba(255, 255, 255, .5);
+    }
+
     .sad-icon {
         background-color: #333;
     }
-        
+
     body {
         background-color: #242424;
     }
 
-    #wrap {
-        border-right: 0.04em solid #fff; 
-    }
-    
     #text {
         color: white;
     }

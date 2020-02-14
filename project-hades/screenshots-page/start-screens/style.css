@@ -6,7 +6,7 @@
     display: none;
 }
 
-/* 
+/*
     Flickity Rules
     75% width of carousel
 */
@@ -62,7 +62,7 @@ html, body {
     height: 100%;
 }
 
-/*  
+/*
     Header items
     ----------------------
     Rules for header <div>
@@ -138,7 +138,7 @@ li.decor {
 }
 
 
-/* 
+/*
     Container Styles
     ----------------------
     Rules for main blocks (flexbox containers)
@@ -175,7 +175,7 @@ li.decor {
     padding-right: 16px;
 }
 
-/* 
+/*
     Element Styles
     ----------------------
     Rules for icon
@@ -194,7 +194,7 @@ li.decor {
 }
 
 .icon-sad-icon {
-    background-image: url(../../../assets/icons/sad-icon-hades.svg);
+    background-image: url(../../../assets/icons/sad-icon.svg);
     fill: black;
     background-repeat: no-repeat;
 }
@@ -211,8 +211,8 @@ li.decor {
 }
 
 /*
-    Screenshots Paths (Light) 
-    Introduction Screens 
+    Screenshots Paths (Light)
+    Introduction Screens
 */
 .wel-scr {
     background-image: url(screenshots/light/intro-screens/wel-scr.png);
@@ -330,8 +330,8 @@ li.decor {
 }
 
 /*
-    Screenshots Paths (Dark) 
-    Introduction Screens 
+    Screenshots Paths (Dark)
+    Introduction Screens
 */
 .wel-scr-dark {
     background-image: url(screenshots/dark/intro-screens/wel-scr.png);
@@ -529,7 +529,7 @@ button.active:hover {
     li, a, button {
         color: black;
     }
-    
+
     /* Setting white text for <a> on dark blocks */
     a.invert {
         color: white;
@@ -570,7 +570,7 @@ button.active:hover {
     p.dark {
         color: rgba(255, 255, 255, 0.4);
     }
-    
+
     p.light {
         color: rgba(0, 0, 0, 0.4);
     }
@@ -592,7 +592,7 @@ button.active:hover {
     li, a, button {
         color: white;
     }
-        
+
     /* Setting black text for <a> on light blocks */
     a.invert {
         color: black;
@@ -617,7 +617,7 @@ button.active:hover {
     h1.dark {
         color: rgba(0, 0, 0, 0.87);
     }
-    
+
     h1.light {
         color: rgba(255, 255, 255, 0.87);
     }
@@ -625,7 +625,7 @@ button.active:hover {
     h2.dark {
         color: rgba(0, 0, 0, 0.87);
     }
-    
+
     h2.light {
         color: rgba(255, 255, 255, 0.87);
     }
@@ -633,7 +633,7 @@ button.active:hover {
     p.dark {
         color: rgba(0, 0, 0, 0.4);
     }
-    
+
     p.light {
         color: rgba(255, 255, 255, 0.4);
     }
@@ -811,62 +811,62 @@ button.active:hover {
             padding-left: 24px;
             padding-right: 24px;
         }
-    
+
         /* Changing header and landing block height */
         header {
             height: 13%;
         }
-    
+
         .flexbox-container.light-screenshots-block, .flexbox-container.dark-screenshots-block {
             height: 450%;
         }
-    
+
         .flickity-viewport {
             height: 615px !important;
         }
-    
+
         .carousel-cell {
             height: 575px;
         }
-    
+
         .screenshot {
             background-size: 80%
         }
-    
+
         /* Disabling avatar in header */
         .avatar {
             display: none;
         }
-    
+
         /* Changing icon size */
         .icon {
             height: 96px;
             width: 96px;
             margin: 0;
         }
-    
+
         /* Special text rules */
         h1 {
             font-size: 36px;
         }
-    
+
         h2 {
             font-size: 24px;
         }
-    
+
         p {
             font-size: 15px;
         }
-    
+
         a.text-button {
             font-size: 12px;
         }
-    
+
         li, a, button {
             font-weight: 500;
             font-size: 15px;
         }
-    
+
         li.decor {
             padding-top: 4px;
         }
@@ -958,7 +958,7 @@ button.active:hover {
         width: 96px;
         margin: 0;
     }
-    
+
     /* Special text rule */
     h1 {
         font-size: 32px;
@@ -983,7 +983,7 @@ button.active:hover {
         width: 96px;
         margin: 0;
     }
-    
+
     /* Special text rule */
     h1 {
         font-size: 28px;
@@ -1008,7 +1008,7 @@ button.active:hover {
         width: 96px;
         margin: 0;
     }
-    
+
     /* Special text rule */
     h1 {
         font-size: 28px;
