@@ -1,9 +1,7 @@
-/* Rules for every mode and device */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap');
-
 * {
+    font-family: "Ubuntu", sans-serif;
     color: white;
+    text-decoration: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
@@ -21,45 +19,41 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: auto;
     min-width: 100%;
     min-height: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
     -ms-transition: all .5s ease-out;
     transition: all .5s ease-out;
     overflow: hidden;
-    z-index: -100;
-    filter: blur(36px);
-    -webkit-filter: blur(36px);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
 #videobcg.visible {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
 }
 
 #videobcg.hidden {
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
 }
 
 #typing {
     display: flex;
     box-sizing: border-box;
-    height: 100%;
-    padding: 8px;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
+    height: 100%;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
@@ -81,16 +75,18 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 100%;
-    height: 100%
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
 .buttons-block {
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: 24px;
+    margin-bottom: 12px;
 }
 
-html, body {
+html,
+body {
     margin: 0px;
     padding: 0px;
 }
@@ -101,16 +97,16 @@ head {
 
 body {
     position: relative;
-    overflow: hidden;
+    height: 100%;
     background: linear-gradient(312deg, #2d132c, #3282b8, #b030b0, #341677);
     background-size: 600% 600%;
     background-repeat: no-repeat;
+    overflow: hidden;
     -webkit-animation: BgAnim 32s ease infinite;
     -moz-animation: BgAnim 32s ease infinite;
     -o-animation: BgAnim 32s ease infinite;
     -ms-animation: BgAnim 32s ease infinite;
     animation: BgAnim 32s ease infinite;
-    height: 100%;
 }
 
 html {
@@ -119,26 +115,35 @@ html {
 }
 
 h1 {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
     cursor: default;
 }
 
 p {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: 'Ubuntu Mono', monospace;
-    cursor: default;
-    width: fit-content;
     margin: 0px;
-}
-
-p.upper-headline {
-    font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    margin: 0px;
-    margin-bottom: 0px;
-    color: rgb(255, 88, 88);
+    color: #ff5858;
+}
+
+a {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+a.typewrite {
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff5858;
 }
 
 .wrap {
@@ -147,19 +152,19 @@ p.upper-headline {
 }
 
 .avatar {
-    background-image: url(assets/avatar.jpg);
-    background-position: center;
-    background-size: 145%;
-    background-repeat: no-repeat;
-    margin: 0px;
-    border-radius: 100%;
-    border: 12px solid white;
     display: inline-block;
+    margin: 0px;
+    background-image: url(assets/avatar.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 12px solid #ff5858;
+    border-radius: 100%;
 }
 
 button {
-    font-family: 'Ubuntu Mono', monospace;
-    outline: none;
+    margin: 8px 4px;
+    padding: 18px;
+    font-size: 18px;
     background-color: transparent;
     border: 3px solid white;
     border-radius: 16px;
@@ -168,15 +173,14 @@ button {
     -o-transition-duration: 0.5s;
     -ms-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    font-size: 18px;
-    padding: 16px;
-    margin: 4px;
+    outline: none;
+
 }
 
 button:hover {
+    background-color: #ff5858;
+    border: 3px solid #ff5858;
     outline: none;
-    background-color: white;
-    color: black;
 }
 
 @-webkit-keyframes BgAnim {
@@ -304,9 +308,9 @@ button:hover {
 */
 @media (min-width: 840px) and (orientation: landscape) {
     h1 {
-        font-size: 48px;
         margin-top: 8px;
         margin-bottom: 32px;
+        font-size: 48px;
     }
 
     #typing {
@@ -314,8 +318,8 @@ button:hover {
     }
 
     .avatar {
-        height: 192px;
         width: 192px;
+        height: 192px;
     }
 }
 
@@ -324,9 +328,9 @@ button:hover {
 */
 @media (min-height: 860px) and (orientation: portrait) {
     h1 {
-        font-size: 48px;
         margin-top: 8px;
         margin-bottom: 32px;
+        font-size: 48px;
     }
 
     #typing {
@@ -334,8 +338,8 @@ button:hover {
     }
 
     .avatar {
-        height: 192px;
         width: 192px;
+        height: 192px;
     }
 }
 
@@ -344,9 +348,9 @@ button:hover {
 */
 @media (max-height: 850px) and (orientation: portrait) {
     h1 {
-        font-size: 36px;
         margin-top: 8px;
         margin-bottom: 24px;
+        font-size: 36px;
     }
 
     #typing {
@@ -358,8 +362,8 @@ button:hover {
     }
 
     .avatar {
-        height: 128px;
         width: 128px;
+        height: 128px;
     }
 }
 
@@ -368,9 +372,9 @@ button:hover {
 */
 @media (max-width: 830px) and (orientation: landscape) {
     h1 {
-        font-size: 36px;
         margin-top: 8px;
         margin-bottom: 12px;
+        font-size: 36px;
     }
 
     #typing {
@@ -391,9 +395,9 @@ button:hover {
 */
 @media (max-width: 340px) and (orientation: portrait) {
     h1 {
-        font-size: 32px;
         margin-top: 8px;
         margin-bottom: 8px;
+        font-size: 32px;
     }
 
     #typing {
@@ -411,9 +415,9 @@ button:hover {
 
 @media (max-height: 320px) and (orientation: landscape) {
     h1 {
-        font-size: 32px;
         margin-top: 8px;
         margin-bottom: 8px;
+        font-size: 32px;
     }
 
     #typing {
