@@ -82,7 +82,7 @@
 }
 
 .buttons-block {
-    width: 80%;
+    width: 60%;
     margin-top: 24px;
     margin-bottom: 12px;
 }
@@ -354,6 +354,7 @@ button:hover {
 
 
     .buttons-block {
+        width: 100%;
         margin-top: 24px;
     }
 
@@ -390,8 +391,12 @@ button:hover {
 @media (max-width: 360px) and (orientation: portrait) {
     h1 {
         margin-top: 8px;
-        margin-bottom: 8px;
-        font-size: 32px;
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    p {
+        font-weight: 400;
     }
 
     #typing {
@@ -408,11 +413,14 @@ button:hover {
     }
 
     .buttons-block {
-        margin-top: 8px;
+        margin-top: 24px;
+        margin-bottom: 12px;
     }
 
     .avatar {
-        display: none;
+        border: 6px solid #ff5858;
+        width: 144px;
+        height: 144px;
     }
 }
 
@@ -420,7 +428,7 @@ button:hover {
     h1 {
         margin-top: 8px;
         margin-bottom: 8px;
-        font-size: 32px;
+        font-size: 28px;
     }
 
     #typing {
