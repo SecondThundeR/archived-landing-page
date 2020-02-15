@@ -1,88 +1,92 @@
 <!-- Нужны комментарии? Откройте index.html (только на английском языке) -->
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
-        <link rel="manifest" href="../favicons/site.webmanifest">
-        <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#ff6464">
-        <link rel="shortcut icon" href="../favicons/favicon.ico">
-        <meta name="apple-mobile-web-app-title" content="Project Hades">
-        <meta name="application-name" content="Project Hades">
-        <meta name="msapplication-TileColor" content="#ff6464">
-        <meta name="msapplication-config" content="../favicons/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
-        <script src="../flickity/flickity.js"></script>
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="../flickity/flickity.css" media="screen">
-        <script src="../flickity/flickity.js"></script>
-        <title>Project Hades</title>
-    </head>
-    <body>
-        <header>
-            <span class="avatar"></span>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../../">Главная</a></li>
-                    <li class="decor">Project Hades</li>
-                </ul>
-            </nav>
-            <button class="active"><a href="https://github.com/SecondThundeR/project-hades">Github</a></button>
-        </header>
-        <div class="flexbox-container landing-block">
-            <div>
-                <h1>Project Hades</h1>
-                <span class="logo"></span>
-                <p class="light">Проект дизайна мессенджера от <a href="https://github.com/SecondThundeR">SecondThundeR</a><br>
-                Project Hades сочетает в себе минималистичный и красивый интерфейс</p>
-            </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../favicons/site.webmanifest">
+    <link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#ff6464">
+    <link rel="shortcut icon" href="../favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Project Hades">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Project Hades">
+    <meta name="msapplication-TileColor" content="#ff6464">
+    <meta name="msapplication-config" content="../favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../flickity/flickity.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <title>Project Hades</title>
+  </head>
+  <body>
+    <header>
+      <a class="account-link" href="https://github.com/SecondThundeR"><span class="avatar"></span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../../">Главная</a></li>
+          <li class="decor">Project Hades</li>
+        </ul>
+      </nav>
+      <a href="https://github.com/SecondThundeR/project-hades"><button class="active">Github</button></a>
+    </header>
+    <section class="flexbox-container landing-block">
+      <div>
+        <h1>Project Hades</h1>
+        <span class="logo"></span>
+        <p class="light">
+          Проект дизайна мессенджера от <a href="https://github.com/SecondThundeR">SecondThundeR</a>
+          <br>
+          Project Hades сочетает в себе минималистичный и красивый интерфейс
+        </p>
+      </div>
+    </section>
+    <section class="flexbox-container uniqueness-block">
+      <h1>В чём уникальность проекта?</h1>
+      <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
+        <div class="carousel-cell">
+          <h2 class="dark">Простота</h2>
+          <span class="icon icon-puzzle"></span>
+          <p class="dark">Project Hades нацелен на простоту элементов и грамотное использование пространства экрана</p>
         </div>
-        <div class="flexbox-container uniqueness-block">
-            <h1>В чём уникальность проекта?</h1>
-            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true, "wrapAround": true }'>
-                <div class="carousel-cell">
-                    <h2 class="dark">Простота</h2>
-                    <span class="icon icon-puzzle"></span>
-                    <p class="dark">Project Hades нацелен на простоту элементов и грамотное использование пространства экрана</p>
-                </div>
-                <div class="carousel-cell">
-                    <h2 class="dark">Минимализм</h2>
-                    <span class="icon icon-box"></span>
-                    <p class="dark">Никаких лишних компонентов и элементов. Только те, что вам нужны от приложения</p>
-                </div>
-                <div class="carousel-cell">
-                    <h2 class="dark">Удобный интерфейс</h2>
-                    <span class="icon icon-emote"></span>
-                 <p class="dark">Простота обучения и использования - главная идеалогия Project Hades</p>
-                </div>
-            </div>
+        <div class="carousel-cell">
+          <h2 class="dark">Минимализм</h2>
+          <span class="icon icon-box"></span>
+          <p class="dark">Никаких лишних компонентов и элементов. Только те, что вам нужны от приложения</p>
         </div>
-        <div class="flexbox-container buttons-block">
-            <h1>Скриншоты</h1>
-            <div class="row-block">
-                <button class="active" onclick="window.location.href='screenshots-page/start-screens/ru/'">Начальные экраны</button>
-                <button disabled>Экраны поддержки (Скоро)</button>
-                <button disabled>Главные экраны (Скоро)</button>
-                <button disabled>Экраны чата (Скоро)</button>
-            </div>
+        <div class="carousel-cell">
+          <h2 class="dark">Удобный интерфейс</h2>
+          <span class="icon icon-emote"></span>
+          <p class="dark">Простота обучения и использования - главная идеалогия Project Hades</p>
         </div>
-        <div class="flexbox-container faq-block">
-            <h1>Часто Задаваемые Вопросы</h1>
-            <a class="invert" href="https://github.com/SecondThundeR/Project-Hades/blob/master/README-RU.md#какие-инструменты-были-использованы-для-его-создания">Какие инструменты были использованы для его создания?</a>
-            <a class="invert" href="https://github.com/SecondThundeR/Project-Hades/blob/master/README-RU.md#какие-ресурсы-были-использованы-в-проекте">Какие ресурсы были использованы в проекте?</a>
-            </div>
-        </div>
-        <div class="footer">
-            <div>
-                <p class="light">
-                    Язык сайта: <a href="../">English</a> / <a class="decor">Русский</a>
-                    <br>
-                    Создан и поддерживается 27 января 2020 года пользователем SecondThundeR с нуля и с <a>❤️</a>
-                </p>
-            </div>
-        </div>
-    </body>
+      </div>
+    </section>
+    <section class="flexbox-container buttons-block">
+      <h1>Скриншоты</h1>
+      <div class="row-block">
+        <!-- <a href="screenshots-page/start-screens/ru/"><button class="active">Начальные экраны</button></a> -->
+        <button disabled>Начальные экраны (Скоро)</button>
+        <button disabled>Экраны поддержки (Скоро)</button>
+        <button disabled>Главные экраны (Скоро)</button>
+        <button disabled>Экраны чата (Скоро)</button>
+      </div>
+    </section>
+    <section class="flexbox-container faq-block">
+      <h1>Часто Задаваемые Вопросы</h1>
+        <a class="invert" href="https://github.com/SecondThundeR/Project-Hades/blob/master/README-RU.md#какие-инструменты-были-использованы-для-его-создания">Какие инструменты были использованы для его создания?</a>
+        <a class="invert" href="https://github.com/SecondThundeR/Project-Hades/blob/master/README-RU.md#какие-ресурсы-были-использованы-в-проекте">Какие ресурсы были использованы в проекте?</a>
+    </section>
+    <footer>
+      <div>
+        <p class="light">
+          Язык сайта: <a href="../">English</a> / <a class="decor">Русский</a>
+          <br>
+          Создан и поддерживается 27 января 2020 года пользователем SecondThundeR с нуля и с <a>❤️</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

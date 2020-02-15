@@ -6,7 +6,7 @@
     display: none;
 }
 
-/* 
+/*
     Flickity Rules
     75% width of carousel
 */
@@ -22,11 +22,11 @@
 /* Rules for carousel cell */
 .carousel-cell {
     display: block;
-    text-align: center;
-    color: white;
     width: 100%;
     height: 370px;
     margin: 24px;
+    text-align: center;
+    color: white;
 }
 
 /* Rules for inactive circles */
@@ -58,7 +58,7 @@ html, body {
     height: 100%;
 }
 
-/*  
+/*
     Header items
     ----------------------
     Rules for header <div>
@@ -66,9 +66,9 @@ html, body {
 header {
     position: absolute;
     display: flex;
+    padding: 12px 10%;
     justify-content: flex-end;
     align-items: center;
-    padding: 12px 10%;
 }
 
 li, a, button {
@@ -84,8 +84,8 @@ a {
 
 /* Link rule (as h2) */
 a.invert {
-    font-weight: 700;
     margin: 16px;
+    font-weight: 700;
     font-size: 28px;
 }
 
@@ -117,20 +117,20 @@ li.decor {
 }
 
 
-/* 
+/*
     Container Styles
     ----------------------
     Rules for main blocks (flexbox containers)
 */
 .flexbox-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     height: 100%;
     padding-left: 16px;
     padding-right: 16px;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 /* Rules for row direction blocks */
@@ -140,47 +140,47 @@ li.decor {
 }
 
 /* Rules for footer block */
-.footer {
+footer {
     display: flex;
+    height: 15%;
+    padding-left: 16px;
+    padding-right: 16px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 20%;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
 /* Rules for header */
 header {
+    width: 100%;
     height: 10%;
-    width: 100%
 }
 
-/* 
+/*
     Element Styles
     ----------------------
     Rules for logo image
 */
 .logo {
+    display: inline-block;
+    width: 192px;
+    height: 192px;
+    margin: 16px;
     background-image: url(assets/cons-icons/logo.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
-    margin: 16px;
-    height: 192px;
-    width: 192px;
     border-radius: 100%;
-    display: inline-block;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
 }
 
 /* Rules for svg icons */
 .icon {
-    height: 144px;
-    width: 144px;
-    background-size: cover;
     display: inline-block;
+    width: 144px;
+    height: 144px;
     margin: 16px;
+    background-size: cover;
 }
 
 /* Paths for svg icons */
@@ -201,57 +201,62 @@ header {
 
 /* Rules for <h1> */
 h1 {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 700;
     margin-top: 24px;
     margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
     color: rgba(255, 88, 88, 0.87);
 }
 
 /* Rules for <h2> */
 h2 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
     margin-top: 16px;
     margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
 }
 
 /* Rules for <p> */
 p {
-    text-align: center;
-    font-weight: 500;
     margin-top: 16px;
     margin-bottom: 16px;
+    font-weight: 500;
     line-height: 1.5;
+    text-align: center;
 }
 
 /* Rules for avatar */
 .avatar {
-    height: 64px;
+    display: inline-block;
     width: 64px;
-    border-radius: 100%;
-    border: 4px solid rgb(255, 88, 88);
+    height: 64px;
     background-image: url(assets/avatar.jpg);
-    background-size: 150%;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    display: inline-block;
-    cursor: pointer;
+    border: 4px solid rgb(255, 88, 88);
+    border-radius: 100%;
+}
+
+.account-link {
     margin-right: auto;
 }
 
 /* Rules for buttons */
 button {
-    outline: none;
-    padding: 9px 25px;
     margin-left: 20px;
+    padding: 9px 25px;
     background-color: transparent;
     border-radius: 50px;
-    cursor: pointer;
     transition: all 0.2s ease-in 0s;
-    margin: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.row-block > button {
+    margin: 8px;
 }
 
 /* Rule for disabled buttons */
@@ -262,8 +267,8 @@ button:disabled {
 /* Rules for hovering over buttons */
 button.active:hover {
     color: white;
-    border: 2px solid rgb(255, 88, 88);
     background-color: rgb(255, 88, 88);
+    border: 2px solid rgb(255, 88, 88);
 }
 
 /* Light Theme */
@@ -282,7 +287,7 @@ button.active:hover {
     li, a, button {
         color: black;
     }
-    
+
     /* Setting white text for <a> on dark blocks */
     a.invert {
         color: white;
@@ -316,7 +321,7 @@ button.active:hover {
     p.dark {
         color: rgba(255, 255, 255, 0.4);
     }
-    
+
     p.light {
         color: rgba(0, 0, 0, 0.4);
     }
@@ -338,7 +343,7 @@ button.active:hover {
     li, a, button {
         color: white;
     }
-        
+
     /* Setting black text for <a> on light blocks */
     a.invert {
         color: black;
@@ -364,7 +369,7 @@ button.active:hover {
     h2.dark {
         color: rgba(0, 0, 0, 0.87);
     }
-    
+
     h2.light {
         color: rgba(255, 255, 255, 0.87);
     }
@@ -372,7 +377,7 @@ button.active:hover {
     p.dark {
         color: rgba(0, 0, 0, 0.4);
     }
-    
+
     p.light {
         color: rgba(255, 255, 255, 0.4);
     }
@@ -411,16 +416,16 @@ button.active:hover {
 
     /* Changing icon size */
     .icon {
-        height: 96px;
         width: 96px;
+        height: 96px;
         margin: 0;
     }
 
     /* Special text rules */
     h1 {
-        font-size: 28px;
         margin-top: 18px;
         margin-bottom: 18px;
+        font-size: 28px;
     }
 
     h1.title {
@@ -462,27 +467,27 @@ button.active:hover {
     }
 
     /* Setting height 25% for footer */
-    .footer {
+    footer {
         height: 25%;
     }
 
     /* Setting smaller logo and icon size */
     .logo {
-        height: 160px;
         width: 160px;
+        height: 160px;
     }
 
     .icon {
-        height: 96px;
         width: 96px;
+        height: 96px;
         margin: 0;
     }
-    
+
     /* Special text rules */
     h1 {
-        font-size: 28px;
         margin-top: 18px;
         margin-bottom: 18px;
+        font-size: 28px;
     }
 
     h1.title {
@@ -492,7 +497,7 @@ button.active:hover {
     h2 {
         font-size: 24px;
     }
-    
+
     p {
         font-size: 15px;
     }
@@ -518,13 +523,13 @@ button.active:hover {
 
 /* Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others) */
 @media (max-width: 340px) and (orientation: portrait) {
-    /* Setting 15% height of header and 85% of landing block */    
+    /* Setting 15% height of header and 85% of landing block */
     header {
         height: 15%;
     }
 
-    /* Setting 25% height of footer */    
-    .footer {
+    /* Setting 25% height of footer */
+    footer {
         height: 25%;
     }
 
@@ -540,21 +545,21 @@ button.active:hover {
 
     /* Setting smaller logo and icon size */
     .logo {
-        height: 144px;
         width: 144px;
+        height: 144px;
     }
 
     .icon {
-        height: 96px;
         width: 96px;
+        height: 96px;
         margin: 0;
     }
 
-    /* Special text rules */    
+    /* Special text rules */
     h1 {
-        font-size: 28px;
         margin-top: 18px;
         margin-bottom: 18px;
+        font-size: 28px;
     }
 
     h1.title {
@@ -582,14 +587,14 @@ button.active:hover {
         padding-top: 4px;
     }
 
-    /* Setting special height for cell of carousel div */    
+    /* Setting special height for cell of carousel div */
     .carousel-cell {
         height: 260px;
     }
 }
 
 @media (max-height: 320px) and (orientation: landscape) {
-    /* Removing header, setting full height of landing block, setting 30% height of footer */    
+    /* Removing header, setting full height of landing block, setting 30% height of footer */
     header {
         display: none;
     }
@@ -598,7 +603,7 @@ button.active:hover {
         height: 100%;
     }
 
-    .footer {
+    footer {
         height: 30%;
     }
 
@@ -612,7 +617,7 @@ button.active:hover {
         display: none;
     }
 
-    /* Special text rules */ 
+    /* Special text rules */
     h1 {
         font-size: 28px;
         margin-top: 8px;
@@ -639,12 +644,12 @@ button.active:hover {
     li.decor {
         padding-top: 4px;
     }
-    
+
     a.invert {
         font-size: 24px;
     }
 
-    /* Setting special height for cell of carousel div */    
+    /* Setting special height for cell of carousel div */
     .carousel-cell {
         height: 150px;
     }
