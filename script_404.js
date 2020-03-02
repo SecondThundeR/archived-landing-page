@@ -13,7 +13,7 @@ let fourZeroFourWords = [
 
 function testFun() {
     let randomWord = Math.floor(Math.random() * fourZeroFourWords.length);
-    let text = document.getElementById('quotes')
+    let text = document.getElementById('quotes');
     text.innerHTML = fourZeroFourWords[randomWord];
 }
 
