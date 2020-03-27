@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/vkui-calc/static/js/main.87e3905c.chunk.js",
-    "main.js.map": "/vkui-calc/static/js/main.87e3905c.chunk.js.map",
+    "main.js": "/vkui-calc/static/js/main.3b39a9e2.chunk.js",
+    "main.js.map": "/vkui-calc/static/js/main.3b39a9e2.chunk.js.map",
     "runtime-main.js": "/vkui-calc/static/js/runtime-main.13906fa8.js",
     "runtime-main.js.map": "/vkui-calc/static/js/runtime-main.13906fa8.js.map",
     "static/css/2.86df01db.chunk.css": "/vkui-calc/static/css/2.86df01db.chunk.css",
     "static/js/2.50774da8.chunk.js": "/vkui-calc/static/js/2.50774da8.chunk.js",
     "static/js/2.50774da8.chunk.js.map": "/vkui-calc/static/js/2.50774da8.chunk.js.map",
     "index.html": "/vkui-calc/index.html",
-    "precache-manifest.2c01991252fe50c02f9e8c21cd7018e4.js": "/vkui-calc/precache-manifest.2c01991252fe50c02f9e8c21cd7018e4.js",
+    "precache-manifest.14a5aee3db8913ff8c3f50bd5caf6e7a.js": "/vkui-calc/precache-manifest.14a5aee3db8913ff8c3f50bd5caf6e7a.js",
     "service-worker.js": "/vkui-calc/service-worker.js",
     "static/css/2.86df01db.chunk.css.map": "/vkui-calc/static/css/2.86df01db.chunk.css.map",
     "static/js/2.50774da8.chunk.js.LICENSE.txt": "/vkui-calc/static/js/2.50774da8.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.13906fa8.js",
     "static/css/2.86df01db.chunk.css",
     "static/js/2.50774da8.chunk.js",
-    "static/js/main.87e3905c.chunk.js"
+    "static/js/main.3b39a9e2.chunk.js"
   ]
 }

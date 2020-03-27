@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vkui-calc/precache-manifest.2c01991252fe50c02f9e8c21cd7018e4.js"
+  "/vkui-calc/precache-manifest.14a5aee3db8913ff8c3f50bd5caf6e7a.js"
 );
 
 self.addEventListener('message', (event) => {

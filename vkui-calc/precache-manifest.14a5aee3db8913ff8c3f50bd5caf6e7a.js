@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33f93fcfbdbcda106406cbf180516e14",
+    "revision": "7e5f95ffd7dae27948e7ca2af796847f",
     "url": "/vkui-calc/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vkui-calc/static/js/2.50774da8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "22bb7bf84052c9adfdb5",
-    "url": "/vkui-calc/static/js/main.87e3905c.chunk.js"
+    "revision": "fa7ae8c60a94397bd0a1",
+    "url": "/vkui-calc/static/js/main.3b39a9e2.chunk.js"
   },
   {
     "revision": "99e59037526210db72c7",
