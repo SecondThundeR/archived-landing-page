@@ -165,7 +165,7 @@ a:hover {
     border-radius: 100%;
 }
 
-button {
+#button {
     margin: 8px 4px;
     padding: 18px;
     font-size: 18px;
@@ -181,7 +181,7 @@ button {
 
 }
 
-button:hover {
+#button:hover {
     background-color: #ff5858;
     border: 3px solid #ff5858;
     outline: none;
