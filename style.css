@@ -158,7 +158,7 @@ a:hover {
 .avatar {
     display: inline-block;
     margin: 0px;
-    background-image: url(assets/avatar.jpg);
+    background-image: url(assets/avatar.png);
     background-size: 100%;
     background-repeat: no-repeat;
     border: 8px solid #ff5858;
