@@ -7,19 +7,19 @@ function setTheme(themeName) {
 function switchTheme() {
     let text = document.getElementById('themeButton');
 
-    if (localStorage.getItem('theme') === 'theme-dark'){
-       setTheme('theme-light');
-       text.innerHTML = "Turn Dark Mode";
+    if (localStorage.getItem('theme') === 'theme-light'){
+       setTheme('theme-dark');
+       text.innerHTML = "Turn Light Mode";
     } else {
-        setTheme('theme-dark');
-        text.innerHTML = "Turn Light Mode";
+        setTheme('theme-light');
+        text.innerHTML = "Turn Dark Mode";
     }
 }
 
 (function () {
-   if (localStorage.getItem('theme') === 'theme-dark') {
-       setTheme('theme-dark');
-   } else {
+   if (localStorage.getItem('theme') === 'theme-light') {
        setTheme('theme-light');
+   } else {
+       setTheme('theme-dark');
    }
 })();
