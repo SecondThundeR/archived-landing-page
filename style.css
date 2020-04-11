@@ -73,7 +73,7 @@
 }
 
 #typing-text {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -167,11 +167,11 @@ a:hover {
 
 #button {
     margin: 8px 4px;
-    padding: 18px;
+    padding: 20px;
     font-size: 18px;
     background-color: transparent;
     border: 3px solid white;
-    border-radius: 16px;
+    border-radius: 12px;
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
@@ -183,7 +183,6 @@ a:hover {
 
 #button:hover {
     background-color: #ff5858;
-    border: 3px solid #ff5858;
     outline: none;
 }
 
@@ -357,7 +356,6 @@ a:hover {
 
     .buttons-block {
         width: 100%;
-        margin-top: 24px;
     }
 
     .avatar {
@@ -379,7 +377,7 @@ a:hover {
 
     .buttons-block {
         width: 70%;
-        margin-top: 12px;
+        margin-top: 8px;
     }
 
     .avatar {
@@ -405,7 +403,7 @@ a:hover {
         padding: 12px;
     }
 
-    button {
+    #button {
         margin: 8px 2px;
         padding: 12px;
         font-size: 16px;
@@ -437,11 +435,11 @@ a:hover {
         padding: 12px;
     }
 
-    button {
-        margin: 8px 2px;
-        padding: 12px;
+    #button {
+        margin: 8px 4px;
+        padding: 18px;
         font-size: 16px;
-        border: 2px solid white;
+        border: 3px solid white;
         border-radius: 12px;
 
     }

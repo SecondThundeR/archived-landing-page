@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+.theme-light {
+    --color-text-button: rgba(0, 0, 0, 0.5);
+    --color-accent: #ff5858;
+    --background-color: #ffffff;
+    --hover-color: #ffffff;
+    --font-color: #121212;
+}
+
+.theme-dark {
+    --color-text-button: rgba(255, 255, 255, 0.5);
+    --color-accent: #ff5858;
+    --background-color: #121212;
+    --hover-color: #ffffff;
+    --font-color: #ffffff;
+ }
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--font-color);
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    text-rendering: optimizeLegibility;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#typing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 8px;
+}
+
+.buttons-block {
+    width: 30%;
+    margin-bottom: 12px;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+head {
+    display: none;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+a {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 400;
+    color: var(--color-text-button);
+    cursor: default;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+#button {
+    margin: 8px 4px;
+    padding: 20px;
+    font-size: 18px;
+    color: var(--font-color);
+    background-color: transparent;
+    border: 3px solid var(--font-color);
+    outline: none;
+    border-radius: 12px;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#button:hover {
+    background-color: var(--color-accent);
+    color: var(--hover-color);
+    outline: none;
+}
+
+/*
+    Rules for regular phones in portait mode
+*/
+@media (max-height: 850px) and (orientation: portrait) {
+    #button {
+        margin: 8px 4px;
+        padding: 18px;
+        font-size: 16px;
+        border: 3px solid var(--font-color);
+        border-radius: 12px;
+    }
+
+    .buttons-block {
+        width: 100%;
+    }
+}
+
+/*
+    Rules for regular phones landscape
+*/
+@media (max-width: 830px) and (orientation: landscape) {
+    .buttons-block {
+        width: 70%;
+    }
+}
+
+/*
+    Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
+*/
+@media (max-width: 360px) and (orientation: portrait) {
+    #button {
+        margin: 8px 4px;
+        padding: 12px;
+        font-size: 16px;
+        border: 3px solid var(--font-color);
+        border-radius: 12px;
+    }
+
+    .buttons-block {
+        width: 100%;
+    }
+}
+
+@media (max-height: 320px) and (orientation: landscape) {
+    #button {
+        margin: 8px 4px;
+        padding: 18px;
+        font-size: 16px;
+        border: 3px solid var(--font-color);
+        border-radius: 12px;
+    }
+}
