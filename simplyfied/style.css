@@ -1,24 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
-.theme-light {
-    --color-text-button: rgba(0, 0, 0, 0.5);
-    --color-accent: #ff5858;
-    --background-color: #ffffff;
-    --hover-color: #ffffff;
-    --font-color: #121212;
-}
-
-.theme-dark {
-    --color-text-button: rgba(255, 255, 255, 0.5);
-    --color-accent: #ff5858;
-    --background-color: #121212;
-    --hover-color: #ffffff;
-    --font-color: #ffffff;
- }
-
 * {
     font-family: "Ubuntu", sans-serif;
-    color: var(--font-color);
     text-decoration: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -73,7 +56,6 @@ head {
 body {
     position: relative;
     height: 100%;
-    background-color: var(--background-color);
     overflow: hidden;
 }
 
@@ -86,7 +68,6 @@ a {
     width: fit-content;
     margin: 0 auto;
     font-weight: 400;
-    color: var(--color-text-button);
     cursor: default;
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
@@ -95,17 +76,11 @@ a {
     transition-duration: 0.5s;
 }
 
-a:hover {
-    color: var(--color-accent);
-}
-
-#button {
+button {
     margin: 8px 4px;
     padding: 20px;
     font-size: 18px;
-    color: var(--font-color);
     background-color: transparent;
-    border: 3px solid var(--font-color);
     outline: none;
     border-radius: 12px;
     -webkit-transition-duration: 0.5s;
@@ -115,9 +90,7 @@ a:hover {
     transition-duration: 0.5s;
 }
 
-#button:hover {
-    background-color: var(--color-accent);
-    color: var(--hover-color);
+button:hover {
     outline: none;
 }
 
@@ -129,7 +102,6 @@ a:hover {
         margin: 8px 4px;
         padding: 18px;
         font-size: 16px;
-        border: 3px solid var(--font-color);
         border-radius: 12px;
     }
 
@@ -155,7 +127,6 @@ a:hover {
         margin: 8px 4px;
         padding: 12px;
         font-size: 16px;
-        border: 3px solid var(--font-color);
         border-radius: 12px;
     }
 
@@ -169,7 +140,79 @@ a:hover {
         margin: 8px 4px;
         padding: 18px;
         font-size: 16px;
-        border: 3px solid var(--font-color);
         border-radius: 12px;
+    }
+}
+
+/* Themes */
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-text-button: rgba(0, 0, 0, 0.5);
+        --color-accent: #ff5858;
+        --background-color: #ffffff;
+        --hover-color: #ffffff;
+        --font-color: #121212;
+    }
+
+    * {
+        color: var(--font-color);
+    }
+
+    body {
+        background-color: var(--background-color);
+    }
+
+    a {
+        color: var(--color-text-button);
+    }
+
+    a#textButton:hover {
+        color: var(--color-accent);
+    }
+
+    button {
+        color: var(--font-color);
+        border: 3px solid var(--font-color);
+    }
+
+    button:hover {
+        background-color: var(--color-accent);
+        color: var(--hover-color);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text-button: rgba(255, 255, 255, 0.5);
+        --color-accent: #ff5858;
+        --background-color: #121212;
+        --hover-color: #ffffff;
+        --font-color: #ffffff;
+    }
+
+    * {
+        color: var(--font-color);
+    }
+
+    body {
+        background-color: var(--background-color);
+    }
+
+    a {
+        color: var(--color-text-button);
+    }
+
+    a#textButton:hover {
+        color: var(--color-accent);
+    }
+
+    button {
+        color: var(--font-color);
+        border: 3px solid var(--font-color);
+    }
+
+    button:hover {
+        background-color: var(--color-accent);
+        color: var(--hover-color);
     }
 }
