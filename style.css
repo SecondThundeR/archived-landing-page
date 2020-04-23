@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 * {
     font-family: "Ubuntu", sans-serif;
@@ -129,10 +129,14 @@ p {
     color: #ff5858;
 }
 
+#buttonsDivider {
+    color: rgba(255, 255, 255,0.5)
+}
+
 a {
     width: fit-content;
     margin: 0 auto;
-    font-weight: 400;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.5);
     cursor: default;
     -webkit-transition-duration: 0.5s;
@@ -148,6 +152,10 @@ a.typewrite {
 
 a:hover {
     color: #ff5858;
+}
+
+a:active {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .wrap {
@@ -333,7 +341,7 @@ a:hover {
     }
 
     .avatar {
-        border: 6px solid #ff5858;
+        border: 8px solid #ff5858;
         width: 192px;
         height: 192px;
     }
