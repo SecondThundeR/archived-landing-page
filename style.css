@@ -154,10 +154,6 @@ a:hover {
     color: #ff5858;
 }
 
-a:active {
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .wrap {
     border-right: 0.05em solid #fff;
     animation: blinking 1.5s steps(1) infinite;
