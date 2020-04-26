@@ -8,13 +8,13 @@ let fourZeroFourWords = [
     "Hi, this is me - error 404!. I'm glad to meet you, but probably you are not very happy :(",
     "Emptiness ... This is what you feel here, isn't it? But this is not forever :)",
     "We can endlessly look at 3 things: how the fire burns, how the water flows and how this error looks on this page",
-    "404 - these 3 numbers mean a lot. In this case, it means that you went to a non-existing page"
+    "404 - this number mean a lot. In this case, it means that you went to a non-existing page"
 ];
 
-function testFun() {
+function randomStringFun() {
     let randomWord = Math.floor(Math.random() * fourZeroFourWords.length);
     let text = document.getElementById('quotes');
     text.innerHTML = fourZeroFourWords[randomWord];
 }
 
-testFun();
+randomStringFun();

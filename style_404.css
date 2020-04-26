@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
+
 * {
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
@@ -22,46 +24,11 @@ body {
     position: relative;
     height: 100%;
     margin: 0;
-    background-color: #242424;
     overflow: hidden;
 }
 
 head {
     display: none;
-}
-
-h1 {
-    width: fit-content;
-    margin: 0px auto;
-    padding: 0px;
-    font-size: 56px;
-    font-weight: bold;
-    cursor: default;
-}
-
-a {
-    width: fit-content;
-    margin: 0 auto;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    -ms-transition-duration: .5s;
-    transition-duration: .5s;
-    cursor: pointer;
-    outline: none;
-}
-
-a:hover {
-    color: #ff6464;
-}
-
-#text {
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 8px;
-    margin-bottom: 12px;
-    color: black;
-    cursor: default;
 }
 
 .cont-elements {
@@ -91,7 +58,32 @@ a:hover {
     background-size: 60%;
     border-radius: 100%;
     transition: all .3s ease-in-out 0s;
-    box-shadow: 0px 0px 30px rgba(0,0,0,.3);
+}
+
+h1 {
+    width: fit-content;
+    margin: 0px auto;
+    padding: 0px;
+    font-size: 56px;
+    font-weight: bold;
+    cursor: default;
+}
+
+a {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 500;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    transition-duration: .5s;
+    cursor: pointer;
+    outline: none;
+}
+
+a:hover {
+    color: #ff6464;
 }
 
 #wrap {
@@ -161,46 +153,62 @@ a:hover {
 }
 
 @media (prefers-color-scheme: light) {
+    :root {
+        --text-color: #000;
+        --background-color: #fff;
+        --dimmed-black: rgba(0, 0, 0, 0.5);
+    }
+
     * {
-        color: black;
+        color: var(--text-color);
     }
 
     a {
-        color: rgba(0, 0, 0, .5);
+        color: var(--dimmed-black);
+    }
+
+    p {
+        color: var(--text-color)
     }
 
     .sad-icon {
-        background-color: #fff;
+        background-color: var(--background-color);
+        box-shadow: 0px 0px 30px var(--dimmed-black);
     }
 
     body {
-        background-color: white;
-    }
-
-    #text {
-        color: black;
+        background-color: var(--background-color);
     }
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #fff;
+        --background-color: #202124;
+        --background-color-icon: #35363a;
+        --dimmed-white: rgba(255, 255, 255, .5);
+        --dimmed-black: rgba(0, 0, 0, 0.5);
+    }
+
     * {
-        color: white;
+        color: var(--dimmed-white);
     }
 
     a {
         color: rgba(255, 255, 255, .5);
     }
 
+    p {
+        color: var(--text-color)
+    }
+
     .sad-icon {
-        background-color: #333;
+        background-color: var(--background-color-icon);
+        box-shadow: 0px 0px 30px var(--dimmed-black);
     }
 
     body {
-        background-color: #242424;
-    }
-
-    #text {
-        color: white;
+        background-color: var(--background-color);
     }
 }
 
