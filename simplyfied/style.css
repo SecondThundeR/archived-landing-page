@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 * {
     font-family: "Ubuntu", sans-serif;
@@ -67,7 +67,7 @@ html {
 a {
     width: fit-content;
     margin: 0 auto;
-    font-weight: 400;
+    font-weight: 500;
     cursor: default;
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
