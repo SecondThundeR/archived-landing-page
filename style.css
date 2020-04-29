@@ -173,7 +173,7 @@ a:hover {
 .avatar {
     display: inline-block;
     margin: 0px;
-    background-image: url(assets/avatar.png);
+    background-image: url(assets/avatar.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     border: 8px solid var(--accent-color);
