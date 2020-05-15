@@ -104,7 +104,6 @@ html,
 body {
     margin: 0px;
     padding: 0px;
-    animation: 2.5s ease-out 0s 1 loadAnimation;
 }
 
 head {
@@ -319,51 +318,6 @@ a:hover {
     }
     100% {
         border-color: var(--text-color);
-    }
-}
-
-@-webkit-keyframes loadAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes loadAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes loadAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes loadAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes loadAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }
 
