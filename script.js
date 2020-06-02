@@ -1,24 +1,48 @@
 'use strict';
 let isShown = true;
+let div1IsShown = true;
+
 function showHideVideo() {
     let video = document.getElementById('videobcg');
-    let bg = document.getElementById('typing');
     let text = document.getElementById('showHideBtn');
 
     if (isShown) {
+        isShown = false;
         video.classList.remove('visible');
         video.classList.add('hidden');
-        bg.classList.remove('visible-dark');
-        bg.classList.add('hidden-dark');
         text.innerHTML = "Show Video";
-        isShown = false;
     } else {
+        isShown = true;
         video.classList.remove('hidden');
         video.classList.add('visible');
-        bg.classList.remove('hidden-dark');
-        bg.classList.add('visible-dark');
         text.innerHTML = "Hide Video";
-        isShown = true;
+    }
+}
+
+async function showPlaylistDiv() {
+    let container = document.getElementById('hostCont');
+    let div1 = document.getElementById('mainCont');
+    let div2 = document.getElementById('playCont');
+    let divs = [div1, div2];
+
+    if (div1IsShown) {
+        div1.classList.remove('visible');
+        div1.classList.add('hidden');
+        await new Promise(r => setTimeout(r, 160));
+        container.insertBefore(divs[1], divs[0]);
+        await new Promise(r => setTimeout(r, 160));
+        div2.classList.remove('hidden');
+        div2.classList.add('visible');
+        div1IsShown = false;
+    } else {
+        div2.classList.remove('visible');
+        div2.classList.add('hidden');
+        await new Promise(r => setTimeout(r, 160));
+        container.insertBefore(divs[0], divs[1]);
+        await new Promise(r => setTimeout(r, 160));
+        div1.classList.remove('hidden');
+        div1.classList.add('visible');
+        div1IsShown = true;
     }
 }
 

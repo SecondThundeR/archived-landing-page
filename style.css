@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 :root {
+    /* Main Colors */
     --text-color: #fff;
     --accent-color: #ff5858;
-    --visible-dark-dimming: rgba(0,0,0,0.6);
-    --hidden-dark-dimming: rgba(0,0,0,0.35);
+    --dimming: rgba(0,0,0,0.6);
+    /* Gradient Colors */
     --gradient-color-first: #2d132c;
     --gradient-color-second: #3282b8;
     --gradient-color-third: #b030b0;
     --gradient-color-fourth: #341677;
+    /* Social Sites Colors */
+    --vk-color: #4680C2;
+    --telegram-color: #0088cc;
+    --instagram-color: #5851db;
+    --twitter-color: #1DA1F2;
+    --lastfm-color: #d51007;
+    --github-color: #333;
+    --playlist-color: #ff2e63;
+    --spotify-color: #1DB954;
+    --amusic-color: #fa57c1;
 }
 
 * {
@@ -59,7 +70,18 @@
     visibility: hidden;
 }
 
-#typing {
+#hostCont {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dimming);
+}
+
+#mainCont, #playCont {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
@@ -68,22 +90,26 @@
     flex-direction: column;
     height: 100%;
     padding: 16px;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    -ms-transition: all .15s ease-out;
+    transition: all .15s ease-out;
 }
 
-#typing.visible-dark {
-    background-color: var(--visible-dark-dimming);
+#mainCont.visible,
+#playCont.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
-#typing.hidden-dark {
-    background-color: var(--hidden-dark-dimming);
+#mainCont.hidden,
+#playCont.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
-#typing-text {
+#mainCont-elements, #playCont-elements {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,10 +120,26 @@
     margin: auto;
 }
 
+#landscapeCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+}
+
 .buttons-block {
     width: 60%;
     margin-top: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.buttons-block-p {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 16px;
 }
 
 html,
@@ -136,12 +178,14 @@ h1 {
 p {
     margin: 0px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--accent-color);
 }
 
-#buttonsDivider {
-    color: rgba(255, 255, 255,0.5)
+.buttonsDivider {
+    color: rgba(255, 255, 255,0.5);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
@@ -150,11 +194,11 @@ a {
     font-weight: 500;
     color: rgba(255, 255, 255, 0.5);
     cursor: default;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -ms-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
 a.typewrite {
@@ -176,8 +220,16 @@ a:hover {
     background-image: url(assets/avatar.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    border: 8px solid var(--accent-color);
     border-radius: 100%;
+}
+
+.playlist-cover {
+    display: inline-block;
+    margin: 0px;
+    background-image: url(assets/cover.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 16px;
 }
 
 #button {
@@ -187,19 +239,65 @@ a:hover {
     background-color: transparent;
     border: 3px solid white;
     border-radius: 12px;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -ms-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    outline: none;
-
-}
-
-#button:hover {
-    background-color: var(--accent-color);
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    transition-duration: 0.3s;
     outline: none;
 }
+
+#button.vk:hover {
+    background-color: var(--vk-color);
+    border: 3px solid var(--vk-color);
+}
+
+#button.telegram:hover {
+    background-color: var(--telegram-color);
+    border: 3px solid var(--telegram-color);
+}
+
+#button.instagram:hover {
+    background-color: var(--instagram-color);
+    border: 3px solid var(--instagram-color);
+}
+
+#button.twitter:hover {
+    background-color: var(--twitter-color);
+    border: 3px solid var(--twitter-color);
+}
+
+#button.lastfm:hover {
+    background-color: var(--lastfm-color);
+    border: 3px solid var(--lastfm-color);
+}
+
+#button.github:hover {
+    background-color: var(--github-color);
+    border: 3px solid var(--github-color);
+}
+
+#button.playlist:hover {
+    background-color: var(--playlist-color);
+    border: 3px solid var(--playlist-color);
+}
+
+#button.vkuicalc:hover {
+    background-color: var(--vk-color);
+    border: 3px solid var(--vk-color);
+}
+
+#button.amusic:hover {
+    background-color: var(--amusic-color);
+    border: 3px solid var(--amusic-color);
+}
+
+#button.spotify:hover {
+    background-color: var(--spotify-color);
+    border: 3px solid var(--spotify-color);
+}
+
+
 
 @-webkit-keyframes BgAnim {
     0% {
@@ -327,13 +425,19 @@ a:hover {
 @media (min-width: 840px) and (orientation: landscape) {
     h1 {
         margin-top: 8px;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
         font-size: 48px;
     }
 
     .avatar {
-        width: 192px;
-        height: 192px;
+        width: 256px;
+        height: 256px;
+        border: 12px solid var(--accent-color);
+    }
+
+    .playlist-cover {
+        width: 256px;
+        height: 256px;
     }
 }
 
@@ -352,6 +456,11 @@ a:hover {
         width: 192px;
         height: 192px;
     }
+
+    .playlist-cover {
+        width: 192px;
+        height: 192px;
+    }
 }
 
 /*
@@ -361,15 +470,26 @@ a:hover {
     h1 {
         margin-top: 8px;
         margin-bottom: 24px;
-        font-size: 36px;
+        font-size: 32px;
     }
 
-    #typing {
+    #mainCont,
+    #playCont {
         padding: 12px;
     }
 
+    #landscapeCont {
+        display: none;
+    }
 
-    .buttons-block {
+    #button {
+        margin: 8px 2px;
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .buttons-block,
+    .buttons-block-p {
         width: 100%;
     }
 
@@ -377,6 +497,11 @@ a:hover {
         border: 6px solid var(--accent-color);
         width: 128px;
         height: 128px;
+    }
+
+    .playlist-cover {
+        width: 256px;
+        height: 256px;
     }
 }
 
@@ -386,8 +511,25 @@ a:hover {
 @media (max-width: 830px) and (orientation: landscape) {
     h1 {
         margin-top: 8px;
-        margin-bottom: 12px;
-        font-size: 36px;
+        margin-bottom: 8px;
+        font-size: 28px;
+    }
+
+    #mainCont {
+        flex-direction: row;
+    }
+
+    #mainCont-elements {
+        margin: 12px 12px 12px 18px;
+    }
+
+    #landscapeCont {
+        margin: 12px 18px 12px 12px;
+    }
+
+    #button {
+        padding: 16px;
+        font-size: 16px;
     }
 
     .buttons-block {
@@ -395,8 +537,25 @@ a:hover {
         margin-top: 8px;
     }
 
-    .avatar {
+    .buttons-block-p {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .avatar,
+    .playlist-cover {
         display: none;
+    }
+
+    .playlist-cover-land {
+        display: inline-block;
+        width: 240px;
+        height: 240px;
+        margin: 0px;
+        background-image: url(assets/cover.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-radius: 16px;
     }
 }
 
@@ -406,15 +565,11 @@ a:hover {
 @media (max-width: 360px) and (orientation: portrait) {
     h1 {
         margin-top: 8px;
-        margin-bottom: 16px;
+        margin-bottom: 4px;
         font-size: 28px;
     }
 
-    p {
-        font-weight: 400;
-    }
-
-    #typing {
+    #mainCont {
         padding: 12px;
     }
 
@@ -423,48 +578,56 @@ a:hover {
         padding: 12px;
         font-size: 16px;
         border: 2px solid var(--text-color);
-        border-radius: 12px;
-
+        border-radius: 8px;
     }
 
-    .buttons-block {
-        margin-top: 16px;
+    #landscapeCont {
+        display: none;
+    }
+
+    .buttons-block,
+    .buttons-block-p {
+        margin-top: 4px;
         margin-bottom: 12px;
     }
 
-    .avatar {
-        border: 4px solid var(--accent-color);
-        width: 96px;
-        height: 96px;
+    .avatar,
+    .playlist-cover {
+        display: none;
     }
 }
 
-@media (max-height: 320px) and (orientation: landscape) {
+@media (max-height: 320px) and (max-width: 640px) and (orientation: landscape) {
     h1 {
         margin-top: 8px;
         margin-bottom: 8px;
         font-size: 28px;
     }
 
-    #typing {
+    #mainCont {
         padding: 12px;
     }
 
-    #button {
-        margin: 8px 4px;
-        padding: 18px;
-        font-size: 16px;
-        border: 3px solid var(--text-color);
-        border-radius: 12px;
-
+    #landscapeCont {
+        display: none;
     }
 
-    .buttons-block {
-        width: 80%;
+    #button {
+        margin: 8px 2px;
+        padding: 12px;
+        font-size: 14px;
+        border: 2px solid var(--text-color);
+        border-radius: 8px;
+    }
+
+    .buttons-block,
+    .buttons-block-p {
+        width: 100%;
         margin-top: 8px;
     }
 
-    .avatar {
+    .avatar,
+    .playlist-cover {
         display: none;
     }
 }

@@ -29,25 +29,44 @@
     <video id="videobcg" class="visible" preload autoplay loop muted>
 			<source src="assets/1.mp4">
     </video>
-    <div id="typing" class="visible-dark">
-    	<div id="typing-text">
-        <p>Welcome here!</p>
-        <h1>
-          <a class="typewrite" data-period="2000" data-type='["secondthunder", "UI/UX Designer", "Front-End Developer"]'>
-            <span class="wrap">Loading...</span>
-          </a>
-        </h1>
-        <span class="avatar"></span>
-        <div class="buttons-block">
-          <a href="https://vk.com/secondthunder"><button id="button">VK</button></a>
-          <a href="tg://resolve?domain=secondthunder"><button id="button">Telegram</button></a>
-          <a href="https://instagram.com/AwayFromGalaxy"><button id="button">Instagram</button></a>
-          <a href="https://twitter.com/scndthndr"><button id="button">Twitter</button></a>
-          <a href="https://last.fm/ru/user/AwayFromGalaxy"><button id="button">Last.fm</button></a>
-          <a href="https://github.com/SecondThundeR"><button id="button">Github</button></a>
-          <a href="https://secondthunder.github.io/vkui-calc"><button id="button">VKUI Calculator</button></a>
+    <div id="hostCont">
+      <div id="mainCont" class="visible">
+        <div id="mainCont-elements">
+          <p>Welcome!</p>
+          <h1>
+            <a class="typewrite" data-period="2000" data-type='["secondthunder", "UI/UX Designer", "Front-End Developer"]'>
+              <span class="wrap">Loading...</span>
+            </a>
+          </h1>
+          <span class="avatar"></span>
+          <div class="buttons-block">
+            <a href="https://vk.com/secondthunder"><button id="button" class="vk">VK</button></a>
+            <a href="tg://resolve?domain=secondthunder"><button id="button" class="telegram">Telegram</button></a>
+            <a href="https://instagram.com/AwayFromGalaxy"><button id="button" class="instagram">Instagram</button></a>
+            <a href="https://twitter.com/scndthndr"><button id="button" class="twitter">Twitter</button></a>
+            <a href="https://last.fm/ru/user/AwayFromGalaxy"><button id="button" class="lastfm">Last.fm</button></a>
+            <a href="https://github.com/SecondThundeR"><button id="button" class="github">Github</button></a>
+            <a href="https://secondthunder.github.io/vkui-calc"><button id="button" class="vkuicalc">VKUI Calculator</button></a>
+            <a id="showPlaylistDiv" onclick="showPlaylistDiv()"><button id="button" class="playlist">AwayFromThePlaylist v.2</button></a>
+          </div>
+          <span class="buttonsDivider"><a id="showHideBtn" onclick="showHideVideo()">Hide Video</a> • <a href="simplyfied/">Simplified Version</a></span>
         </div>
-        <span id="buttonsDivider"><a id="showHideBtn" onclick="showHideVideo()">Hide Video</a> • <a href="simplyfied/">Simplified Version</a></span>
+      </div>
+      <div id="playCont" class="hidden">
+        <div id="landscapeCont">
+          <span class="playlist-cover-land"></span>
+        </div>
+        <div id="playCont-elements">
+          <p>Listen to</p>
+          <h1>AwayFromThePlaylist v.2</h1>
+          <span class="playlist-cover"></span>
+          <div class="buttons-block-p">
+            <a href="https://music.apple.com/ru/playlist/awayfromtheplaylist-v-2/pl.u-11zBX41tNWvazY7?l=en"><button id="button" class="amusic">Apple Music</button></a>
+            <a href="https://open.spotify.com/playlist/0pbiT1B1enVz4ZZ4ISreYo?si=9rwQTa64S-ewbWJrKiiSoQ"><button id="button" class="spotify">Spotify</button></a>
+            <a href="https://vk.com/audio_playlist178526576_50_1258378789b8347854"><button id="button" class="vk">VK</button></a>
+          </div>
+          <span class="buttonsDivider"><a id="showHideBtn" onclick="showHideVideo()">Hide Video</a> • <a id="showPlaylistDiv" onclick="showPlaylistDiv()">Back to Main Page</a></span>
+        </div>
       </div>
     </div>
   </body>
