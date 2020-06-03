@@ -28,18 +28,18 @@ async function showPlaylistDiv() {
     if (div1IsShown) {
         div1.classList.remove('visible');
         div1.classList.add('hidden');
-        await new Promise(r => setTimeout(r, 160));
+        await new Promise(r => setTimeout(r, 250));
         container.insertBefore(divs[1], divs[0]);
-        await new Promise(r => setTimeout(r, 160));
+        await new Promise(r => setTimeout(r, 25));
         div2.classList.remove('hidden');
         div2.classList.add('visible');
         div1IsShown = false;
     } else {
         div2.classList.remove('visible');
         div2.classList.add('hidden');
-        await new Promise(r => setTimeout(r, 160));
+        await new Promise(r => setTimeout(r, 250));
         container.insertBefore(divs[0], divs[1]);
-        await new Promise(r => setTimeout(r, 160));
+        await new Promise(r => setTimeout(r, 25));
         div1.classList.remove('hidden');
         div1.classList.add('visible');
         div1IsShown = true;

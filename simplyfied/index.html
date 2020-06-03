@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SecondThundeR's Landing Page (Simplyfied)">
     <link rel="canonical" href="http://secondthunder.github.io/simplyfied">
-    <title>Project Nemesis</title>
+    <title>Project Nemesis (Simplyfied)</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../favicons/main/apple-touch-icon.png">
@@ -26,18 +26,33 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="flex-container">
-      <div id="flex-elements">
-        <div class="buttons-block">
-          <a href="https://vk.com/SecondThundeR"><button>VK</button></a>
-          <a href="tg://resolve?domain=SecondThundeR"><button>Telegram</button></a>
-          <a href="https://instagram.com/AwayFromGalaxy"><button>Instagram</button></a>
-          <a href="https://twitter.com/scndthndr"><button>Twitter</button></a>
-          <a href="https://last.fm/ru/user/AwayFromGalaxy"><button>Last.fm</button></a>
-          <a href="https://github.com/SecondThundeR"><button>Github</button></a>
-          <a href="https://secondthunder.github.io/vkui-calc"><button>VKUI Calculator</button></a>
+    <div id="hostCont">
+      <div id="mainCont" class="visible">
+        <div id="mainCont-elements">
+          <a>You are on the Main Page</a>
+          <div class="buttons-block">
+            <a href="https://vk.com/secondthunder"><button>VK</button></a>
+            <a href="tg://resolve?domain=secondthunder"><button>Telegram</button></a>
+            <a href="https://instagram.com/AwayFromGalaxy"><button>Instagram</button></a>
+            <a href="https://twitter.com/scndthndr"><button>Twitter</button></a>
+            <a href="https://last.fm/ru/user/AwayFromGalaxy"><button>Last.fm</button></a>
+            <a href="https://github.com/SecondThundeR"><button>Github</button></a>
+            <a href="https://secondthunder.github.io/vkui-calc"><button>VKUI Calculator</button></a>
+            <a id="showPlaylistDiv" onclick="showPlaylistDiv()"><button>AwayFromThePlaylist v.2</button></a>
+          </div>
+          <span><a class="textButton" href="../">Full Version</a></span>
         </div>
-        <span><a id="textButton" href="../">Full Version</a></span>
+      </div>
+      <div id="playCont" class="hidden">
+        <div id="playCont-elements">
+          <a>You are on the AwayFromThePlaylist Page</a>
+          <div class="buttons-block-p">
+            <a href="https://music.apple.com/ru/playlist/awayfromtheplaylist-v-2/pl.u-11zBX41tNWvazY7?l=en"><button id="button">Apple Music</button></a>
+            <a href="https://open.spotify.com/playlist/0pbiT1B1enVz4ZZ4ISreYo?si=9rwQTa64S-ewbWJrKiiSoQ"><button id="button">Spotify</button></a>
+            <a href="https://vk.com/audio_playlist178526576_50_1258378789b8347854"><button id="button">VK</button></a>
+          </div>
+          <span><a id="showPlaylistDiv" class="textButton" onclick="showPlaylistDiv()">Back to Main Page</a></span>
+        </div>
       </div>
     </div>
   </body>
