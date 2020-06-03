@@ -122,7 +122,7 @@
 }
 
 #landscapeCont {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -496,8 +496,8 @@ a:hover {
 
     .avatar {
         border: 6px solid var(--accent-color);
-        width: 128px;
-        height: 128px;
+        width: 144px;
+        height: 144px;
     }
 
     .playlist-cover {
@@ -516,7 +516,7 @@ a:hover {
         font-size: 28px;
     }
 
-    #mainCont {
+    #playCont {
         flex-direction: row;
     }
 
@@ -534,7 +534,7 @@ a:hover {
     }
 
     .buttons-block {
-        width: 70%;
+        width: 90%;
         margin-top: 8px;
     }
 
