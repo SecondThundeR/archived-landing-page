@@ -68,7 +68,7 @@
 }
 
 .buttons-block {
-    width: 60%;
+    width: 70%;
     margin-top: 12px;
     margin-bottom: 12px;
 }
@@ -134,7 +134,7 @@ button:hover {
     Rules for regular phones in portait mode
 */
 @media (max-height: 850px) and (orientation: portrait) {
-    #button {
+    button {
         margin: 8px 4px;
         padding: 18px;
         font-size: 16px;
@@ -151,7 +151,7 @@ button:hover {
 */
 @media (max-width: 830px) and (orientation: landscape) {
     .buttons-block {
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -159,7 +159,7 @@ button:hover {
     Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
 */
 @media (max-width: 360px) and (orientation: portrait) {
-    #button {
+    button {
         margin: 8px 4px;
         padding: 12px;
         font-size: 16px;
@@ -171,10 +171,10 @@ button:hover {
     }
 }
 
-@media (max-height: 320px) and (orientation: landscape) {
-    #button {
+@media (max-height: 320px) and (max-width: 640px) and (orientation: landscape) {
+    button {
         margin: 8px 4px;
-        padding: 18px;
+        padding: 12px;
         font-size: 16px;
         border-radius: 12px;
     }
