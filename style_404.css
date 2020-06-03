@@ -51,7 +51,7 @@ head {
     display: inline-block;
     width: 192px;
     height: 192px;
-    margin: 36px;
+    margin: 16px;
     background-image: url(assets/icons/sad-icon.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -80,6 +80,11 @@ a {
     transition-duration: .5s;
     cursor: pointer;
     outline: none;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 16px;
 }
 
 a:hover {
@@ -222,9 +227,13 @@ a:hover {
     }
 }
 
-@media (max-height: 320px) and (orientation: landscape) {
+@media (max-height: 320px) and (max-width: 640px) and (orientation: landscape) {
     h1 {
         font-size: 48px;
+    }
+
+    p {
+        margin-top: 16px;
     }
 
     .sad-icon {
