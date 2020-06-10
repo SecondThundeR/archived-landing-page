@@ -233,7 +233,7 @@ a:hover {
     border-radius: 16px;
 }
 
-#button {
+button {
     margin: 8px 4px;
     padding: 20px;
     font-size: 18px;
@@ -248,52 +248,52 @@ a:hover {
     outline: none;
 }
 
-#button.vk:hover {
+button.vk:hover {
     background-color: var(--vk-color);
     border: 3px solid var(--vk-color);
 }
 
-#button.telegram:hover {
+button.telegram:hover {
     background-color: var(--telegram-color);
     border: 3px solid var(--telegram-color);
 }
 
-#button.instagram:hover {
+button.instagram:hover {
     background-color: var(--instagram-color);
     border: 3px solid var(--instagram-color);
 }
 
-#button.twitter:hover {
+button.twitter:hover {
     background-color: var(--twitter-color);
     border: 3px solid var(--twitter-color);
 }
 
-#button.lastfm:hover {
+button.lastfm:hover {
     background-color: var(--lastfm-color);
     border: 3px solid var(--lastfm-color);
 }
 
-#button.github:hover {
+button.github:hover {
     background-color: var(--github-color);
     border: 3px solid var(--github-color);
 }
 
-#button.playlist:hover {
+button.playlist:hover {
     background-color: var(--playlist-color);
     border: 3px solid var(--playlist-color);
 }
 
-#button.vkuicalc:hover {
+button.vkuicalc:hover {
     background-color: var(--vk-color);
     border: 3px solid var(--vk-color);
 }
 
-#button.amusic:hover {
+button.amusic:hover {
     background-color: var(--amusic-color);
     border: 3px solid var(--amusic-color);
 }
 
-#button.spotify:hover {
+button.spotify:hover {
     background-color: var(--spotify-color);
     border: 3px solid var(--spotify-color);
 }
@@ -483,7 +483,7 @@ a:hover {
         display: none;
     }
 
-    #button {
+    button {
         margin: 8px 2px;
         padding: 16px;
         font-size: 18px;
@@ -528,7 +528,7 @@ a:hover {
         margin: 12px 18px 12px 12px;
     }
 
-    #button {
+    button {
         padding: 16px;
         font-size: 16px;
     }
@@ -574,7 +574,7 @@ a:hover {
         padding: 12px;
     }
 
-    #button {
+    button {
         margin: 8px 2px;
         padding: 12px;
         font-size: 16px;
@@ -613,7 +613,7 @@ a:hover {
         display: none;
     }
 
-    #button {
+    button {
         margin: 8px 2px;
         padding: 12px;
         font-size: 14px;
