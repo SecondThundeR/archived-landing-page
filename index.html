@@ -27,7 +27,7 @@
   </head>
   <body>
     <video id="videobcg" class="visible" preload autoplay loop muted>
-			<source src="assets/1.mp4">
+			<source id="videosrc" src="assets/1.mp4">
     </video>
     <div id="hostCont">
       <div id="mainCont" class="visible">
@@ -49,7 +49,7 @@
             <button class="vkuicalc" onclick="window.location.href='https://secondthunder.github.io/vkui-calc'">VKUI Calculator</button>
             <button id="showPlaylistDiv" class="playlist" onclick="showPlaylistDiv()">AwayFromThePlaylist v.2</button>
           </div>
-          <span class="buttonsDivider"><a id="showHideBtn" onclick="showHideVideo()">Hide Video</a> • <a href="simplyfied/">Simplified Version</a></span>
+          <span class="buttonsDivider"><a id="showHideBtn" onclick="showHideVideo()">Hide Video</a> • <a id="changeVideoBtn" onclick="changeVideo()">Change Video</a> • <a href="simplyfied/">Simplified Version</a></span>
         </div>
       </div>
       <div id="playCont" class="hidden">

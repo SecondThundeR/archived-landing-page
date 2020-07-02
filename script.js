@@ -1,5 +1,6 @@
 'use strict';
 let isShown = true;
+let isFirstVidSet = true;
 let div1IsShown = true;
 
 function showHideVideo() {
@@ -16,6 +17,32 @@ function showHideVideo() {
         video.classList.remove('hidden');
         video.classList.add('visible');
         text.innerHTML = "Hide Video";
+    }
+}
+
+function changeVideo() {
+    let videocontainer = document.getElementById('videobcg');
+    let videosource = document.getElementById('videosrc');
+    let firstvideo = 'assets/1.mp4';
+    let secondvideo = 'assets/2.mp4';
+    let videobutton = document.getElementById("changeVideoBtn");
+
+    if (isFirstVidSet) {
+        isFirstVidSet = false;
+        videobutton.addEventListener("click", function(event) {
+            videocontainer.pause();
+            videosource.setAttribute('src', secondvideo);
+            videocontainer.load();
+            videocontainer.play();
+        }, false);
+    } else {
+        isFirstVidSet = true;
+        videobutton.addEventListener("click", function(event) {
+            videocontainer.pause();
+            videosource.setAttribute('src', firstvideo);
+            videocontainer.load();
+            videocontainer.play();
+        }, false);
     }
 }
 
