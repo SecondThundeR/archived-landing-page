@@ -5,11 +5,13 @@
     --text-color: #fff;
     --accent-color: #ff5858;
     --dimming: rgba(0,0,0,0.6);
+
     /* Gradient Colors */
     --gradient-color-first: #2d132c;
     --gradient-color-second: #3282b8;
     --gradient-color-third: #b030b0;
     --gradient-color-fourth: #341677;
+
     /* Social Sites Colors */
     --vk-color: #4680C2;
     --telegram-color: #0088cc;
