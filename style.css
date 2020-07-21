@@ -21,7 +21,6 @@
     --github-color: #333;
     --playlist-color: #ff2e63;
     --spotify-color: #1DB954;
-    --amusic-color: #fa57c1;
 }
 
 * {
@@ -83,7 +82,9 @@
     background-color: var(--dimming);
 }
 
-#mainCont, #playCont {
+#mainCont,
+#playCont,
+#infoCont {
     display: flex;
     box-sizing: border-box;
     justify-content: center;
@@ -100,19 +101,22 @@
 }
 
 #mainCont.visible,
-#playCont.visible {
+#playCont.visible
+#infoCont.visible {
     opacity: 1;
     visibility: visible;
 }
 
 #mainCont.hidden,
-#playCont.hidden {
+#playCont.hidden,
+#infoCont.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
 #mainCont-elements,
-#playCont-elements {
+#playCont-elements,
+#infoCont-elements {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,6 +193,23 @@ p {
     color: rgba(255, 255, 255,0.5);
     margin-left: auto;
     margin-right: auto;
+}
+
+.infoSpan {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoSpan i {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.infoButton {
+    margin-top: 12px;
 }
 
 a {
@@ -476,9 +497,19 @@ button.spotify:hover {
         font-size: 32px;
     }
 
+    h1.infoTitle {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+
     #mainCont,
     #playCont {
         padding: 12px;
+    }
+
+    #infoCont {
+        padding: 24px;
     }
 
     #landscapeCont {
@@ -520,6 +551,10 @@ button.spotify:hover {
 
     #playCont {
         flex-direction: row;
+    }
+
+    #infoCont {
+        padding: 24px;
     }
 
     #playCont-elements {
@@ -572,6 +607,12 @@ button.spotify:hover {
         font-size: 28px;
     }
 
+    h1.infoTitle {
+        margin-top: 8px;
+        margin-bottom: 12px;
+        font-size: 28px;
+    }
+
     #mainCont {
         padding: 12px;
     }
@@ -605,6 +646,15 @@ button.spotify:hover {
         margin-top: 8px;
         margin-bottom: 8px;
         font-size: 28px;
+    }
+
+    .infoSpan,
+    .infoSpan i {
+        font-size: 16px;
+    }
+
+    .infoButton {
+        margin-top: 8px;
     }
 
     #mainCont {

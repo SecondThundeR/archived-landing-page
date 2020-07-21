@@ -1,5 +1,5 @@
 'use strict'
-let div1IsShown = true;
+let isDiv1Shown = true;
 
 async function showPlaylistDiv() {
   let container = document.getElementById('hostCont');
@@ -7,7 +7,7 @@ async function showPlaylistDiv() {
   let div2 = document.getElementById('playCont');
   let divs = [div1, div2];
 
-  if (div1IsShown) {
+  if (isDiv1Shown) {
       div1.classList.remove('visible');
       div1.classList.add('hidden');
       await new Promise(r => setTimeout(r, 250));
@@ -15,7 +15,8 @@ async function showPlaylistDiv() {
       await new Promise(r => setTimeout(r, 25));
       div2.classList.remove('hidden');
       div2.classList.add('visible');
-      div1IsShown = false;
+      isDiv1Shown = false;
+      isDiv2Shown = true;
   } else {
       div2.classList.remove('visible');
       div2.classList.add('hidden');
@@ -24,6 +25,7 @@ async function showPlaylistDiv() {
       await new Promise(r => setTimeout(r, 25));
       div1.classList.remove('hidden');
       div1.classList.add('visible');
-      div1IsShown = true;
+      isDiv1Shown = true;
+      isDiv2Shown = false;
   }
 }

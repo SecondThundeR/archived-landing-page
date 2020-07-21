@@ -1,19 +1,20 @@
 'use strict';
-let isShown = true;
+let isVideoShown = true;
 let isFirstVidSet = true;
-let div1IsShown = true;
+let isDiv1Shown = true;
+let isDiv2Shown = false;
 
 function showHideVideo() {
     let video = document.getElementById('videobcg');
     let text = document.getElementById('showHideBtn');
 
-    if (isShown) {
-        isShown = false;
+    if (isVideoShown) {
+        isVideoShown = false;
         video.classList.remove('visible');
         video.classList.add('hidden');
         text.innerHTML = "Show Video";
     } else {
-        isShown = true;
+        isVideoShown = true;
         video.classList.remove('hidden');
         video.classList.add('visible');
         text.innerHTML = "Hide Video";
@@ -52,7 +53,7 @@ async function showPlaylistDiv() {
     let div2 = document.getElementById('playCont');
     let divs = [div1, div2];
 
-    if (div1IsShown) {
+    if (isDiv1Shown) {
         div1.classList.remove('visible');
         div1.classList.add('hidden');
         await new Promise(r => setTimeout(r, 250));
@@ -60,7 +61,8 @@ async function showPlaylistDiv() {
         await new Promise(r => setTimeout(r, 25));
         div2.classList.remove('hidden');
         div2.classList.add('visible');
-        div1IsShown = false;
+        isDiv1Shown = false;
+        isDiv2Shown = true;
     } else {
         div2.classList.remove('visible');
         div2.classList.add('hidden');
@@ -69,7 +71,35 @@ async function showPlaylistDiv() {
         await new Promise(r => setTimeout(r, 25));
         div1.classList.remove('hidden');
         div1.classList.add('visible');
-        div1IsShown = true;
+        isDiv1Shown = true;
+        isDiv2Shown = false;
+    }
+}
+
+async function showInfoDiv() {
+    let container = document.getElementById('hostCont');
+    let div1 = document.getElementById('playCont');
+    let div2 = document.getElementById('infoCont');
+    let divs = [div1, div2];
+
+    if (isDiv2Shown) {
+        div1.classList.remove('visible');
+        div1.classList.add('hidden');
+        await new Promise(r => setTimeout(r, 250));
+        container.insertBefore(divs[1], divs[0]);
+        await new Promise(r => setTimeout(r, 25));
+        div2.classList.remove('hidden');
+        div2.classList.add('visible');
+        isDiv2Shown = false;
+    } else {
+        div2.classList.remove('visible');
+        div2.classList.add('hidden');
+        await new Promise(r => setTimeout(r, 250));
+        container.insertBefore(divs[0], divs[1]);
+        await new Promise(r => setTimeout(r, 25));
+        div1.classList.remove('hidden');
+        div1.classList.add('visible');
+        isDiv2Shown = true;
     }
 }
 
