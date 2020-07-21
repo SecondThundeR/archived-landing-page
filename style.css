@@ -18,7 +18,8 @@
     --instagram-color: #5851db;
     --twitter-color: #1DA1F2;
     --lastfm-color: #d51007;
-    --github-color: #333;
+    --github-bg-color: #fff;
+    --github-text-color: #333;
     --playlist-color: #ff2e63;
     --spotify-color: #1DB954;
 }
@@ -297,8 +298,9 @@ button.lastfm:hover {
 }
 
 button.github:hover {
-    background-color: var(--github-color);
-    border: 3px solid var(--github-color);
+    background-color: var(--github-bg-color);
+    border: 3px solid var(--github-bg-color);
+    color: var(--github-text-color);
 }
 
 button.playlist:hover {
