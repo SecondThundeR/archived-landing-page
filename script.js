@@ -1,6 +1,6 @@
 'use strict';
 let isVideoShown = true;
-let isFirstVidSet = true;
+let isSecondVidSet = false;
 let isDiv1Shown = true;
 let isDiv2Shown = false;
 
@@ -10,13 +10,13 @@ function showHideVideo() {
 
     if (isVideoShown) {
         isVideoShown = false;
-        video.classList.remove('visible');
-        video.classList.add('hidden');
+        video.classList.toggle('visible');
+        video.classList.toggle('hidden');
         text.innerHTML = "Show Video";
     } else {
         isVideoShown = true;
-        video.classList.remove('hidden');
-        video.classList.add('visible');
+        video.classList.toggle('hidden');
+        video.classList.toggle('visible');
         text.innerHTML = "Hide Video";
     }
 }
@@ -28,21 +28,17 @@ function changeVideo() {
     let secondvideo = 'assets/2.mp4';
     let videobutton = document.getElementById("changeVideoBtn");
 
-    if (isFirstVidSet) {
-        isFirstVidSet = false;
+    if (isSecondVidSet) {
+        isSecondVidSet = false;
         videobutton.addEventListener("click", function(event) {
-            videocontainer.pause();
-            videosource.setAttribute('src', secondvideo);
-            videocontainer.load();
-            videocontainer.play();
-        }, false);
-    } else {
-        isFirstVidSet = true;
-        videobutton.addEventListener("click", function(event) {
-            videocontainer.pause();
             videosource.setAttribute('src', firstvideo);
             videocontainer.load();
-            videocontainer.play();
+        }, false);
+    } else {
+        isSecondVidSet = true;
+        videobutton.addEventListener("click", function(event) {
+            videosource.setAttribute('src', secondvideo);
+            videocontainer.load();
         }, false);
     }
 }
