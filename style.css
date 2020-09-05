@@ -163,15 +163,10 @@ head {
 body {
     position: relative;
     height: 100%;
-    background: linear-gradient(312deg, var(--gradient-color-first), var(--gradient-color-second), var(--gradient-color-third), var(--gradient-color-fourth));
+    background: #121212;
     background-size: 600% 600%;
     background-repeat: no-repeat;
     overflow: hidden;
-    -webkit-animation: BgAnim 32s ease infinite;
-    -moz-animation: BgAnim 32s ease infinite;
-    -o-animation: BgAnim 32s ease infinite;
-    -ms-animation: BgAnim 32s ease infinite;
-    animation: BgAnim 32s ease infinite;
 }
 
 html {
@@ -321,68 +316,6 @@ button.amusic:hover {
 button.spotify:hover {
     background-color: var(--spotify-color);
     border: 3px solid var(--spotify-color);
-}
-
-
-
-@-webkit-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-moz-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-o-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-ms-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
 }
 
 @-webkit-keyframes blinking {
