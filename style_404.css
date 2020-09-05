@@ -1,242 +1,186 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 * {
-    font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
-    text-rendering: optimizeLegibility;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html,
 body{
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 
 body {
-    position: relative;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
 head {
-    display: none;
+  display: none;
 }
 
 .cont-elements {
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
 }
 
 .flex-container {
-    display: flex;
-    height: 100%;
-    padding: 16px;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .sad-icon {
-    display: inline-block;
-    width: 192px;
-    height: 192px;
-    margin: 16px;
-    background-image: url(assets/icons/sad-icon.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 60%;
-    border-radius: 100%;
-    transition: all .3s ease-in-out 0s;
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  margin: 16px;
+  background-image: url(assets/icons/sad-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border-radius: 100%;
+  transition: all .3s ease-in-out 0s;
 }
 
 h1 {
-    width: fit-content;
-    margin: 0px auto;
-    padding: 0px;
-    font-size: 56px;
-    font-weight: bold;
-    cursor: default;
+  width: fit-content;
+  margin: 0px auto;
+  padding: 0px;
+  font-size: 56px;
+  font-weight: bold;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -ms-transition-duration: .5s;
+  transition-duration: .5s;
+  cursor: default;
 }
 
 a {
-    width: fit-content;
-    margin: 0 auto;
-    font-weight: 500;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
-    -ms-transition-duration: .5s;
-    transition-duration: .5s;
-    cursor: pointer;
-    outline: none;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: 500;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -ms-transition-duration: .5s;
+  transition-duration: .5s;
+  cursor: pointer;
+  outline: none;
 }
 
 p {
-    margin-top: 0px;
-    margin-bottom: 16px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+h1:hover {
+  color: #ff6464;
 }
 
 a:hover {
-    color: #ff6464;
-}
-
-#wrap {
-    color: #ff6464;
-    border-right: 3px solid #ff6464;
-    animation: blinking 1.5s steps(1) infinite;
-}
-
-@-webkit-keyframes blinking {
-    0%  {
-        border-color: #ff6464;
-    }
-    50% {
-        color: transparent;
-    }
-    100% {
-        border-color: #ff6464;
-    }
-}
-
-@-moz-keyframes blinking {
-    0%  {
-        border-color: #ff6464;
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: #ff6464;
-    }
-}
-
-@-o-keyframes blinking {
-    0%  {
-        border-color: #ff6464;
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: #ff6464;
-    }
-}
-
-@-ms-keyframes blinking {
-    0%  {
-        border-color: #ff6464;
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: #ff6464;
-    }
-}
-
-@keyframes blinking {
-    0%  {
-        border-color: #ff6464;
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: #ff6464;
-    }
+  color: #ff6464;
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --text-color: #000;
-        --background-color: #fff;
-        --dimmed-black: rgba(0, 0, 0, 0.5);
-    }
+  :root {
+    --text-color: #000;
+    --background-color: #fff;
+    --dimmed-black: rgba(0, 0, 0, 0.5);
+  }
 
-    * {
-        color: var(--text-color);
-    }
+  * {
+    color: var(--dimmed-black);
+  }
 
-    a {
-        color: var(--dimmed-black);
-    }
+  a {
+    color: var(--dimmed-black);
+  }
 
-    p {
-        color: var(--text-color)
-    }
+  p {
+    color: var(--text-color)
+  }
 
-    .sad-icon {
-        background-color: var(--background-color);
-        box-shadow: 0px 0px 30px var(--dimmed-black);
-    }
+  .sad-icon {
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 30px var(--dimmed-black);
+  }
 
-    body {
-        background-color: var(--background-color);
-    }
+  body {
+    background-color: var(--background-color);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #fff;
-        --background-color: #202124;
-        --background-color-icon: #35363a;
-        --dimmed-white: rgba(255, 255, 255, .5);
-        --dimmed-black: rgba(0, 0, 0, 0.5);
-    }
+  :root {
+    --text-color: #fff;
+    --background-color: #202124;
+    --background-color-icon: #35363a;
+    --dimmed-white: rgba(255, 255, 255, .5);
+    --dimmed-black: rgba(0, 0, 0, 0.5);
+  }
 
-    * {
-        color: var(--dimmed-white);
-    }
+  * {
+    color: var(--dimmed-white);
+  }
 
-    a {
-        color: rgba(255, 255, 255, .5);
-    }
+  a {
+    color: rgba(255, 255, 255, .5);
+  }
 
-    p {
-        color: var(--text-color)
-    }
+  p {
+    color: var(--text-color)
+  }
 
-    .sad-icon {
-        background-color: var(--background-color-icon);
-        box-shadow: 0px 0px 30px var(--dimmed-black);
-    }
+  .sad-icon {
+    background-color: var(--background-color-icon);
+    box-shadow: 0px 0px 30px var(--dimmed-black);
+  }
 
-    body {
-        background-color: var(--background-color);
-    }
+  body {
+    background-color: var(--background-color);
+  }
 }
 
 @media (max-width: 830px) and (orientation: landscape) {
-    h1 {
-        font-size: 48px;
-    }
-    .sad-icon {
-        width: 144px;
-        height: 144px;
-    }
+  h1 {
+    font-size: 48px;
+  }
+
+  .sad-icon {
+    width: 144px;
+    height: 144px;
+  }
 }
 
 @media (max-height: 320px) and (max-width: 640px) and (orientation: landscape) {
-    h1 {
-        font-size: 48px;
-    }
+  h1 {
+    font-size: 48px;
+  }
 
-    p {
-        margin-top: 16px;
-    }
+  p {
+    margin-top: 16px;
+  }
 
-    .sad-icon {
-        display: none;
-    }
+  .sad-icon {
+    display: none;
+  }
 }
