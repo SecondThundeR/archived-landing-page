@@ -7,17 +7,20 @@ let isDiv2Shown = false;
 function showHideVideo() {
     let video = document.getElementById('videobcg');
     let text = document.getElementById('showHideBtn');
+    let body = document.body;
 
     if (isVideoShown) {
-        isVideoShown = false;
+        body.style.animationPlayState = "running";
         video.classList.toggle('visible');
         video.classList.toggle('hidden');
         text.innerHTML = "Show Video";
+        isVideoShown = false;
     } else {
-        isVideoShown = true;
+        body.style.animationPlayState = "paused";
         video.classList.toggle('hidden');
         video.classList.toggle('visible');
         text.innerHTML = "Hide Video";
+        isVideoShown = true;
     }
 }
 
@@ -141,6 +144,8 @@ TxtType.prototype.tick = function() {
 };
 
 window.onload = function() {
+    let body = document.body;
+    body.style.animationPlayState = "paused";
     let elements = document.getElementsByClassName('typewrite');
     for (let i=0; i<elements.length; i++) {
         let toRotate = elements[i].getAttribute('data-type');
