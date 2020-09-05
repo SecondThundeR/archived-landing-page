@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Страница SecondThundeR'а (Упрощённая)">
+    <link rel="canonical" href="http://secondthunder.github.io/ru/simplified">
+    <title>Проект Немезида (Упрощённый)</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/main/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/main/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/main/favicon-16x16.png">
+    <link rel="manifest" href="../../favicons/main/site.webmanifest">
+    <link rel="mask-icon" href="../../favicons/main/safari-pinned-tab.svg" color="#ff6464">
+    <link rel="shortcut icon" href="../../favicons/main/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Проект Немезида">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Проект Немезида">
+    <meta name="msapplication-TileColor" content="#ff6464">
+    <meta name="msapplication-config" content="../../favicons/main/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="hostCont">
+      <div id="mainCont" class="visible">
+        <div id="mainCont-elements">
+          <a>Главная страница</a>
+          <div class="buttons-block">
+            <button class="vk" onclick="window.location.href='https://vk.com/secondthunder'">ВКонтакте</button>
+            <button class="telegram" onclick="window.location.href='tg://resolve?domain=secondthunder'">Telegram</button>
+            <button class="instagram" onclick="window.location.href='https://instagram.com/AwayFromGalaxy'">Instagram</button>
+            <button class="twitter" onclick="window.location.href='https://twitter.com/scndthndr'">Твиттер</button>
+            <button class="lastfm" onclick="window.location.href='https://last.fm/ru/user/AwayFromGalaxy'">Last.fm</button>
+            <button class="github" onclick="window.location.href='https://github.com/SecondThundeR'">Github</button>
+            <button class="vkuicalc" onclick="window.location.href='https://secondthunder.github.io/vkui-calc'">Калькулятор на VKUI</button>
+            <button id="showPlaylistDiv" class="playlist" onclick="showPlaylistDiv()">AwayFromThePlaylist v.2</button>
+          </div>
+          <span><a class="textButton" href="../">Полная версия</a></span>
+        </div>
+      </div>
+      <div id="playCont" class="hidden">
+        <div id="playCont-elements">
+          <a>AwayFromThePlaylist v.2</a>
+          <div class="buttons-block-p">
+            <button class="spotify" onclick="window.location.href='https://open.spotify.com/playlist/0pbiT1B1enVz4ZZ4ISreYo?si=9rwQTa64S-ewbWJrKiiSoQ'">Spotify</button>
+          </div>
+          <span><a id="showPlaylistDiv" class="textButton" onclick="showPlaylistDiv()">Вернуться на главную страницу</a></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

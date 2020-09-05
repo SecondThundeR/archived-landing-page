@@ -1,688 +1,555 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 
 :root {
-    /* Main Colors */
-    --text-color: #fff;
-    --accent-color: #ff5858;
-    --dimming: rgba(0,0,0,0.6);
+  /* Main Colors */
+  --text-color: #fff;
+  --accent-color: #ff5858;
+  --dimming: rgba(0,0,0,0.6);
+  --body-background-color: #121212;
 
-    /* Gradient Colors */
-    --gradient-color-first: #2d132c;
-    --gradient-color-second: #3282b8;
-    --gradient-color-third: #b030b0;
-    --gradient-color-fourth: #341677;
+  /* Gradient Colors */
+  --gradient-color-first: #2d132c;
+  --gradient-color-second: #3282b8;
+  --gradient-color-third: #b030b0;
+  --gradient-color-fourth: #341677;
 
-    /* Social Sites Colors */
-    --vk-color: #4680C2;
-    --telegram-color: #0088cc;
-    --instagram-color: #E1306C;
-    --twitter-color: #1DA1F2;
-    --lastfm-color: #d51007;
-    --github-bg-color: #fff;
-    --github-text-color: #333;
-    --playlist-color: #ff2e63;
-    --spotify-color: #1DB954;
+  /* Social Sites Colors */
+  --vk-color: #4680C2;
+  --telegram-color: #0088cc;
+  --instagram-color: #E1306C;
+  --twitter-color: #1DA1F2;
+  --lastfm-color: #d51007;
+  --github-bg-color: #fff;
+  --github-text-color: #333;
+  --playlist-color: #ff2e63;
+  --spotify-color: #1DB954;
 }
 
 * {
-    font-family: "Ubuntu", sans-serif;
-    color: var(--text-color);
-    text-decoration: none;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    text-rendering: optimizeLegibility;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--text-color);
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  text-rendering: optimizeLegibility;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #videobcg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 110%;
-    min-height: 110%;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    transition: all .5s ease-out;
-    overflow: hidden;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 110%;
+  min-height: 110%;
+  overflow: hidden;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #videobcg.visible {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 #videobcg.hidden {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #hostCont {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--dimming);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dimming);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 #mainCont,
 #playCont,
 #infoCont {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    height: 100%;
-    padding: 16px;
-    -webkit-transition: all .25s ease-out;
-    -moz-transition: all .25s ease-out;
-    -o-transition: all .25s ease-out;
-    -ms-transition: all .25s ease-out;
-    transition: all .25s ease-out;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  transition: all .25s ease-out;
 }
 
 #mainCont.visible,
 #playCont.visible
 #infoCont.visible {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 #mainCont.hidden,
 #playCont.hidden,
 #infoCont.hidden {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #mainCont-elements,
 #playCont-elements,
 #infoCont-elements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
 }
 
 #landscapeCont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
 }
 
 .buttons-block {
-    width: 60%;
-    margin-top: 24px;
-    margin-bottom: 16px;
+  width: 60%;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
 .buttons-block-p {
-    width: 100%;
-    margin-top: 24px;
-    margin-bottom: 16px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
 html,
 body {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 head {
-    display: none;
+  display: none;
 }
 
 body {
-    position: relative;
-    height: 100%;
-    background: linear-gradient(312deg, var(--gradient-color-first), var(--gradient-color-second), var(--gradient-color-third), var(--gradient-color-fourth));
-    background-size: 600% 600%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    -webkit-animation: BgAnim 32s ease infinite;
-    -moz-animation: BgAnim 32s ease infinite;
-    -o-animation: BgAnim 32s ease infinite;
-    -ms-animation: BgAnim 32s ease infinite;
-    animation: BgAnim 32s ease infinite;
+  position: relative;
+  height: 100%;
+  background-color: var(--body-background-color);
+  overflow: hidden;
 }
 
 html {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 h1 {
-    cursor: default;
+  cursor: default;
 }
 
 p {
-    margin: 0px;
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--accent-color);
+  margin: 0px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--accent-color);
 }
 
 .buttonsDivider {
-    color: rgba(255, 255, 255,0.5);
-    margin-left: auto;
-    margin-right: auto;
+  color: rgba(255, 255, 255,0.5);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .infoSpan {
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    margin-left: auto;
-    margin-right: auto;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .infoSpan i {
-    color: var(--accent-color);
-    font-weight: 500;
+  color: var(--accent-color);
+  font-weight: 500;
 }
 
 .infoButton {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 a {
-    width: fit-content;
-    margin: 0 auto;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.5);
-    cursor: default;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 a.typewrite {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a:hover {
-    color: var(--accent-color);
-}
-
-.wrap {
-    border-right: 0.05em solid var(--text-color);
-    animation: blinking 1.5s steps(1) infinite;
+  color: var(--accent-color);
 }
 
 .avatar {
-    display: inline-block;
-    margin: 0px;
-    background-image: url(assets/avatar.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    border-radius: 100%;
+  display: inline-block;
+  margin: 0px;
+  background-image: url(assets/avatar.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 100%;
 }
 
 .playlist-cover {
+  display: inline-block;
+  margin: 0px;
+  background-image: url(assets/cover.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+button {
+  margin: 8px 4px;
+  padding: 20px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 12px;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  outline: none;
+}
+
+button.vk:hover {
+  background-color: var(--vk-color);
+  border: 3px solid var(--vk-color);
+}
+
+button.telegram:hover {
+  background-color: var(--telegram-color);
+  border: 3px solid var(--telegram-color);
+}
+
+button.instagram:hover {
+  background-color: var(--instagram-color);
+  border: 3px solid var(--instagram-color);
+}
+
+button.twitter:hover {
+  background-color: var(--twitter-color);
+  border: 3px solid var(--twitter-color);
+}
+
+button.lastfm:hover {
+  background-color: var(--lastfm-color);
+  border: 3px solid var(--lastfm-color);
+}
+
+button.github:hover {
+  background-color: var(--github-bg-color);
+  border: 3px solid var(--github-bg-color);
+  color: var(--github-text-color);
+}
+
+button.playlist:hover {
+  background-color: var(--playlist-color);
+  border: 3px solid var(--playlist-color);
+}
+
+button.vkuicalc:hover {
+  background-color: var(--vk-color);
+  border: 3px solid var(--vk-color);
+}
+
+button.amusic:hover {
+  background-color: var(--amusic-color);
+  border: 3px solid var(--amusic-color);
+}
+
+button.spotify:hover {
+  background-color: var(--spotify-color);
+  border: 3px solid var(--spotify-color);
+}
+
+/*
+  Rules for tablets and PC's in landscape
+*/
+@media (min-width: 840px) and (orientation: landscape) {
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 48px;
+  }
+
+  .avatar {
+    width: 256px;
+    height: 256px;
+    border: 12px solid var(--accent-color);
+  }
+
+  .playlist-cover {
+    width: 256px;
+    height: 256px;
+  }
+}
+
+/*
+  Rules for tablets and PC's in portrait
+*/
+@media (min-height: 860px) and (orientation: portrait) {
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-size: 48px;
+  }
+
+  .avatar {
+    border: 8px solid var(--accent-color);
+    width: 192px;
+    height: 192px;
+  }
+
+  .playlist-cover {
+    width: 192px;
+    height: 192px;
+  }
+}
+
+/*
+  Rules for regular phones in portait mode
+*/
+@media (max-height: 850px) and (orientation: portrait) {
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  h1.infoTitle {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+
+  #mainCont,
+  #playCont {
+    padding: 12px;
+  }
+
+  #infoCont {
+    padding: 24px;
+  }
+
+  #landscapeCont {
+    display: none;
+  }
+
+  button {
+    margin: 8px 2px;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .buttons-block,
+  .buttons-block-p {
+    width: 100%;
+  }
+
+  .avatar {
+    border: 6px solid var(--accent-color);
+    width: 144px;
+    height: 144px;
+  }
+
+  .playlist-cover {
+    width: 256px;
+    height: 256px;
+  }
+}
+
+/*
+  Rules for regular phones landscape
+*/
+@media (max-width: 830px) and (orientation: landscape) {
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+
+  #playCont {
+    flex-direction: row;
+  }
+
+  #infoCont {
+    padding: 24px;
+  }
+
+  #playCont-elements {
+    margin: 12px 12px 12px 18px;
+  }
+
+  #landscapeCont {
+    margin: 12px 18px 12px 12px;
+  }
+
+  button {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .buttons-block {
+    width: 90%;
+    margin-top: 8px;
+  }
+
+  .buttons-block-p {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .avatar,
+  .playlist-cover {
+    display: none;
+  }
+
+  .playlist-cover-land {
     display: inline-block;
+    width: 240px;
+    height: 240px;
     margin: 0px;
     background-image: url(assets/cover.png);
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 16px;
-}
-
-button {
-    margin: 8px 4px;
-    padding: 20px;
-    font-size: 18px;
-    background-color: transparent;
-    border: 3px solid white;
-    border-radius: 12px;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    outline: none;
-}
-
-button.vk:hover {
-    background-color: var(--vk-color);
-    border: 3px solid var(--vk-color);
-}
-
-button.telegram:hover {
-    background-color: var(--telegram-color);
-    border: 3px solid var(--telegram-color);
-}
-
-button.instagram:hover {
-    background-color: var(--instagram-color);
-    border: 3px solid var(--instagram-color);
-}
-
-button.twitter:hover {
-    background-color: var(--twitter-color);
-    border: 3px solid var(--twitter-color);
-}
-
-button.lastfm:hover {
-    background-color: var(--lastfm-color);
-    border: 3px solid var(--lastfm-color);
-}
-
-button.github:hover {
-    background-color: var(--github-bg-color);
-    border: 3px solid var(--github-bg-color);
-    color: var(--github-text-color);
-}
-
-button.playlist:hover {
-    background-color: var(--playlist-color);
-    border: 3px solid var(--playlist-color);
-}
-
-button.vkuicalc:hover {
-    background-color: var(--vk-color);
-    border: 3px solid var(--vk-color);
-}
-
-button.amusic:hover {
-    background-color: var(--amusic-color);
-    border: 3px solid var(--amusic-color);
-}
-
-button.spotify:hover {
-    background-color: var(--spotify-color);
-    border: 3px solid var(--spotify-color);
-}
-
-
-
-@-webkit-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-moz-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-o-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-ms-keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@keyframes BgAnim {
-    0% {
-        background-position:2% 0%;
-    }
-    50% {
-        background-position:99% 100%;
-    }
-    100% {
-        background-position:2% 0%;
-    }
-}
-
-@-webkit-keyframes blinking {
-    0%  {
-        color: var(--text-color);
-    }
-    50% {
-        color: transparent;
-    }
-    100% {
-        color: var(--text-color);
-    }
-}
-
-@-moz-keyframes blinking {
-    0%  {
-        border-color: var(--text-color);
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: var(--text-color);
-    }
-}
-
-@-o-keyframes blinking {
-    0%  {
-        border-color: var(--text-color);
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: var(--text-color);
-    }
-}
-
-@-ms-keyframes blinking {
-    0%  {
-        border-color: var(--text-color);
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: var(--text-color);
-    }
-}
-
-@keyframes blinking {
-    0%  {
-        border-color: var(--text-color);
-    }
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: var(--text-color);
-    }
+  }
 }
 
 /*
-    Rules for tablets and PC's in landscape
-*/
-@media (min-width: 840px) and (orientation: landscape) {
-    h1 {
-        margin-top: 8px;
-        margin-bottom: 24px;
-        font-size: 48px;
-    }
-
-    .avatar {
-        width: 256px;
-        height: 256px;
-        border: 12px solid var(--accent-color);
-    }
-
-    .playlist-cover {
-        width: 256px;
-        height: 256px;
-    }
-}
-
-/*
-    Rules for tablets and PC's in portrait
-*/
-@media (min-height: 860px) and (orientation: portrait) {
-    h1 {
-        margin-top: 8px;
-        margin-bottom: 32px;
-        font-size: 48px;
-    }
-
-    .avatar {
-        border: 8px solid var(--accent-color);
-        width: 192px;
-        height: 192px;
-    }
-
-    .playlist-cover {
-        width: 192px;
-        height: 192px;
-    }
-}
-
-/*
-    Rules for regular phones in portait mode
-*/
-@media (max-height: 850px) and (orientation: portrait) {
-    h1 {
-        margin-top: 8px;
-        margin-bottom: 24px;
-        font-size: 32px;
-    }
-
-    h1.infoTitle {
-        margin-top: 8px;
-        margin-bottom: 16px;
-        font-size: 32px;
-    }
-
-    #mainCont,
-    #playCont {
-        padding: 12px;
-    }
-
-    #infoCont {
-        padding: 24px;
-    }
-
-    #landscapeCont {
-        display: none;
-    }
-
-    button {
-        margin: 8px 2px;
-        padding: 16px;
-        font-size: 18px;
-    }
-
-    .buttons-block,
-    .buttons-block-p {
-        width: 100%;
-    }
-
-    .avatar {
-        border: 6px solid var(--accent-color);
-        width: 144px;
-        height: 144px;
-    }
-
-    .playlist-cover {
-        width: 256px;
-        height: 256px;
-    }
-}
-
-/*
-    Rules for regular phones landscape
-*/
-@media (max-width: 830px) and (orientation: landscape) {
-    h1 {
-        margin-top: 8px;
-        margin-bottom: 8px;
-        font-size: 28px;
-    }
-
-    #playCont {
-        flex-direction: row;
-    }
-
-    #infoCont {
-        padding: 24px;
-    }
-
-    #playCont-elements {
-        margin: 12px 12px 12px 18px;
-    }
-
-    #landscapeCont {
-        margin: 12px 18px 12px 12px;
-    }
-
-    button {
-        padding: 16px;
-        font-size: 16px;
-    }
-
-    .buttons-block {
-        width: 90%;
-        margin-top: 8px;
-    }
-
-    .buttons-block-p {
-        width: 100%;
-        margin-top: 8px;
-    }
-
-    .avatar,
-    .playlist-cover {
-        display: none;
-    }
-
-    .playlist-cover-land {
-        display: inline-block;
-        width: 240px;
-        height: 240px;
-        margin: 0px;
-        background-image: url(assets/cover.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        border-radius: 16px;
-    }
-}
-
-/*
-    Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
+  Special rule for portrait and landscape modes for small phones (e.g. iPhone 5S/SE and others)
 */
 @media (max-width: 360px) and (orientation: portrait) {
-    h1 {
-        margin-top: 8px;
-        margin-bottom: 4px;
-        font-size: 28px;
-    }
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 28px;
+  }
 
-    h1.infoTitle {
-        margin-top: 8px;
-        margin-bottom: 12px;
-        font-size: 28px;
-    }
+  h1.infoTitle {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
 
-    #mainCont {
-        padding: 12px;
-    }
+  #mainCont {
+    padding: 12px;
+  }
 
-    button {
-        margin: 8px 2px;
-        padding: 12px;
-        font-size: 16px;
-        border: 2px solid var(--text-color);
-        border-radius: 8px;
-    }
+  button {
+    margin: 8px 2px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+  }
 
-    #landscapeCont {
-        display: none;
-    }
+  #landscapeCont {
+    display: none;
+  }
 
-    .buttons-block,
-    .buttons-block-p {
-        margin-top: 4px;
-        margin-bottom: 12px;
-    }
+  .buttons-block,
+  .buttons-block-p {
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
 
-    .avatar,
-    .playlist-cover {
-        display: none;
-    }
+  .avatar,
+  .playlist-cover {
+    display: none;
+  }
 }
 
 @media (max-height: 320px) and (max-width: 640px) and (orientation: landscape) {
-    h1 {
-        margin-top: 8px;
-        margin-bottom: 8px;
-        font-size: 28px;
-    }
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
 
-    .infoSpan,
-    .infoSpan i {
-        font-size: 16px;
-    }
+  .infoSpan,
+  .infoSpan i {
+    font-size: 16px;
+  }
 
-    .infoButton {
-        margin-top: 8px;
-    }
+  .infoButton {
+    margin-top: 8px;
+  }
 
-    #mainCont {
-        padding: 12px;
-    }
+  #mainCont {
+    padding: 12px;
+  }
 
-    #landscapeCont {
-        display: none;
-    }
+  #landscapeCont {
+    display: none;
+  }
 
-    button {
-        margin: 8px 2px;
-        padding: 12px;
-        font-size: 14px;
-        border: 2px solid var(--text-color);
-        border-radius: 8px;
-    }
+  button {
+    margin: 8px 2px;
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+  }
 
-    .buttons-block,
-    .buttons-block-p {
-        width: 100%;
-        margin-top: 8px;
-    }
+  .buttons-block,
+  .buttons-block-p {
+    width: 100%;
+    margin-top: 8px;
+  }
 
-    .avatar,
-    .playlist-cover {
-        display: none;
-    }
+  .avatar,
+  .playlist-cover {
+    display: none;
+  }
 }
