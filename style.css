@@ -47,12 +47,12 @@
     left: 50%;
     min-width: 110%;
     min-height: 110%;
+    overflow: hidden;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
     -ms-transition: all .5s ease-out;
     transition: all .5s ease-out;
-    overflow: hidden;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
