@@ -5,20 +5,22 @@ let isDiv1Shown = true;
 let isDiv2Shown = false;
 
 function showHideVideo() {
-    let video = document.getElementById('videobcg');
+    let videocontainer = document.getElementById('videobcg');
     let text = document.getElementById('showHideBtn');
     let body = document.body;
 
     if (isVideoShown) {
         body.style.animationPlayState = "running";
-        video.classList.toggle('visible');
-        video.classList.toggle('hidden');
+        videocontainer.pause();
+        videocontainer.classList.toggle('visible');
+        videocontainer.classList.toggle('hidden');
         text.innerHTML = "Show Video";
         isVideoShown = false;
     } else {
         body.style.animationPlayState = "paused";
-        video.classList.toggle('hidden');
-        video.classList.toggle('visible');
+        videocontainer.play();
+        videocontainer.classList.toggle('hidden');
+        videocontainer.classList.toggle('visible');
         text.innerHTML = "Hide Video";
         isVideoShown = true;
     }
@@ -26,23 +28,20 @@ function showHideVideo() {
 
 function changeVideo() {
     let videocontainer = document.getElementById('videobcg');
-    let videosource = document.getElementById('videosrc');
+    var sources = videocontainer.getElementsByTagName('source');
     let firstvideo = 'assets/1.mp4';
     let secondvideo = 'assets/2.mp4';
-    let videobutton = document.getElementById("changeVideoBtn");
 
     if (isSecondVidSet) {
         isSecondVidSet = false;
-        videobutton.addEventListener("click", function(event) {
-            videosource.setAttribute('src', firstvideo);
-            videocontainer.load();
-        }, false);
+        sources[0].src = firstvideo;
+        sources[1].src = secondvideo;
+        videocontainer.load();
     } else {
         isSecondVidSet = true;
-        videobutton.addEventListener("click", function(event) {
-            videosource.setAttribute('src', secondvideo);
-            videocontainer.load();
-        }, false);
+        sources[0].src = secondvideo;
+        sources[1].src = firstvideo;
+        videocontainer.load();
     }
 }
 
