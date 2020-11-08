@@ -102,6 +102,11 @@
   transition: all .25s ease-out;
 }
 
+#infoCont {
+  width: 50%;
+  margin: auto;
+}
+
 #mainCont.visible,
 #playCont.visible
 #infoCont.visible {
@@ -379,6 +384,7 @@ button.spotify:hover {
 
   #infoCont {
     padding: 24px;
+    width: 100% !important;
   }
 
   #landscapeCont {
@@ -424,6 +430,7 @@ button.spotify:hover {
 
   #infoCont {
     padding: 24px;
+    width: 100% !important;
   }
 
   #playCont-elements {
