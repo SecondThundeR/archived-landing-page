@@ -6,9 +6,11 @@ This repository is used to store and host the landing page *(Nothing more, for n
 ## Best experience as seen on
 
 - Desktop: This page fully optimized for desktops *(1280x720, 1920x1080...)*
-  - Chrome 84.0.4147.125+
+  - Safari: 14 and higher
+  - Chrome: 87 and higher
 - Mobile: This page isn't fully adaptive for phones, but it has sorta optimized styles for it
-  - Chrome for Android 84.0.4147.125+
+  - Safari: 14 and higher
+  - Chrome for Android 87 and higher
 
 ## License
 
