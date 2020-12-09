@@ -158,8 +158,8 @@
 
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 head {
@@ -183,7 +183,7 @@ h1 {
 }
 
 p {
-  margin: 0px;
+  margin: 0;
   font-weight: 500;
   font-size: 18px;
   color: var(--accent-color);
@@ -235,7 +235,7 @@ a:hover {
 
 .avatar {
   display: inline-block;
-  margin: 0px;
+  margin: 0;
   background-image: url(assets/avatar.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -244,7 +244,7 @@ a:hover {
 
 .playlist-cover {
   display: inline-block;
-  margin: 0px;
+  margin: 0;
   background-image: url(assets/cover.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -465,7 +465,7 @@ button.spotify:hover {
     display: inline-block;
     width: 240px;
     height: 240px;
-    margin: 0px;
+    margin: 0;
     background-image: url(assets/cover.png);
     background-size: 100%;
     background-repeat: no-repeat;

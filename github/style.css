@@ -54,8 +54,8 @@
 
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 head {
@@ -78,7 +78,7 @@ h1 {
 }
 
 p {
-  margin: 0px;
+  margin: 0;
   font-weight: 500;
   font-size: 18px;
 }
@@ -161,7 +161,7 @@ p {
 /* Themes */
 @media (prefers-color-scheme: light) {
   :root {
-    --text-color: #00;
+    --text-color: #000;
     --color-accent: #ff5858;
     --body-background-color: #ffffff;
   }
