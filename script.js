@@ -1,99 +1,98 @@
-'use strict';
-let isVideoShown = true;
-let isSecondVidSet = false;
-let isDiv1Shown = true;
-let isDiv2Shown = false;
+// Dismiss warning container and save it's state in localStorage
+async function dismissWarningContainer() {
+  if (window.localStorage.getItem('isClosed') != "true") {
+    window.localStorage.setItem('isClosed', "true");
+  }
+  document.getElementById("warningCont").style.opacity = "0";
+  await new Promise(r => setTimeout(r, 410));
+  document.getElementById("warningCont").remove();
+}
 
-function showHideVideo() {
-  let videocontainer = document.getElementById('videobcg');
-  let text = document.getElementById('showHideBtn');
+/*
+  Check for dismiss status of warning container:
 
-  if (isVideoShown) {
-    videocontainer.pause();
-    videocontainer.classList.toggle('visible');
-    videocontainer.classList.toggle('hidden');
-    text.innerHTML = "Show Video";
-    isVideoShown = false;
-  } else {
-    videocontainer.play();
-    videocontainer.classList.toggle('hidden');
-    videocontainer.classList.toggle('visible');
-    text.innerHTML = "Hide Video";
-    isVideoShown = true;
+  null - initialize dismiss status and save it in localStorage (Also set opacity for warning container elements to 1)
+  true - delete warning container from DOM
+  false - set opacity for warning container elements to 1
+*/
+function checkForDismiss(dismissStatus) {
+  switch (dismissStatus) {
+    case null:
+      window.localStorage.setItem('isClosed', "false");
+      document.getElementById("warningCont-elements").style.opacity = "1";
+      break;
+    case "true":
+      document.getElementById("warningCont").remove();
+      break;
+    case "false":
+      document.getElementById("warningCont-elements").style.opacity = "1";
+      break;
+    default:
+      break;
   }
 }
 
-function changeVideo() {
-  let videocontainer = document.getElementById('videobcg');
-  var sources = videocontainer.getElementsByTagName('source');
-  let firstvideo = 'assets/1.mp4';
-  let secondvideo = 'assets/2.mp4';
-
-  if (isSecondVidSet) {
-    isSecondVidSet = false;
-    sources[0].src = firstvideo;
-    sources[1].src = secondvideo;
-    videocontainer.load();
-  } else {
-    isSecondVidSet = true;
-    sources[0].src = secondvideo;
-    sources[1].src = firstvideo;
-    videocontainer.load();
+// Change favicons depending on current theme
+function changeFavicons() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.querySelector("link[rel='apple-touch-icon']").setAttribute("href", "favicons/main/dark/apple-touch-icon.png");
+    document.querySelector("link[sizes='32x32']").setAttribute("href", "favicons/main/dark/favicon-32x32.png");
+    document.querySelector("link[sizes='16x16']").setAttribute("href",  "favicons/main/dark/favicon-16x16.png");
+    document.querySelector("link[rel='manifest']").setAttribute("href",  "favicons/main/dark/site.webmanifest");
+    document.querySelector("link[rel='mask-icon']").setAttribute("href", "favicons/main/dark/safari-pinned-tab.svg");
+    document.querySelector('link[rel="mask-icon"]').setAttribute("color", "#e6739f");
+    document.querySelector("link[rel='shortcut icon']").setAttribute("href", "favicons/main/dark/favicon.ico");
+    document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", "#e6739f");
+    document.querySelector('meta[name="msapplication-config"]').setAttribute("content", "favicons/main/dark/browserconfig.xml");
+  }
+  else {
+    document.querySelector("link[rel='apple-touch-icon']").setAttribute("href", "favicons/main/light/apple-touch-icon.png");
+    document.querySelector("link[sizes='32x32']").setAttribute("href", "favicons/main/light/favicon-32x32.png");
+    document.querySelector("link[sizes='16x16']").setAttribute("href",  "favicons/main/light/favicon-16x16.png");
+    document.querySelector("link[rel='manifest']").setAttribute("href",  "favicons/main/light/site.webmanifest");
+    document.querySelector("link[rel='mask-icon']").setAttribute("href", "favicons/main/light/safari-pinned-tab.svg");
+    document.querySelector('link[rel="mask-icon"]').setAttribute("color", "#b91d47");
+    document.querySelector("link[rel='shortcut icon']").setAttribute("href", "favicons/main/light/favicon.ico");
+    document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", "#b91d47");
+    document.querySelector('meta[name="msapplication-config"]').setAttribute("content", "favicons/main/light/browserconfig.xml");
   }
 }
 
-async function showPlaylistDiv() {
-  let container = document.getElementById('hostCont');
-  let div1 = document.getElementById('mainCont');
-  let div2 = document.getElementById('playCont');
-  let divs = [div1, div2];
-
-  if (isDiv1Shown) {
-    div1.classList.remove('visible');
-    div1.classList.add('hidden');
-    await new Promise(r => setTimeout(r, 250));
-    container.insertBefore(divs[1], divs[0]);
-    await new Promise(r => setTimeout(r, 25));
-    div2.classList.remove('hidden');
-    div2.classList.add('visible');
-    isDiv1Shown = false;
-    isDiv2Shown = true;
-  } else {
-    div2.classList.remove('visible');
-    div2.classList.add('hidden');
-    await new Promise(r => setTimeout(r, 250));
-    container.insertBefore(divs[0], divs[1]);
-    await new Promise(r => setTimeout(r, 25));
-    div1.classList.remove('hidden');
-    div1.classList.add('visible');
-    isDiv1Shown = true;
-    isDiv2Shown = false;
-  }
+// Move to certain element on page without changing URL (Default anchors replacement)
+function scrollToElement(divID) {
+  const divElement = document.getElementById(divID);
+  divElement.scrollIntoView({
+    block: 'start',
+    behavior: 'smooth'
+  });
 }
 
-async function showInfoDiv() {
-  let container = document.getElementById('hostCont');
-  let div1 = document.getElementById('playCont');
-  let div2 = document.getElementById('infoCont');
-  let divs = [div1, div2];
-
-  if (isDiv2Shown) {
-    div1.classList.remove('visible');
-    div1.classList.add('hidden');
-    await new Promise(r => setTimeout(r, 250));
-    container.insertBefore(divs[1], divs[0]);
-    await new Promise(r => setTimeout(r, 25));
-    div2.classList.remove('hidden');
-    div2.classList.add('visible');
-    isDiv2Shown = false;
+// Event listener for scrolling. Control hiding "Scroll down" container
+window.addEventListener("scroll", () => {
+  const scrollCheckpoint = 600;
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= scrollCheckpoint) {
+    opacity = 1 - currentScroll / scrollCheckpoint;
   } else {
-    div2.classList.remove('visible');
-    div2.classList.add('hidden');
-    await new Promise(r => setTimeout(r, 250));
-    container.insertBefore(divs[0], divs[1]);
-    await new Promise(r => setTimeout(r, 25));
-    div1.classList.remove('hidden');
-    div1.classList.add('visible');
-    isDiv2Shown = true;
+    opacity = 0;
   }
+  document.getElementById("scrollTip").style.opacity = opacity;
+});
+
+// Event listener for theme switch. Control favicons change
+window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', event => {
+  changeFavicons();
+  if (!event.matches) {
+    console.info("Favicons have been successfully replaced with a light version");
+  }
+  else {
+    console.info("Favicons have been successfully replaced with a dark version");
+  }
+});
+
+// Onload function. Execute favicons change, check for dismiss status and set opacity of elements of main container to 1
+window.onload = function () {
+  changeFavicons();
+  checkForDismiss(window.localStorage.getItem('isClosed'));
+  document.getElementById("mainCont-elements").style.opacity = "1";
 }
