@@ -46,7 +46,7 @@ html, body {
 }
 
 /* Define settings of main and warning containers */
-#hostCont, #warningCont {
+#warningCont {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -319,7 +319,6 @@ span#spotify {
     --accent: rgb(179, 30, 87);
     --accent-hover: rgb(240, 42, 118);
     --background-main: rgb(255, 255, 255);
-    --background-warn: rgba(255, 255, 255, 0.85);
     --background-icon: rgba(179, 30, 87, 0.15);
   }
 
@@ -329,12 +328,8 @@ span#spotify {
   }
 
   /* Set background colors for non-social containers */
-  #mainCont, #footerCont {
+  #mainCont, #footerCont, #warningCont {
     background-color: var(--background-main);
-  }
-
-  #warningCont {
-    background-color: var(--background-warn);
   }
 
   /* Set color for p tag and tip block */
@@ -411,7 +406,6 @@ span#spotify {
     --accent: rgb(230, 115, 159);
     --accent-hover: rgb(184, 62, 108);
     --background-main: rgb(18, 18, 18);
-    --background-warn: rgba(18, 18, 18, 0.85);
     --background-icon: rgba(230, 115, 159, 0.15);
   }
 
@@ -421,12 +415,8 @@ span#spotify {
   }
 
   /* Set background colors for non-social containers */
-  #mainCont, #footerCont {
+  #mainCont, #footerCont, #warningCont {
     background-color: var(--background-main);
-  }
-
-  #warningCont {
-    background-color: var(--background-warn);
   }
 
   /* Set color for p tag and tip block */

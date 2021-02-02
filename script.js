@@ -5,6 +5,7 @@ async function dismissWarningContainer() {
   }
   document.getElementById("warningCont").style.opacity = "0";
   await new Promise(r => setTimeout(r, 410));
+  mainContStyleSwitcher("true")
   document.getElementById("warningCont").remove();
 }
 
@@ -18,13 +19,28 @@ async function dismissWarningContainer() {
 function checkForDismiss(dismissStatus) {
   switch (dismissStatus) {
     case null:
+      mainContStyleSwitcher("false")
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.getElementById("warningCont").style.backgroundColor = '#121212d9';
+      }
+      else {
+        document.getElementById("warningCont").style.backgroundColor = '#ffffffd9';
+      }
       window.localStorage.setItem('isClosed', "false");
       document.getElementById("warningCont-elements").style.opacity = "1";
       break;
     case "true":
+      mainContStyleSwitcher("true")
       document.getElementById("warningCont").remove();
       break;
     case "false":
+      mainContStyleSwitcher("false");
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.getElementById("warningCont").style.backgroundColor = '#121212d9';
+      }
+      else {
+        document.getElementById("warningCont").style.backgroundColor = '#ffffffd9';
+      }
       document.getElementById("warningCont-elements").style.opacity = "1";
       break;
     default:
@@ -55,6 +71,27 @@ function changeFavicons() {
     document.querySelector("link[rel='shortcut icon']").setAttribute("href", "favicons/main/light/favicon.ico");
     document.querySelector('meta[name="msapplication-TileColor"]').setAttribute("content", "#b91d47");
     document.querySelector('meta[name="msapplication-config"]').setAttribute("content", "favicons/main/light/browserconfig.xml");
+  }
+}
+
+function mainContStyleSwitcher(status) {
+  if (status == "true") {
+    document.getElementById("hostCont").style.position = "absolute";
+    document.getElementById("hostCont").style.top = "0";
+    document.getElementById("hostCont").style.bottom = "0";
+    document.getElementById("hostCont").style.left = "0";
+    document.getElementById("hostCont").style.right = "0";
+    document.getElementById("hostCont").style.width = "100%";
+    document.getElementById("hostCont").style.height = "100%";
+  }
+  else {
+    document.getElementById("hostCont").style.position = "fixed";
+    document.getElementById("hostCont").style.top = "0";
+    document.getElementById("hostCont").style.bottom = "0";
+    document.getElementById("hostCont").style.left = "0";
+    document.getElementById("hostCont").style.right = "0";
+    document.getElementById("hostCont").style.width = "100%";
+    document.getElementById("hostCont").style.height = "100%";
   }
 }
 
@@ -92,7 +129,7 @@ window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', eve
 
 // Onload function. Execute favicons change, check for dismiss status and set opacity of elements of main container to 1
 window.onload = function () {
-  changeFavicons();
   checkForDismiss(window.localStorage.getItem('isClosed'));
   document.getElementById("mainCont-elements").style.opacity = "1";
+  changeFavicons();
 }
