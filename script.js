@@ -95,15 +95,6 @@ function mainContStyleSwitcher(status) {
   }
 }
 
-// Move to certain element on page without changing URL (Default anchors replacement)
-function scrollToElement(divID) {
-  const divElement = document.getElementById(divID);
-  divElement.scrollIntoView({
-    block: 'start',
-    behavior: 'smooth'
-  });
-}
-
 // Event listener for scrolling. Control hiding "Scroll down" container
 window.addEventListener("scroll", () => {
   const scrollCheckpoint = 600;
