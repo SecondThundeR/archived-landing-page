@@ -95,6 +95,7 @@ function mainContStyleSwitcher(status) {
   }
 }
 
+// Function counts reloads (site opening). When reloadCount hits more than 3, removing scrollTip block
 function reloadCounter() {
   reloads = window.localStorage.getItem('reloadCount');
   console.log(reloads);
@@ -135,7 +136,7 @@ window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', eve
   }
 });
 
-// Onload function. Execute favicons change, check for dismiss status and set opacity of elements of main container to 1
+// Onload function. Execute reload counter, favicons change, check for dismiss status and set opacity of elements of main container to 1
 window.onload = function () {
   reloadCounter();
   checkForDismiss(window.localStorage.getItem('isClosed'));
