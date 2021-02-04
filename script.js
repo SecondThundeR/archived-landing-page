@@ -95,6 +95,23 @@ function mainContStyleSwitcher(status) {
   }
 }
 
+function reloadCounter() {
+  reloads = window.localStorage.getItem('reloadCount');
+  console.log(reloads);
+  switch (reloads) {
+    case null:
+      window.localStorage.setItem('reloadCount', "1");
+      break;
+    default:
+      if (parseInt(reloads, 10) >= 3) {
+        document.getElementById("scrollTip").remove();
+      }
+      updatedReloads = parseInt(reloads, 10) + 1
+      window.localStorage.setItem('reloadCount', updatedReloads.toString());
+      break;
+  }
+}
+
 // Event listener for scrolling. Control hiding "Scroll down" container
 window.addEventListener("scroll", () => {
   const scrollCheckpoint = 600;
@@ -120,6 +137,7 @@ window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', eve
 
 // Onload function. Execute favicons change, check for dismiss status and set opacity of elements of main container to 1
 window.onload = function () {
+  reloadCounter();
   checkForDismiss(window.localStorage.getItem('isClosed'));
   document.getElementById("mainCont-elements").style.opacity = "1";
   changeFavicons();
