@@ -140,6 +140,6 @@ window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', eve
 window.onload = function () {
   reloadCounter();
   checkForDismiss(window.localStorage.getItem('isClosed'));
-  document.getElementById("mainCont-elements").style.opacity = "1";
   changeFavicons();
+  document.getElementById("mainCont-elements").style.opacity = "1";
 }
