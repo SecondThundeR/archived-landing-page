@@ -325,7 +325,7 @@ span#spotify {
   }
 
   /* Set background colors for non-social containers */
-  #mainCont, #footerCont, #warningCont {
+  body {
     background-color: var(--background-main);
   }
 
@@ -412,7 +412,7 @@ span#spotify {
   }
 
   /* Set background colors for non-social containers */
-  #mainCont, #footerCont, #warningCont {
+  body {
     background-color: var(--background-main);
   }
 
