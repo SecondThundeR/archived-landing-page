@@ -5,7 +5,6 @@ async function dismissWarningContainer() {
   }
   document.getElementById("warningCont").style.opacity = "0";
   await new Promise(r => setTimeout(r, 410));
-  mainContStyleSwitcher("true")
   document.getElementById("warningCont").remove();
 }
 
@@ -74,7 +73,8 @@ function changeFavicons() {
   }
 }
 
-function mainContStyleSwitcher(status) {
+function mainContStyleSwitcher() {
+  const status = window.localStorage.getItem('isClosed');
   if (status == "true") {
     document.getElementById("hostCont").style.position = "absolute";
     document.getElementById("hostCont").style.top = "0";
@@ -139,7 +139,8 @@ window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', eve
 // Onload function. Execute reload counter, favicons change, check for dismiss status and set opacity of elements of main container to 1
 window.onload = function () {
   reloadCounter();
-  checkForDismiss(window.localStorage.getItem('isClosed'));
   changeFavicons();
+  mainContStyleSwitcher()
+  checkForDismiss(window.localStorage.getItem('isClosed'));
   document.getElementById("mainCont-elements").style.opacity = "1";
 }
