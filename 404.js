@@ -24,17 +24,6 @@ function changeFavicons() {
   }
 }
 
-// Set correct styles for hostCont (Due to dynamic changing on main site)
-function setHostContSettings() {
-  document.getElementById("hostCont").style.position = "absolute";
-  document.getElementById("hostCont").style.top = "0";
-  document.getElementById("hostCont").style.bottom = "0";
-  document.getElementById("hostCont").style.left = "0";
-  document.getElementById("hostCont").style.right = "0";
-  document.getElementById("hostCont").style.width = "100%";
-  document.getElementById("hostCont").style.height = "100%";
-}
-
 // Event listener for theme switch. Control favicons change
 window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', event => {
   changeFavicons();
@@ -44,11 +33,10 @@ window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener('change', eve
   else {
     console.info("Favicons have been successfully replaced with a dark version");
   }
-});
+})
 
 // Onload function. Execute favicons change, set hostCont styles and set opacity of elements of main container to 1
 window.onload = function () {
   changeFavicons();
-  setHostContSettings();
   document.getElementById("mainCont-elements").style.opacity = "1";
 }

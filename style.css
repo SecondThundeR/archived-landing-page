@@ -45,8 +45,8 @@ html, body {
   height: 100%;
 }
 
-/* Define settings of warning container */
-#warningCont {
+/* Define settings of hostCont */
+#hostCont {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -54,9 +54,6 @@ html, body {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
-  -webkit-backdrop-filter: blur(32px);
-  backdrop-filter: blur(32px);
 }
 
 /* Define settings for "Scroll down" tip container */
@@ -67,7 +64,7 @@ html, body {
 }
 
 /* Define subcontainers settings */
-#warningCont, #mainCont, #vkCont, #tgCont, #igCont, #twitterCont, #lastfmCont,
+#mainCont, #vkCont, #tgCont, #igCont, #twitterCont, #lastfmCont,
 #githubCont, #codeStatsCont, #spotifyCont, #playlistCont, #footerCont {
   display: flex;
   box-sizing: border-box;
@@ -80,7 +77,7 @@ html, body {
 }
 
 /* Define settings of elements containers */
-#warningCont-elements, #mainCont-elements, #vkCont-elements, #tgCont-elements,
+#mainCont-elements, #vkCont-elements, #tgCont-elements,
 #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
 #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
   display: flex;
@@ -94,8 +91,8 @@ html, body {
 }
 
 /* Define special transitions for some containers */
-#warningCont, #mainCont, #footerCont,
-#warningCont-elements, #mainCont-elements {
+#mainCont, #footerCont,
+#mainCont-elements, #scrollTip {
   -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
@@ -104,9 +101,8 @@ html, body {
 }
 
 
-/* Define default opacity of elements containers onload */
-#warningCont-elements,
-#mainCont-elements {
+/* Define default opacity of elements mainCont and scrollTip onload */
+#mainCont-elements, #scrollTip {
   opacity: 0;
 }
 
@@ -227,19 +223,6 @@ span#spotify {
   border-radius: 100%;
 }
 
-/* Define settings of site's main logo */
-#warn-icon {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  width: 224px;
-  height: 224px;
-  background-size: 65%;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 100%;
-}
-
 /* Define settings of site's 404 icon */
 #fourzerofour-icon {
   display: inline-block;
@@ -338,15 +321,9 @@ span#spotify {
     color: var(--text-tip);
   }
 
-  /* Define settings for avatar, 404 and warning container icon */
+  /* Define settings for avatar, 404 icon */
   #avatar {
     border: 14px solid var(--accent);
-  }
-
-  #warn-icon {
-    border: 14px solid var(--accent);
-    background-image: url(assets/icons/link-light.svg);
-    background-color: var(--background-icon);
   }
 
   #fourzerofour-icon {
@@ -425,15 +402,9 @@ span#spotify {
     color: var(--text-tip);
   }
 
-  /* Define settings for avatar, 404 and warning container icon */
+  /* Define settings for avatar, 404 icon */
   #avatar {
     border: 14px solid var(--accent);
-  }
-
-  #warn-icon {
-    border: 14px solid var(--accent);
-    background-image: url(assets/icons/link-dark.svg);
-    background-color: var(--background-icon);
   }
 
   #fourzerofour-icon {
@@ -482,7 +453,7 @@ span#spotify {
 
 /* Rules for regular phones in portait mode */
 @media (max-height: 850px) and (orientation: portrait) {
-  #warningCont-elements, #mainCont-elements, #vkCont-elements, #tgCont-elements,
+  #mainCont-elements, #vkCont-elements, #tgCont-elements,
   #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
   #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
     width: fit-content;
@@ -520,7 +491,7 @@ span#spotify {
 
 /* Rules for regular phones landscape */
 @media (max-width: 830px) and (orientation: landscape) {
-  #warningCont-elements, #mainCont-elements, #vkCont-elements, #tgCont-elements,
+  #mainCont-elements, #vkCont-elements, #tgCont-elements,
   #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
   #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
     flex-direction: row;
