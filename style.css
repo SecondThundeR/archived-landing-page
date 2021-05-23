@@ -7,6 +7,7 @@
   --tg-color: #25A3E2;
   --ig-color: #E1306C;
   --twitter-color: #41ABE1;
+  --discord-color: #5865F2;
   --lastfm-color: #D51007;
   --github-color: #181616;
   --codestats-color: #3E4053;
@@ -64,7 +65,7 @@ html, body {
 }
 
 /* Define subcontainers settings */
-#mainCont, #vkCont, #tgCont, #igCont, #twitterCont, #lastfmCont,
+#mainCont, #vkCont, #tgCont, #igCont, #twitterCont, #discordCont, #lastfmCont,
 #githubCont, #codeStatsCont, #spotifyCont, #playlistCont, #footerCont {
   display: flex;
   box-sizing: border-box;
@@ -77,9 +78,8 @@ html, body {
 }
 
 /* Define settings of elements containers */
-#mainCont-elements, #vkCont-elements, #tgCont-elements,
-#igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
-#codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
+#mainCont-elements, #vkCont-elements, #tgCont-elements, #igCont-elements, #twitterCont-elements, #discordCont-elements, #lastfmCont-elements,
+#githubCont-elements, #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +121,10 @@ html, body {
 
 #twitterCont {
   background-color: var(--twitter-color);
+}
+
+#discordCont {
+    background-color: var(--discord-color);
 }
 
 #lastfmCont {
@@ -174,6 +178,10 @@ button {
   -o-transition-duration: 0.4s;
   -ms-transition-duration: 0.4s;
   transition-duration: 0.4s;
+}
+
+.discord-btn {
+    margin-bottom: 32px;
 }
 
 /* Define settings for p tag */
@@ -267,6 +275,10 @@ span#spotify {
 
 .twitter-logo {
   background-image: url(assets/icons/social/twitter-logo.svg);
+}
+
+.discord-logo {
+    background-image: url(assets/icons/social/ds-logo.svg);
 }
 
 .lastfm-logo {
