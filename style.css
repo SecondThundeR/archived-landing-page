@@ -3,124 +3,124 @@
 
 /* Define theme independent colors for elements */
 :root {
-  --vk-color: #2787F5;
-  --tg-color: #25A3E2;
-  --ig-color: #E1306C;
-  --twitter-color: #41ABE1;
-  --discord-color: #5865F2;
-  --lastfm-color: #D51007;
-  --github-color: #181616;
-  --codestats-color: #3E4053;
-  --spotify-color: #1ED760;
-  --playlist-color: #FF2E63;
-  --social-normal: rgba(255, 255, 255, 1);
-  --social-dimmed: rgba(255, 255, 255, 0.6);
-  --spotify-normal: rgba(0, 0, 0, 1);
-  --spotify-dimmed: rgba(0, 0, 0, 0.6);
+    --vk-color: #2787F5;
+    --tg-color: #25A3E2;
+    --ig-color: #E1306C;
+    --twitter-color: #41ABE1;
+    --discord-color: #5865F2;
+    --lastfm-color: #D51007;
+    --github-color: #181616;
+    --codestats-color: #3E4053;
+    --spotify-color: #1ED760;
+    --playlist-color: #FF2E63;
+    --social-normal: rgba(255, 255, 255, 1);
+    --social-dimmed: rgba(255, 255, 255, 0.6);
+    --spotify-normal: rgba(0, 0, 0, 1);
+    --spotify-dimmed: rgba(0, 0, 0, 0.6);
 }
 
 /* Global settings for elements */
 * {
-  font-family: "Ubuntu", sans-serif;
-  box-sizing: border-box;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* Make scrollbar and head elements invisible */
 head, ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Define default html and body settings */
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Define settings of hostCont */
 #hostCont {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Define settings for "Scroll down" tip container */
 #scrollTip {
-  position: absolute;
-  bottom: 1%;
-  opacity: 1;
+    position: absolute;
+    bottom: 1%;
+    opacity: 1;
 }
 
 /* Define subcontainers settings */
 #mainCont, #vkCont, #tgCont, #igCont, #twitterCont, #discordCont, #lastfmCont,
 #githubCont, #codeStatsCont, #spotifyCont, #playlistCont, #footerCont {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  height: 100%;
-  padding: 18px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 18px;
 }
 
 /* Define settings of elements containers */
 #mainCont-elements, #vkCont-elements, #tgCont-elements, #igCont-elements, #twitterCont-elements, #discordCont-elements, #lastfmCont-elements,
 #githubCont-elements, #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  width: 50%;
-  height: fit-content;
-  margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    height: fit-content;
+    margin: auto;
 }
 
 /* Define special transitions for some containers */
 #mainCont, #footerCont,
 #mainCont-elements, #scrollTip {
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -ms-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 
 /* Define default opacity of elements mainCont and scrollTip onload */
 #mainCont-elements, #scrollTip {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* Define colors for each special container */
 #vkCont {
-  background-color: var(--vk-color);
+    background-color: var(--vk-color);
 }
 
 #tgCont {
-  background-color: var(--tg-color);
+    background-color: var(--tg-color);
 }
 
 #igCont {
-  background-color: var(--ig-color);
+    background-color: var(--ig-color);
 }
 
 #twitterCont {
-  background-color: var(--twitter-color);
+    background-color: var(--twitter-color);
 }
 
 #discordCont {
@@ -128,56 +128,56 @@ html, body {
 }
 
 #lastfmCont {
-  background-color: var(--lastfm-color);
+    background-color: var(--lastfm-color);
 }
 
 #githubCont {
-  background-color: var(--github-color);
+    background-color: var(--github-color);
 }
 
 #codeStatsCont {
-  background-color: var(--codestats-color);
+    background-color: var(--codestats-color);
 }
 
 #spotifyCont {
-  background-color: var(--spotify-color);
+    background-color: var(--spotify-color);
 }
 
 #playlistCont {
-  background: rgb(255,46,99);
-  background: linear-gradient(45deg, rgba(255,46,99,1) 0%, rgba(255,157,157,1) 100%);
+    background: rgb(255,46,99);
+    background: linear-gradient(45deg, rgba(255,46,99,1) 0%, rgba(255,157,157,1) 100%);
 }
 
 /* Define settings for h1 tag */
 h1 {
-  cursor: default;
-  margin-top: 32px;
-  margin-bottom: 12px;
-  font-size: 48px;
+    cursor: default;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-size: 48px;
 }
 
 /* Define settings for h1 tag on 404 page */
 #h1-404 {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 /* Define settings for button tag */
 button {
-  cursor: pointer;
-  margin: 0;
-  margin-top: 32px;
-  padding: 24px 38px;
-  font-size: 22px;
-  font-weight: 400;
-  color: white;
-  border: none;
-  border-radius: 16px;
-  outline: none;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -ms-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+    cursor: pointer;
+    margin: 0;
+    margin-top: 32px;
+    padding: 24px 38px;
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 .discord-btn {
@@ -186,95 +186,95 @@ button {
 
 /* Define settings for p tag */
 p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Define settings for description text */
 #desc {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 /* Define settings for tip text */
 .tip {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 /* Define settings for h1, desc and span tag of social blocks */
 #social-h1.dimmed, #desc.social-dimmed {
-  color: var(--social-dimmed);
+    color: var(--social-dimmed);
 }
 
 span.social {
-  color: var(--social-normal);
+    color: var(--social-normal);
 }
 
 /* Define settings for h1, desc and span tag of Spotify block */
 #spotify-h1, #desc.spotify {
-  color: var(--spotify-dimmed);
+    color: var(--spotify-dimmed);
 }
 
 span#spotify {
-  color: var(--spotify-normal);
+    color: var(--spotify-normal);
 }
 
 /* Define settings for avatar */
 #avatar {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  width: 224px;
-  height: 224px;
-  background-image: url(assets/images/avatar.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border-radius: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 224px;
+    height: 224px;
+    background-image: url(https://avatars.githubusercontent.com/u/36604233?v=4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
 }
 
 /* Define settings of site's 404 icon */
 #fourzerofour-icon {
-  display: inline-block;
-  width: 192px;
-  height: 192px;
-  background-size: cover;
+    display: inline-block;
+    width: 192px;
+    height: 192px;
+    background-size: cover;
 }
 
 /* Define settings for small icons */
 .icon {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  background-size: cover;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-size: cover;
 }
 
 /* Define dimming for arrow icon */
 #arrow-down {
-  filter: opacity(40%);
+    filter: opacity(40%);
 }
 
 /* Define settings for logos */
 .logo {
-  display: inline-block;
-  width: 192px;
-  height: 192px;
-  background-size: cover;
+    display: inline-block;
+    width: 192px;
+    height: 192px;
+    background-size: cover;
 }
 
 /* Define paths for logos */
 .vk-logo {
-  background-image: url(assets/icons/social/vk-logo.svg);
+    background-image: url(assets/icons/social/vk-logo.svg);
 }
 
 .tg-logo {
-  background-image: url(assets/icons/social/tg-logo.svg);
+    background-image: url(assets/icons/social/tg-logo.svg);
 }
 
 .ig-logo {
-  background-image: url(assets/icons/social/ig-logo.svg);
+    background-image: url(assets/icons/social/ig-logo.svg);
 }
 
 .twitter-logo {
-  background-image: url(assets/icons/social/twitter-logo.svg);
+    background-image: url(assets/icons/social/twitter-logo.svg);
 }
 
 .discord-logo {
@@ -282,270 +282,270 @@ span#spotify {
 }
 
 .lastfm-logo {
-  background-image: url(assets/icons/social/lastfm-logo.svg);
+    background-image: url(assets/icons/social/lastfm-logo.svg);
 }
 
 .gh-logo {
-  background-image: url(assets/icons/social/gh-logo.svg);
+    background-image: url(assets/icons/social/gh-logo.svg);
 }
 
 .cs-logo {
-  background-image: url(assets/icons/social/cs-logo.svg);
+    background-image: url(assets/icons/social/cs-logo.svg);
 }
 
 .spotify-logo {
-  background-image: url(assets/icons/social/spotify-logo.svg);
+    background-image: url(assets/icons/social/spotify-logo.svg);
 }
 
 .playlist-icon {
-  background-image: url(assets/icons/playlist-icon.svg);
+    background-image: url(assets/icons/playlist-icon.svg);
 }
 
 /* Define settings for light theme */
 @media (prefers-color-scheme: light) {
-  /* Define colors for light theme */
-  :root {
-    --text-normal: rgb(0, 0, 0);
-    --text-dimmed: rgba(0, 0, 0, 0.5);
-    --text-tip: rgba(0, 0, 0, 0.4);
-    --accent: rgb(179, 30, 87);
-    --accent-hover: rgb(240, 42, 118);
-    --background-main: rgb(255, 255, 255);
-    --background-icon: rgba(179, 30, 87, 0.15);
-  }
+    /* Define colors for light theme */
+    :root {
+        --text-normal: rgb(0, 0, 0);
+        --text-dimmed: rgba(0, 0, 0, 0.5);
+        --text-tip: rgba(0, 0, 0, 0.4);
+        --accent: rgb(179, 30, 87);
+        --accent-hover: rgb(240, 42, 118);
+        --background-main: rgb(255, 255, 255);
+        --background-icon: rgba(179, 30, 87, 0.15);
+    }
 
-  /* Set color for all elements */
-  * {
-    color: var(--text-normal);
-  }
+    /* Set color for all elements */
+    * {
+        color: var(--text-normal);
+    }
 
-  /* Set background colors for non-social containers */
-  body {
-    background-color: var(--background-main);
-  }
+    /* Set background colors for non-social containers */
+    body {
+        background-color: var(--background-main);
+    }
 
-  /* Set color for p tag and tip block */
-  p {
-    color: var(--text-dimmed);
-  }
+    /* Set color for p tag and tip block */
+    p {
+        color: var(--text-dimmed);
+    }
 
-  .tip {
-    color: var(--text-tip);
-  }
+    .tip {
+        color: var(--text-tip);
+    }
 
-  /* Define settings for avatar, 404 icon */
-  #avatar {
-    border: 14px solid var(--accent);
-  }
+    /* Define settings for avatar, 404 icon */
+    #avatar {
+        border: 14px solid var(--accent);
+    }
 
-  #fourzerofour-icon {
-    background-image: url(assets/icons/error-light.svg);
-  }
+    #fourzerofour-icon {
+        background-image: url(assets/icons/error-light.svg);
+    }
 
-  /* Set color for theme-dimmed description */
-  #desc.theme-dimmed {
-    color: var(--text-dimmed);
-  }
+    /* Set color for theme-dimmed description */
+    #desc.theme-dimmed {
+        color: var(--text-dimmed);
+    }
 
-  /* Set color for theme accent */
-  .theme-accent {
-    color: var(--accent);
-  }
+    /* Set color for theme accent */
+    .theme-accent {
+        color: var(--accent);
+    }
 
-  /* Set color for button and its hover state */
-  button {
-    background-color: var(--accent);
-  }
+    /* Set color for button and its hover state */
+    button {
+        background-color: var(--accent);
+    }
 
-  button:hover {
-    background-color: var(--accent-hover);
-  }
+    button:hover {
+        background-color: var(--accent-hover);
+    }
 
-  /* Set color for social button and its hover state */
-  .social-btn {
-    background-color: white;
-    color: black;
-  }
+    /* Set color for social button and its hover state */
+    .social-btn {
+        background-color: white;
+        color: black;
+    }
 
-  .social-btn:hover {
-    background-color: var(--accent);
-    color: white;
-  }
+    .social-btn:hover {
+        background-color: var(--accent);
+        color: white;
+    }
 
-  /* Set icon for light theme */
-  .arrow-up-icon {
-    background-image: url(assets/icons/arrow-up-light.svg);
-  }
+    /* Set icon for light theme */
+    .arrow-up-icon {
+        background-image: url(assets/icons/arrow-up-light.svg);
+    }
 
-  #arrow-down {
-    background-image: url(assets/icons/arrow-down-light.svg);
-  }
+    #arrow-down {
+        background-image: url(assets/icons/arrow-down-light.svg);
+    }
 }
 
 /* Define settings for dark theme */
 @media (prefers-color-scheme: dark) {
-  /* Define colors for dark theme */
-  :root {
-    --text-normal: rgb(255, 255, 255);
-    --text-dimmed: rgba(255, 255, 255, 0.6);
-    --text-tip: rgba(255, 255, 255, 0.4);
-    --accent: rgb(230, 115, 159);
-    --accent-hover: rgb(184, 62, 108);
-    --background-main: rgb(18, 18, 18);
-    --background-icon: rgba(230, 115, 159, 0.15);
-  }
+    /* Define colors for dark theme */
+    :root {
+        --text-normal: rgb(255, 255, 255);
+        --text-dimmed: rgba(255, 255, 255, 0.6);
+        --text-tip: rgba(255, 255, 255, 0.4);
+        --accent: rgb(230, 115, 159);
+        --accent-hover: rgb(184, 62, 108);
+        --background-main: rgb(18, 18, 18);
+        --background-icon: rgba(230, 115, 159, 0.15);
+    }
 
-  /* Set color for all elements */
-  * {
-    color: var(--text-normal);
-  }
+    /* Set color for all elements */
+    * {
+        color: var(--text-normal);
+    }
 
-  /* Set background colors for non-social containers */
-  body {
-    background-color: var(--background-main);
-  }
+    /* Set background colors for non-social containers */
+    body {
+        background-color: var(--background-main);
+    }
 
-  /* Set color for p tag and tip block */
-  p {
-    color: var(--text-dimmed);
-  }
+    /* Set color for p tag and tip block */
+    p {
+        color: var(--text-dimmed);
+    }
 
-  .tip {
-    color: var(--text-tip);
-  }
+    .tip {
+        color: var(--text-tip);
+    }
 
-  /* Define settings for avatar, 404 icon */
-  #avatar {
-    border: 14px solid var(--accent);
-  }
+    /* Define settings for avatar, 404 icon */
+    #avatar {
+        border: 14px solid var(--accent);
+    }
 
-  #fourzerofour-icon {
-    background-image: url(assets/icons/error-dark.svg);
-  }
+    #fourzerofour-icon {
+        background-image: url(assets/icons/error-dark.svg);
+    }
 
-  /* Set color for theme-dimmed description */
-  #desc.theme-dimmed {
-    color: var(--text-dimmed);
-  }
+    /* Set color for theme-dimmed description */
+    #desc.theme-dimmed {
+        color: var(--text-dimmed);
+    }
 
-  /* Set color for theme accent */
-  .theme-accent {
-    color: var(--accent);
-  }
+    /* Set color for theme accent */
+    .theme-accent {
+        color: var(--accent);
+    }
 
-  /* Set color for button and its hover state */
-  button {
-    background-color: var(--accent);
-  }
+    /* Set color for button and its hover state */
+    button {
+        background-color: var(--accent);
+    }
 
-  button:hover {
-    background-color: var(--accent-hover);
-  }
+    button:hover {
+        background-color: var(--accent-hover);
+    }
 
-  /* Set color for social button and its hover state */
-  .social-btn {
-    background-color: white;
-    color: black;
-  }
+    /* Set color for social button and its hover state */
+    .social-btn {
+        background-color: white;
+        color: black;
+    }
 
-  .social-btn:hover {
-    background-color: var(--accent);
-    color: white;
-  }
+    .social-btn:hover {
+        background-color: var(--accent);
+        color: white;
+    }
 
-  /* Set icon for dark theme */
-  .arrow-up-icon {
-    background-image: url(assets/icons/arrow-up-dark.svg);
-  }
+    /* Set icon for dark theme */
+    .arrow-up-icon {
+        background-image: url(assets/icons/arrow-up-dark.svg);
+    }
 
-  #arrow-down {
-    background-image: url(assets/icons/arrow-down-dark.svg);
-  }
+    #arrow-down {
+        background-image: url(assets/icons/arrow-down-dark.svg);
+    }
 }
 
 /* Rules for regular phones in portait mode */
 @media (max-height: 850px) and (orientation: portrait) {
-  #mainCont-elements, #vkCont-elements, #tgCont-elements,
-  #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
-  #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
-    width: fit-content;
-  }
+    #mainCont-elements, #vkCont-elements, #tgCont-elements,
+    #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
+    #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
+        width: fit-content;
+    }
 
-  h1 {
-    font-size: 28px;
-  }
+    h1 {
+        font-size: 28px;
+    }
 
-  p {
-    font-size: 20px !important;
-  }
+    p {
+        font-size: 20px !important;
+    }
 
-  p.tip {
-    font-size: 18px !important;
-  }
+    p.tip {
+        font-size: 18px !important;
+    }
 
-  #fourzerofour-icon, .logo {
-    width: 128px;
-    height: 128px;
-  }
+    #fourzerofour-icon, .logo {
+        width: 128px;
+        height: 128px;
+    }
 
-  #avatar {
-    width: 196px;
-    height: 196px;
-  }
+    #avatar {
+        width: 196px;
+        height: 196px;
+    }
 
-  button {
-    padding: 18px 24px;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 12px;
-  }
+    button {
+        padding: 18px 24px;
+        font-size: 20px;
+        font-weight: 400;
+        border-radius: 12px;
+    }
 }
 
 /* Rules for regular phones landscape */
 @media (max-width: 830px) and (orientation: landscape) {
-  #mainCont-elements, #vkCont-elements, #tgCont-elements,
-  #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
-  #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
-    flex-direction: row;
-    width: fit-content;
-  }
+    #mainCont-elements, #vkCont-elements, #tgCont-elements,
+    #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
+    #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
+        flex-direction: row;
+        width: fit-content;
+    }
 
-  #landscape-elements {
-    width: 55%;
-  }
+    #landscape-elements {
+        width: 55%;
+    }
 
-  h1 {
-    font-size: 28px;
-  }
+    h1 {
+        font-size: 28px;
+    }
 
-  p {
-    font-size: 20px !important;
-  }
+    p {
+        font-size: 20px !important;
+    }
 
-  p.tip {
-    font-size: 0 !important;
-  }
+    p.tip {
+        font-size: 0 !important;
+    }
 
-  #fourzerofour-icon, .logo {
-    width: 144px;
-    height: 144px;
-    margin-right: 10%;
-  }
+    #fourzerofour-icon, .logo {
+        width: 144px;
+        height: 144px;
+        margin-right: 10%;
+    }
 
-  .icon {
-    width: 0;
-    height: 0;
-  }
+    .icon {
+        width: 0;
+        height: 0;
+    }
 
-  #avatar {
-    width: 208px;
-    height: 208px;
-  }
+    #avatar {
+        width: 208px;
+        height: 208px;
+    }
 
-  button {
-    padding: 18px 24px;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 12px;
-  }
+    button {
+        padding: 18px 24px;
+        font-size: 20px;
+        font-weight: 400;
+        border-radius: 12px;
+    }
 }
