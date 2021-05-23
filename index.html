@@ -170,10 +170,18 @@
     <div id="footerCont">
       <!-- footerCont container elements -->
       <div id="footerCont-elements">
-        <span class="logo upvote-icon"></span>
+        <span class="logo arrow-up-icon"></span>
         <div id="landscape-elements">
-          <h1>So, <span class="theme-accent">thank you</span> for scrolling to the end</h1>
-          <p id="desc" class="theme-dimmed">I tried very hard with the redesign of this site and I hope you really liked this design :)</p>
+          <h1>Let's scroll to the <span class="theme-accent">beggining</span> of the page</h1>
+          <button
+            onclick="window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            })"
+          >
+          Scroll up
+          </button>
         </div>
       </div>
     </div>

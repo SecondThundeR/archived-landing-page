@@ -373,8 +373,8 @@ span#spotify {
   }
 
   /* Set icon for light theme */
-  .upvote-icon {
-    background-image: url(assets/icons/upvote-light.svg);
+  .arrow-up-icon {
+    background-image: url(assets/icons/arrow-up-light.svg);
   }
 
   #arrow-down {
@@ -454,8 +454,8 @@ span#spotify {
   }
 
   /* Set icon for dark theme */
-  .upvote-icon {
-    background-image: url(assets/icons/upvote-dark.svg);
+  .arrow-up-icon {
+    background-image: url(assets/icons/arrow-up-dark.svg);
   }
 
   #arrow-down {
