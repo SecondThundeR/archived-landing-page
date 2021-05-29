@@ -1,6 +1,7 @@
 # SecondThundeR's Landing Page (Project Aether)
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE-CC0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE-MIT)
 
 This repository is used to store and host the landing page *(Nothing more, for now)*
 
