@@ -8,6 +8,6 @@ This page is fully optimized for computers. Mobile devices have been superficial
 
 ## License
 
-This repo is licensed under the **Creative Commons Zero v1.0 Universal**
+This repo is dual-licensed under the **Creative Commons Zero v1.0 Universal** *(for all media, e.g. favicons, etc.)* and **MIT License** *(for all code)*
 
-For the complete licensing terms, please read [LICENSE](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE) file
+For the complete licensing terms, please read [LICENSE-MIT](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE-MIT) and [LICENSE-CC0](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE-CC0) files
