@@ -464,7 +464,7 @@ span#spotify {
 }
 
 /* Rules for regular phones in portait mode */
-@media (orientation: portrait) {
+@media (max-height: 850px) and (orientation: portrait) {
     #mainCont-elements, #vkCont-elements, #tgCont-elements, #discordCont-elements,
     #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
     #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
@@ -502,7 +502,7 @@ span#spotify {
 }
 
 /* Rules for regular phones landscape */
-@media (orientation: landscape) {
+@media (max-width: 1000px) and (orientation: landscape) {
     #mainCont-elements, #vkCont-elements, #tgCont-elements, #discordCont-elements,
     #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
     #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
