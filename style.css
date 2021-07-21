@@ -19,13 +19,6 @@
     --spotify-dimmed: rgba(0, 0, 0, 0.6);
 }
 
-@supports(padding:max(0px)) {
-    body, header, footer {
-        padding-left: min(0vmin, env(safe-area-inset-left));
-        padding-right: min(0vmin, env(safe-area-inset-right));
-    }
-}
-
 /* Global settings for elements */
 * {
     font-family: "Ubuntu", sans-serif;
@@ -472,7 +465,7 @@ span#spotify {
 
 /* Rules for regular phones in portait mode */
 @media (orientation: portrait) {
-    #mainCont-elements, #vkCont-elements, #tgCont-elements,
+    #mainCont-elements, #vkCont-elements, #tgCont-elements, #discordCont-elements,
     #igCont-elements, #twitterCont-elements, #lastfmCont-elements, #githubCont-elements,
     #codeStatsCont-elements, #spotifyCont-elements, #playlistCont-elements, #footerCont-elements {
         width: fit-content;
