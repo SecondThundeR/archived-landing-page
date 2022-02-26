@@ -1,11 +1,6 @@
 # SecondThundeR's Landing Page (Project Aether)
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE_CC0)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SecondThundeR/secondthunder.github.io/blob/master/LICENSE_MIT)
-
-This repository is used to store and host the landing page *(Nothing more, for now)*
-
-This page is fully optimized for computers. Mobile devices have been superficially tested and there may be inconsistencies on different devices *(Perhaps someday I will rewrite this on some framework to work correctly on mobile devices)*
+This is an archive of older changes for this page, due to problems with `.git` folder. More about it you can see on a [new repo](https://github.com/SecondThundeR/secondthunder.github.io/settings)
 
 ## License
 
