@@ -1,6 +1,6 @@
 # SecondThundeR's Landing Page (Project Aether)
 
-This is an archive of older changes for this page, due to problems with `.git` folder. More about it you can see on a [new repo](https://github.com/SecondThundeR/secondthunder.github.io/settings)
+This is an archive of older changes for this page, due to problems with `.git` folder. More about it you can see on a [new repo](https://github.com/SecondThundeR/secondthunder.github.io)
 
 ## License
 
